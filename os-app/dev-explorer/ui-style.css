@@ -68,21 +68,29 @@
 .MSTExplorerTrace {
 	padding: var(--MSTExplorerPadding);
 
-	background: rgba(0, 0, 0, 4%);
+	background: rgba(0, 0, 0, 2%);
 
 	/* MSTExplorerConvertFlexbox:Child */
 	flex-basis: 20% !important;
+
+	/* cap width */
+	overflow: hidden;
+	overflow-wrap: break-word;
 }
 
 .MSTExplorerOutput {
 	margin: 0;
 	padding: var(--MSTExplorerPadding);
 
-	background: rgba(0, 0, 0, 8%);
+	background: rgba(0, 0, 0, 4%);
+
+	/* cap width */
+	overflow: hidden;
+	overflow-wrap: break-word;
 }
 
 .MSTExplorerMassage {
-	background: rgba(0, 0, 0, 2%);
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
 
 	/* MSTExplorerWorkspaceFlexbox:Child */
 	min-height: 80px;
@@ -106,7 +114,6 @@
 }
 
 .MSTExplorerMassage :global(.CodeMirror-scroll) {
-	background: rgba(0, 0, 0, 2%);
 }
 
 .MSTExplorerMassage :global(.CodeMirror-lines) {

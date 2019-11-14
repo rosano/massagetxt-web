@@ -21,4 +21,16 @@ export let OLSKLocalized;
 
 	font-family: monospace;
 }
+
+.MSTExplorerTraceItemOperation {
+	font-weight: bold;
+}
+
+.MSTExplorerTraceItemInputHeading {
+	margin-top: 10px;
+
+	text-transform: uppercase;
+	opacity: 0.5;
+	letter-spacing: 3px;
+}
 </style>
