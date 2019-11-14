@@ -1,5 +1,5 @@
 <script>
-export let MSTExplorerTraceItemOperation = '';
+export let MSTExplorerTraceItemOperation;
 export let MSTExplorerTraceItemInput;
 </script>
 

@@ -49,6 +49,10 @@ describe('MSTExplorerTraceItem', function() {
 		browser.assert.text(MSTExplorerTraceItemOperation, '$input')
 	});
 
+	it('sets MSTExplorerTraceItemInput', function () {
+		browser.assert.text(MSTExplorerTraceItemInput, 'alfa')
+	});
+
 	context('update MSTExplorerMassage', function () {
 
 		before(function () {

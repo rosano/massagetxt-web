@@ -15,7 +15,10 @@ Object.entries({
 describe('MSTExplorerTraceItem_Access', function () {
 
 	before(function() {
-		return browser.visit(kDefaultRoute.OLSKRoutePath);
+		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerTraceItemOperation: 'alfa',
+			MSTExplorerTraceItemInput: 'bravo',
+		}));
 	});
 	
 	it('shows MSTExplorerTraceItem', function() {
