@@ -58,6 +58,7 @@ const mod = {
 mod.LifecycleModuleWillMount();
 
 import MSTEditor from './submodules/MSTEditor/main.svelte';
+import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte';
 </script>
 
 <div class="MSTExplorer">
@@ -79,7 +80,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 
 		<div class="MSTExplorerTrace">
 			{#each mod._ValueTraceObjects as item}
-				<div class="MSTExplorerTraceItem"></div>
+				<MSTExplorerTraceItem MSTExplorerTraceItemOperation={ item.MSTTraceOperation } />
 			{/each}
 		</div>
 

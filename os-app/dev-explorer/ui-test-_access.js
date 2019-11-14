@@ -58,8 +58,6 @@ describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 		it('shows MSTExplorerTraceItem', function () {
 			browser.assert.elements(MSTExplorerTraceItem, 1)
 		});
-
-		
 	
 	});
 

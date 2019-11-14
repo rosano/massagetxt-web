@@ -32,6 +32,37 @@ describe('MSTExplorerMassageEditor', function() {
 	
 });
 	
+describe('MSTExplorerTraceItem', function() {
+	
+	before(function() {
+		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerRaw: 'alfa',
+			MSTExplorerMassage: '$input',
+		}));
+	});
+
+	it('initializes to result', function () {
+		browser.assert.elements(MSTExplorerTraceItem, 1)
+	});
+
+	it('sets MSTExplorerTraceItemOperation', function () {
+		browser.assert.text(MSTExplorerTraceItemOperation, '$input')
+	});
+
+	context('update MSTExplorerMassage', function () {
+
+		before(function () {
+			browser.fill(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, '$input.lines');
+		});
+
+		it('updates elements', function () {
+			browser.assert.elements(MSTExplorerTraceItem, 2)
+		});
+	
+	});
+
+});
+	
 describe('MSTExplorerOutput', function() {
 	
 	before(function() {
