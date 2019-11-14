@@ -1,5 +1,6 @@
 <script>
 export let MSTExplorerSource = '';
+export let MSTExplorerMassage = '';
 export let MSTExplorerOptions = {};
 
 const mod = {
@@ -35,6 +36,18 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 			Tab: false,
 		},
 	} } MSTEditorInitialValue={ MSTExplorerSource }/>
+</div>
+
+<div class="MSTExplorerMassageEditor">
+	<MSTEditor MSTEditorOptions={ {
+		lineWrapping: true,
+
+		keyMap: 'sublime',
+
+		extraKeys: {
+			Tab: false,
+		},
+	} } MSTEditorInitialValue={ MSTExplorerMassage }/>
 </div>
 
 </div>
