@@ -6,11 +6,22 @@
 .MSTExplorer {
 	height: 100vh;
 
+	font-family: 'Helvetica Neue', 'Helvetica', sans;
 	font-size: var(--MSTExplorerFontSize);
 
 	/* MSTExplorerFlexbox:Parent */
 	display: flex;
 	flex-direction: column;
+}
+
+.MSTExplorerToolbar {
+	padding: var(--MSTExplorerPadding);
+
+	background: rgba(0, 0, 0, 6%);
+
+	/* MSTExplorerToolbar:Parent */
+	display: flex;
+	justify-content: flex-end;
 }
 
 .MSTExplorerWorkspace {
