@@ -1,4 +1,5 @@
 <script>
+export let MSTExplorerSource = '';
 export let MSTExplorerOptions = {};
 
 const mod = {
@@ -18,9 +19,24 @@ const mod = {
 
 mod.LifecycleModuleWillMount();
 
+import MSTEditor from './submodules/MSTEditor/main.svelte';
 </script>
 
 <div class="Container MSTExplorer">
+
+<div class="MSTExplorerSourceEditor">
+	<MSTEditor MSTEditorOptions={ {
+		lineNumbers: true,
+		lineWrapping: true,
+
+		keyMap: 'sublime',
+
+		extraKeys: {
+			Tab: false,
+		},
+	} } MSTEditorInitialValue={ MSTExplorerSource }/>
+</div>
+
 </div>
 
 <style src="./ui-style.css"></style>
