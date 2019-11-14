@@ -21,6 +21,12 @@ const mod = {
 
 	MessageDispatch: createEventDispatcher(),
 
+	// INTERFACE
+
+	InterfaceInputDebugDidInput (event) {
+		mod.MessageDispatch('MSTEditorDispatchValueChanged', this.value);
+	},
+
 	// VALUE
 
 	_ValuePostInitializeQueue: [],
@@ -71,6 +77,10 @@ onMount(mod.LifecycleComponentDidMount);
 
 <div class="MSTEditor">
 
-<textarea bind:this={ mod._ModuleInstanceElement }></textarea>
+{#if OLSK_TESTING_BEHAVIOUR()}
+	<textarea class="MSTEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput }></textarea>
+{/if}
+
+<textarea class="MSTEditorField" bind:this={ mod._ModuleInstanceElement }></textarea>
 
 </div>
