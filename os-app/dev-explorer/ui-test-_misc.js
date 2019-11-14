@@ -4,6 +4,24 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('MSTExplorer_Misc', function () {
 
+describe('MSTExplorerPermalink', function() {
+	
+	before(function() {
+		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerRaw: 'alfa bravo',
+			MSTExplorerMassage: '$input.prepend( charlie)',
+		}));
+	});
+
+	it('sets href', function () {
+		browser.assert.attribute(MSTExplorerPermalink, 'href', OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerRaw: encodeURIComponent('alfa bravo'),
+			MSTExplorerMassage: encodeURIComponent('$input.prepend( charlie)'),
+		}));
+	});
+
+});
+	
 describe('MSTExplorerRaw', function() {
 	
 	before(function() {

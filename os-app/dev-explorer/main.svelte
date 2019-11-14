@@ -3,6 +3,12 @@ export let MSTExplorerRaw = '';
 export let MSTExplorerMassage = '';
 export let MSTExplorerOptions = {};
 
+let _OLSKLocalizedMap = JSON.parse(`{"OLSK_I18N_SEARCH_REPLACE":"OLSK_I18N_SEARCH_REPLACE"}`);
+import OLSKInternational from 'OLSKInternational';
+export const OLSKLocalized = function(inputData) {
+	return OLSKInternational.OLSKInternationalLocalizedString(inputData, _OLSKLocalizedMap[MSTExplorerOptions.MSTOptionLanguage || 'en']);
+};
+
 import MassageTXT from 'MassageTXT';
 
 const mod = {
@@ -62,6 +68,10 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 </script>
 
 <div class="MSTExplorer">
+
+<div class="MSTExplorerToolbar">
+	<a class="MSTExplorerPermalink" href={ `${ window.location.pathname }?MSTExplorerRaw=${ encodeURIComponent(MSTExplorerRaw) }&MSTExplorerMassage=${ encodeURIComponent(MSTExplorerMassage) }` }>{ OLSKLocalized('MSTExplorerPermalinkText') }</a>
+</div>
 
 <div class="MSTExplorerWorkspace">
 	<div class="MSTExplorerConvert">
