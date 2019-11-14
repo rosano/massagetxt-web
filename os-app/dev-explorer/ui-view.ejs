@@ -1,0 +1,20 @@
+<%
+locals.OLSKPageAssets = [
+	'__compiled/ui-behaviour.js',
+	'__compiled/ui-style.css',
+	'ui-behaviour.js',
+];
+locals.OLSKPagePublicConstants = {
+	OLSKSharedPageCurrentLanguage: OLSKSharedPageCurrentLanguage,
+};
+%>
+
+<%- include('../_shared/common/layout-header.ejs') %>
+
+<div id="MSTExplorerTarget"></div>
+
+<script type="text/javascript">
+MSTExplorerBehaviour.LifecyclePageWillLoad();
+</script>
+
+<%- include('../_shared/common/layout-footer.ejs') %>
