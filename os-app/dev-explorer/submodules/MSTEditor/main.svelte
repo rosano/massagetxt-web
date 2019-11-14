@@ -61,6 +61,8 @@ const mod = {
 
 			mod.MessageDispatch('MSTEditorDispatchValueChanged', instance.getValue());
 		});
+
+		mod._ValueCodeMirrorInstance.focus();
 	},
 
 	// LIFECYCLE
