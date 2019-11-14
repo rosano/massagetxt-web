@@ -23,12 +23,22 @@ const mod = {
 
 	// VALUE
 
+	_ValueTraceObjects: [],
+
 	_ValueOutput: '',
 
 	// REACT
 
 	ReactOutput () {
-		mod._ValueOutput = MSTExplorerMassage[0] !== '$' ? MSTExplorerRaw : MassageTXT.MSTMassage(MSTExplorerRaw, MSTExplorerMassage);
+		const item = [];
+
+		mod._ValueOutput = MSTExplorerMassage[0] !== '$' ? MSTExplorerRaw : MassageTXT.MSTMassage(MSTExplorerRaw, MSTExplorerMassage, {
+			MSTOptionTrace (inputData) {
+				item.push(inputData);
+			},
+		});
+
+		mod._ValueTraceObjects = item;
 	},
 
 	// SETUP
@@ -65,6 +75,12 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 					Tab: false,
 				},
 			} } MSTEditorInitialValue={ MSTExplorerRaw } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedRaw } />
+		</div>
+
+		<div class="MSTExplorerTrace">
+			{#each mod._ValueTraceObjects as item}
+				<div class="MSTExplorerTraceItem"></div>
+			{/each}
 		</div>
 
 		<pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>
