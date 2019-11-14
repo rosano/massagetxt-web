@@ -7,20 +7,28 @@ import MassageTXT from 'MassageTXT';
 
 const mod = {
 
+	// MESSAGE
+
+	MSTEditorDispatchValueChangedRaw () {
+		MSTExplorerRaw = arguments[0].detail;
+		
+		mod.ReactOutput();
+	},
+
 	// VALUE
 
 	_ValueOutput: '',
 
-	// COMMAND
+	// REACT
 
-	CommandUpdateOutput (param1, param2) {
-		mod._ValueOutput = param2[0] !== '$' ? param1 : MassageTXT.MSTMassage(param1, param2);
+	ReactOutput () {
+		mod._ValueOutput = MSTExplorerMassage[0] !== '$' ? MSTExplorerRaw : MassageTXT.MSTMassage(MSTExplorerRaw, MSTExplorerMassage);
 	},
 
 	// SETUP
 
 	SetupEverything() {
-		mod.CommandUpdateOutput(MSTExplorerRaw, MSTExplorerMassage);
+		mod.ReactOutput();
 	},
 
 	// LIFECYCLE
@@ -48,7 +56,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 		extraKeys: {
 			Tab: false,
 		},
-	} } MSTEditorInitialValue={ MSTExplorerRaw }/>
+	} } MSTEditorInitialValue={ MSTExplorerRaw } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedRaw } />
 </div>
 
 <div class="MSTExplorerMassageEditor">

@@ -59,7 +59,7 @@ const mod = {
 				return;
 			}
 
-			dispatch('MSTEditorDispatchValueChanged', instance.getValue());
+			mod.MessageDispatch('MSTEditorDispatchValueChanged', instance.getValue());
 		});
 	},
 
