@@ -32,7 +32,7 @@
 
 .MSTExplorerConvert > * {
 	/* MSTExplorerConvertFlexbox:Child */
-	flex-basis: 50%;
+	flex-basis: 40%;
 }
 
 .MSTExplorerRawEditor {
@@ -52,6 +52,22 @@
 
 	/* override defaults */
 	height: 100%;
+}
+
+.MSTExplorerTrace {
+	padding: var(--MSTExplorerPadding);
+
+	background: rgba(0, 0, 0, 4%);
+
+	/* MSTExplorerConvertFlexbox:Child */
+	flex-basis: 20% !important;
+}
+
+.MSTExplorerOutput {
+	margin: 0;
+	padding: var(--MSTExplorerPadding);
+
+	background: rgba(0, 0, 0, 8%);
 }
 
 .MSTExplorerMassageEditor {
@@ -90,11 +106,4 @@
 .MSTExplorerMassageEditor :global(.CodeMirror pre) {
 	/* override defaults */
 	padding: 0;
-}
-
-.MSTExplorerOutput {
-	margin: 0;
-	padding: var(--MSTExplorerPadding);
-
-	background: rgba(0, 0, 0, 4%);
 }
