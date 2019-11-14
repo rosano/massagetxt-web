@@ -27,3 +27,15 @@ describe('MSTPermalinkEncode', function testMSTPermalinkEncode() {
 	});
 	
 });
+
+describe('MSTStringify', function testMSTStringify() {
+
+	it('returns string if string', function () {
+		deepEqual(mainModule.MSTStringify('alfa'), 'alfa')
+	});
+
+	it('returns JSON.stringified', function () {
+		deepEqual(mainModule.MSTStringify(['alfa']), JSON.stringify(['alfa']))
+	});
+
+});
