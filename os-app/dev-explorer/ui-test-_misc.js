@@ -18,4 +18,18 @@ describe('MSTExplorerTextEditor', function() {
 	
 });
 	
+describe('MSTExplorerMassageEditor', function() {
+	
+	before(function() {
+		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerMassage: 'alfa',
+		}));
+	});
+
+	it('initializes to MSTExplorerMassage', function () {
+		browser.assert.input(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, 'alfa')
+	});
+	
+});
+	
 });
