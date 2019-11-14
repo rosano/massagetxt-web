@@ -21,5 +21,9 @@ describe('MSTPermalinkEncode', function testMSTPermalinkEncode() {
 	it('encodes brackets', function () {
 		deepEqual(mainModule.MSTPermalinkEncode('alfa-bravo()-charlie[]'), 'alfa-bravo%28%29-charlie%5B%5D')
 	});
+
+	it('encodes asterisk', function () {
+		deepEqual(mainModule.MSTPermalinkEncode('alfa-bravo*'), 'alfa-bravo%2a')
+	});
 	
 });
