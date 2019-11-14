@@ -91,7 +91,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 
 		<div class="MSTExplorerTrace">
 			{#each mod._ValueTraceObjects as item}
-				<MSTExplorerTraceItem MSTExplorerTraceItemOperation={ item.MSTTraceOperation } MSTExplorerTraceItemInputContent={ MSTExplorerLogic.MSTStringify(item.MSTTraceInput) } />
+				<MSTExplorerTraceItem MSTExplorerTraceItemOperation={ item.MSTTraceOperation } MSTExplorerTraceItemInputContent={ MSTExplorerLogic.MSTStringify(item.MSTTraceInput) } OLSKLocalized={ OLSKLocalized } />
 			{/each}
 		</div>
 

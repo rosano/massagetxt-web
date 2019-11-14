@@ -7,6 +7,7 @@ Object.entries({
 
 	MSTExplorerTraceItemOperation: '.MSTExplorerTraceItemOperation',
 
+	MSTExplorerTraceItemInputHeading: '.MSTExplorerTraceItemInputHeading',
 	MSTExplorerTraceItemInputContent: '.MSTExplorerTraceItemInputContent',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
@@ -27,6 +28,10 @@ describe('MSTExplorerTraceItem_Access', function () {
 	
 	it('shows MSTExplorerTraceItemOperation', function() {
 		browser.assert.elements(MSTExplorerTraceItemOperation, 1);
+	});
+	
+	it('shows MSTExplorerTraceItemInputHeading', function() {
+		browser.assert.elements(MSTExplorerTraceItemInputHeading, 1);
 	});
 	
 	it('shows MSTExplorerTraceItemInputContent', function() {

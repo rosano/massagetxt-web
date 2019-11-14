@@ -1,8 +1,7 @@
-import RollupStart from './main.svelte';
+import RollupStart from './stub-view.svelte';
 
 const MSTExplorerTraceItem = new RollupStart({
 	target: document.body,
-	props: Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()),
 });
 
 export default MSTExplorerTraceItem;

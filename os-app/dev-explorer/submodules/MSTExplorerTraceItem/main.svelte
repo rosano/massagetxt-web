@@ -1,11 +1,14 @@
 <script>
 export let MSTExplorerTraceItemOperation;
 export let MSTExplorerTraceItemInputContent;
+export let OLSKLocalized;
 </script>
 
 <div class="MSTExplorerTraceItem">
 
 <div class="MSTExplorerTraceItemOperation">{ MSTExplorerTraceItemOperation }</div>
+
+<div class="MSTExplorerTraceItemInputHeading">{ OLSKLocalized('MSTExplorerTraceItemInputHeadingText') }</div>
 
 <div class="MSTExplorerTraceItemInputContent">{ MSTExplorerTraceItemInputContent }</div>
 
