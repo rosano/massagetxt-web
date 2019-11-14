@@ -18,7 +18,7 @@ describe('MSTExplorerRaw', function() {
 	
 });
 	
-describe('MSTExplorerMassageEditor', function() {
+describe('MSTExplorerMassage', function() {
 	
 	before(function() {
 		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
@@ -27,7 +27,7 @@ describe('MSTExplorerMassageEditor', function() {
 	});
 
 	it('initializes to MSTExplorerMassage', function () {
-		browser.assert.input(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, '$input')
+		browser.assert.input(`${ MSTExplorerMassage } .MSTEditorFieldDebug`, '$input')
 	});
 	
 });
@@ -56,7 +56,7 @@ describe('MSTExplorerTraceItem', function() {
 	context('update MSTExplorerMassage', function () {
 
 		before(function () {
-			browser.fill(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, '$input.lines');
+			browser.fill(`${ MSTExplorerMassage } .MSTEditorFieldDebug`, '$input.lines');
 		});
 
 		it('updates elements', function () {
@@ -95,7 +95,7 @@ describe('MSTExplorerOutput', function() {
 	context('update MSTExplorerMassage', function () {
 
 		before(function () {
-			browser.fill(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, '$input.prepend(alfa )');
+			browser.fill(`${ MSTExplorerMassage } .MSTEditorFieldDebug`, '$input.prepend(alfa )');
 		});
 		
 		it('sets value', function () {

@@ -70,20 +70,20 @@
 	background: rgba(0, 0, 0, 8%);
 }
 
-.MSTExplorerMassageEditor {
+.MSTExplorerMassage {
 	background: rgba(0, 0, 0, 2%);
 
 	/* MSTExplorerWorkspaceFlexbox:Child */
 	min-height: 80px;
 
-	/* MSTExplorerMassageEditorStation:Parent */
+	/* MSTExplorerMassageStation:Parent */
 	position: relative;
 }
 
-.MSTExplorerMassageEditor :global(.CodeMirror) {
+.MSTExplorerMassage :global(.CodeMirror) {
 	font-size: var(--MSTExplorerFontSize);
 
-	/* MSTExplorerMassageEditorStation:Child */
+	/* MSTExplorerMassageStation:Child */
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -94,16 +94,16 @@
 	height: 100%;
 }
 
-.MSTExplorerMassageEditor :global(.CodeMirror-scroll) {
+.MSTExplorerMassage :global(.CodeMirror-scroll) {
 	background: rgba(0, 0, 0, 2%);
 }
 
-.MSTExplorerMassageEditor :global(.CodeMirror-lines) {
+.MSTExplorerMassage :global(.CodeMirror-lines) {
 	/* override defaults */
 	padding: var(--MSTExplorerPadding);
 }
 
-.MSTExplorerMassageEditor :global(.CodeMirror pre) {
+.MSTExplorerMassage :global(.CodeMirror pre) {
 	/* override defaults */
 	padding: 0;
 }

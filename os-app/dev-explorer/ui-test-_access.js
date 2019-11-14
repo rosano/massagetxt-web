@@ -6,7 +6,7 @@ Object.entries({
 	MSTExplorer: '.MSTExplorer',
 	
 	MSTExplorerRaw: '.MSTExplorerRaw .MSTEditor',
-	MSTExplorerMassageEditor: '.MSTExplorerMassageEditor .MSTEditor',
+	MSTExplorerMassage: '.MSTExplorerMassage .MSTEditor',
 	
 	MSTExplorerTrace: '.MSTExplorerTrace',	
 	MSTExplorerTraceItem: '.MSTExplorerTraceItem',
@@ -30,8 +30,8 @@ describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 		browser.assert.elements(MSTExplorerRaw, 1)
 	});
 
-	it('shows MSTExplorerMassageEditor', function() {
-		browser.assert.elements(MSTExplorerMassageEditor, 1)
+	it('shows MSTExplorerMassage', function() {
+		browser.assert.elements(MSTExplorerMassage, 1)
 	});
 
 	it('shows MSTExplorerTrace', function() {

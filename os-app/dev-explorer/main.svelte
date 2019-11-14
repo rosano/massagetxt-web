@@ -87,7 +87,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 		<pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>
 	</div>
 
-	<div class="MSTExplorerMassageEditor">
+	<div class="MSTExplorerMassage">
 		<MSTEditor MSTEditorOptions={ {
 			lineWrapping: true,
 
