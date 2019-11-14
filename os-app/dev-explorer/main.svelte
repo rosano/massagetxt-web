@@ -1,5 +1,5 @@
 <script>
-export let MSTExplorerSource = '';
+export let MSTExplorerText = '';
 export let MSTExplorerMassage = '';
 export let MSTExplorerOptions = {};
 
@@ -25,7 +25,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 
 <div class="Container MSTExplorer">
 
-<div class="MSTExplorerSourceEditor">
+<div class="MSTExplorerTextEditor">
 	<MSTEditor MSTEditorOptions={ {
 		lineNumbers: true,
 		lineWrapping: true,
@@ -35,7 +35,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 		extraKeys: {
 			Tab: false,
 		},
-	} } MSTEditorInitialValue={ MSTExplorerSource }/>
+	} } MSTEditorInitialValue={ MSTExplorerText }/>
 </div>
 
 <div class="MSTExplorerMassageEditor">

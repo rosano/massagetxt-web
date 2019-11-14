@@ -5,7 +5,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	MSTExplorer: '.MSTExplorer',
 	
-	MSTExplorerSourceEditor: '.MSTExplorerSourceEditor .MSTEditor',
+	MSTExplorerTextEditor: '.MSTExplorerTextEditor .MSTEditor',
 	MSTExplorerMassageEditor: '.MSTExplorerMassageEditor .MSTEditor',
 	
 	MSTExplorerOutput: '.MSTExplorerOutput',
@@ -23,8 +23,8 @@ describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 		browser.assert.elements(MSTExplorer, 1)
 	});
 
-	it('shows MSTExplorerSourceEditor', function() {
-		browser.assert.elements(MSTExplorerSourceEditor, 1)
+	it('shows MSTExplorerTextEditor', function() {
+		browser.assert.elements(MSTExplorerTextEditor, 1)
 	});
 
 	it('shows MSTExplorerMassageEditor', function() {
