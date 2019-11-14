@@ -78,7 +78,7 @@ onMount(mod.LifecycleComponentDidMount);
 <div class="MSTEditor">
 
 {#if OLSK_TESTING_BEHAVIOUR()}
-	<textarea class="MSTEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput }></textarea>
+	<textarea class="MSTEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput } value={ MSTEditorInitialValue }></textarea>
 {/if}
 
 <textarea class="MSTEditorField" bind:this={ mod._ModuleInstanceElement }></textarea>

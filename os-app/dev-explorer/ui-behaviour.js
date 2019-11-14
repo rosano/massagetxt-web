@@ -1,5 +1,3 @@
-const params = Object.fromEntries((new window.URLSearchParams(window.location.search)).entries());
-
 const mod = {
 
 	// SETUP
@@ -7,7 +5,7 @@ const mod = {
 	SetupEverything() {
 		let app = new Main({
 			target: document.getElementById('MSTExplorerTarget'),
-			props: {},
+			props: Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()),
 		});
 	},
 
