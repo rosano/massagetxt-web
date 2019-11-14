@@ -95,6 +95,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 
 			extraKeys: {
 				Tab: false,
+				'Shift-Tab': false,
 			},
 		} } MSTEditorInitialValue={ MSTExplorerMassage } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedMassage } />
 	</div>
