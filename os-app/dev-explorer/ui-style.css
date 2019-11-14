@@ -1,2 +1,72 @@
-.Container {
+.MSTExplorer {
+	height: 100vh;
+
+	font-size: 10pt;
+
+	/* MSTExplorerFlexbox:Parent */
+	display: flex;
+	flex-direction: column;
+}
+
+.MSTExplorerWorkspace {
+	/* MSTExplorerFlexbox:Child */
+	flex-grow: 1;
+
+	/* MSTExplorerWorkspaceFlexbox:Parent */
+	display: flex;
+	flex-direction: column;
+}
+
+.MSTExplorerConvert {
+	/* MSTExplorerWorkspaceFlexbox:Child */
+	flex-grow: 1;
+
+	/* MSTExplorerConvertFlexbox:Parent */
+	display: flex;
+}
+
+.MSTExplorerConvert > * {
+	/* MSTExplorerConvertFlexbox:Child */
+	flex-basis: 50%;
+}
+
+.MSTExplorerRawEditor {
+	/* MSTExplorerRawEditorStation:Parent */
+	position: relative;
+}
+
+.MSTExplorerRawEditor :global(.CodeMirror) {
+	/* MSTExplorerRawEditorStation:Child */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	/* override defaults */
+	height: 100%;
+}
+
+.MSTExplorerMassageEditor {
+	/* MSTExplorerWorkspaceFlexbox:Child */
+	min-height: 80px;
+
+	/* MSTExplorerMassageEditorStation:Parent */
+	position: relative;
+}
+
+.MSTExplorerMassageEditor :global(.CodeMirror) {
+	/* MSTExplorerMassageEditorStation:Child */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	/* override defaults */
+	height: 100%;
+}
+
+.MSTExplorerOutput {
+	margin: 0;
 }

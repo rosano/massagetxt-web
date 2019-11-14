@@ -50,34 +50,38 @@ mod.LifecycleModuleWillMount();
 import MSTEditor from './submodules/MSTEditor/main.svelte';
 </script>
 
-<div class="Container MSTExplorer">
+<div class="MSTExplorer">
 
-<div class="MSTExplorerRawEditor">
-	<MSTEditor MSTEditorOptions={ {
-		lineNumbers: true,
-		lineWrapping: true,
+<div class="MSTExplorerWorkspace">
+	<div class="MSTExplorerConvert">
+		<div class="MSTExplorerRawEditor">
+			<MSTEditor MSTEditorOptions={ {
+				lineNumbers: true,
+				lineWrapping: true,
 
-		keyMap: 'sublime',
+				keyMap: 'sublime',
 
-		extraKeys: {
-			Tab: false,
-		},
-	} } MSTEditorInitialValue={ MSTExplorerRaw } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedRaw } />
+				extraKeys: {
+					Tab: false,
+				},
+			} } MSTEditorInitialValue={ MSTExplorerRaw } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedRaw } />
+		</div>
+
+		<pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>
+	</div>
+
+	<div class="MSTExplorerMassageEditor">
+		<MSTEditor MSTEditorOptions={ {
+			lineWrapping: true,
+
+			keyMap: 'sublime',
+
+			extraKeys: {
+				Tab: false,
+			},
+		} } MSTEditorInitialValue={ MSTExplorerMassage } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedMassage } />
+	</div>
 </div>
-
-<div class="MSTExplorerMassageEditor">
-	<MSTEditor MSTEditorOptions={ {
-		lineWrapping: true,
-
-		keyMap: 'sublime',
-
-		extraKeys: {
-			Tab: false,
-		},
-	} } MSTEditorInitialValue={ MSTExplorerMassage } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedMassage } />
-</div>
-
-<pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>
 
 </div>
 
