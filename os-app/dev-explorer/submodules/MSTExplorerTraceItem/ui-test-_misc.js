@@ -9,7 +9,7 @@ describe('MSTExplorerTraceItemOperation', function() {
 	before(function() {
 		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
 			MSTExplorerTraceItemOperation: 'alfa',
-			MSTExplorerTraceItemInput: 'bravo',
+			MSTExplorerTraceItemInputContent: 'bravo',
 		}));
 	});
 
@@ -19,17 +19,17 @@ describe('MSTExplorerTraceItemOperation', function() {
 	
 });
 	
-describe('MSTExplorerTraceItemInput', function() {
+describe('MSTExplorerTraceItemInputContent', function() {
 	
 	before(function() {
 		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
 			MSTExplorerTraceItemOperation: 'alfa',
-			MSTExplorerTraceItemInput: 'bravo',
+			MSTExplorerTraceItemInputContent: 'bravo',
 		}));
 	});
 
-	it('initializes to MSTExplorerTraceItemInput', function () {
-		browser.assert.text(MSTExplorerTraceItemInput, 'bravo')
+	it('initializes to MSTExplorerTraceItemInputContent', function () {
+		browser.assert.text(MSTExplorerTraceItemInputContent, 'bravo')
 	});
 	
 });

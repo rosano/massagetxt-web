@@ -7,7 +7,7 @@ Object.entries({
 
 	MSTExplorerTraceItemOperation: '.MSTExplorerTraceItemOperation',
 
-	MSTExplorerTraceItemInput: '.MSTExplorerTraceItemInput',
+	MSTExplorerTraceItemInputContent: '.MSTExplorerTraceItemInputContent',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -17,7 +17,7 @@ describe('MSTExplorerTraceItem_Access', function () {
 	before(function() {
 		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
 			MSTExplorerTraceItemOperation: 'alfa',
-			MSTExplorerTraceItemInput: 'bravo',
+			MSTExplorerTraceItemInputContent: 'bravo',
 		}));
 	});
 	
@@ -29,8 +29,8 @@ describe('MSTExplorerTraceItem_Access', function () {
 		browser.assert.elements(MSTExplorerTraceItemOperation, 1);
 	});
 	
-	it('shows MSTExplorerTraceItemInput', function() {
-		browser.assert.elements(MSTExplorerTraceItemInput, 1);
+	it('shows MSTExplorerTraceItemInputContent', function() {
+		browser.assert.elements(MSTExplorerTraceItemInputContent, 1);
 	});
 	
 });

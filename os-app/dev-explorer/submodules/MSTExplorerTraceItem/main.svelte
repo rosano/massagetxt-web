@@ -1,13 +1,13 @@
 <script>
 export let MSTExplorerTraceItemOperation;
-export let MSTExplorerTraceItemInput;
+export let MSTExplorerTraceItemInputContent;
 </script>
 
 <div class="MSTExplorerTraceItem">
 
 <div class="MSTExplorerTraceItemOperation">{ MSTExplorerTraceItemOperation }</div>
 
-<div class="MSTExplorerTraceItemInput">{ MSTExplorerTraceItemInput }</div>
+<div class="MSTExplorerTraceItemInputContent">{ MSTExplorerTraceItemInputContent }</div>
 
 </div>
 
