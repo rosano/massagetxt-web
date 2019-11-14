@@ -21,6 +21,9 @@
     "// FRONDEND EDITOR": null,
     "codemirror": "rosano/CodeMirror#add-distribution",
 
+    "// MASSAGE": null,
+    "MassageTXT": "massagetxt/mst-lib",
+
     "// I sacrifice myself for the commas of others": null
   },
   "devDependencies": {

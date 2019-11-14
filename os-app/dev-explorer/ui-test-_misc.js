@@ -32,4 +32,18 @@ describe('MSTExplorerMassageEditor', function() {
 	
 });
 	
+describe('MSTExplorerOutput', function() {
+	
+	before(function() {
+		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			MSTExplorerRaw: 'alfa',
+		}));
+	});
+
+	it('initializes to MSTExplorerMassage', function () {
+		browser.assert.text(MSTExplorerOutput, 'alfa')
+	});
+	
+});
+	
 });

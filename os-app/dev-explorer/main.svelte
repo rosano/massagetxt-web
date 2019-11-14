@@ -3,11 +3,24 @@ export let MSTExplorerRaw = '';
 export let MSTExplorerMassage = '';
 export let MSTExplorerOptions = {};
 
+import MassageTXT from 'MassageTXT';
+
 const mod = {
+
+	// VALUE
+
+	_ValueOutput: '',
+
+	// COMMAND
+
+	CommandUpdateOutput (param1, param2) {
+		mod._ValueOutput = param2[0] !== '$' ? param1 : MassageTXT.MSTMassage(param1, param2);
+	},
 
 	// SETUP
 
 	SetupEverything() {
+		mod.CommandUpdateOutput(MSTExplorerRaw, MSTExplorerMassage);
 	},
 
 	// LIFECYCLE
@@ -50,7 +63,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 	} } MSTEditorInitialValue={ MSTExplorerMassage }/>
 </div>
 
-<pre class="MSTExplorerOutput"></pre>
+<pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>
 
 </div>
 
