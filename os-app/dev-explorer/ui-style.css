@@ -1,7 +1,12 @@
+:root {
+	--MSTExplorerFontSize: 10pt;
+	--MSTExplorerPadding: 10px;
+}
+
 .MSTExplorer {
 	height: 100vh;
 
-	font-size: 10pt;
+	font-size: var(--MSTExplorerFontSize);
 
 	/* MSTExplorerFlexbox:Parent */
 	display: flex;
@@ -36,6 +41,8 @@
 }
 
 .MSTExplorerRawEditor :global(.CodeMirror) {
+	font-size: var(--MSTExplorerFontSize);
+	
 	/* MSTExplorerRawEditorStation:Child */
 	position: absolute;
 	top: 0;
@@ -48,6 +55,8 @@
 }
 
 .MSTExplorerMassageEditor {
+	background: rgba(0, 0, 0, 2%);
+
 	/* MSTExplorerWorkspaceFlexbox:Child */
 	min-height: 80px;
 
@@ -56,6 +65,8 @@
 }
 
 .MSTExplorerMassageEditor :global(.CodeMirror) {
+	font-size: var(--MSTExplorerFontSize);
+
 	/* MSTExplorerMassageEditorStation:Child */
 	position: absolute;
 	top: 0;
@@ -67,6 +78,23 @@
 	height: 100%;
 }
 
+.MSTExplorerMassageEditor :global(.CodeMirror-scroll) {
+	background: rgba(0, 0, 0, 2%);
+}
+
+.MSTExplorerMassageEditor :global(.CodeMirror-lines) {
+	/* override defaults */
+	padding: var(--MSTExplorerPadding);
+}
+
+.MSTExplorerMassageEditor :global(.CodeMirror pre) {
+	/* override defaults */
+	padding: 0;
+}
+
 .MSTExplorerOutput {
 	margin: 0;
+	padding: var(--MSTExplorerPadding);
+
+	background: rgba(0, 0, 0, 4%);
 }
