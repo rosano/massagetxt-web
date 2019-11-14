@@ -1,0 +1,76 @@
+<script>
+export let MSTEditorInitialValue = '';
+export let MSTEditorOptions = {};
+
+export const MSTEditorSetDocument = function (inputData) {
+	mod._ValueCodeMirrorInstance.setValue(inputData);
+	mod._ValueCodeMirrorInstance.getDoc().clearHistory();
+};
+
+export let EditorConfigure = function (e) {
+	// console.log(mod._ValueCodeMirrorInstance ? 'run' : 'queue', e);
+	return mod._ValueCodeMirrorInstance ? e(mod._ValueCodeMirrorInstance) : mod._ValuePostInitializeQueue.push(e);
+};
+
+import { OLSK_TESTING_BEHAVIOUR } from 'OLSKTesting'
+import { createEventDispatcher } from 'svelte';
+
+const mod = {
+
+	// MESSAGE
+
+	MessageDispatch: createEventDispatcher(),
+
+	// VALUE
+
+	_ValuePostInitializeQueue: [],
+
+	// SETUP
+
+	SetupEverything () {
+		if (OLSK_TESTING_BEHAVIOUR()) {
+			return;
+		}
+
+		mod.SetupCodeMirrorInstance();
+
+		// console.log(mod._ValuePostInitializeQueue);
+		
+		mod._ValuePostInitializeQueue.splice(0, mod._ValuePostInitializeQueue.length).forEach(function(e) {
+			// console.log('run', e);
+
+			return e(mod._ValueCodeMirrorInstance);
+		});
+	},
+
+	SetupCodeMirrorInstance() {
+		mod._ValueCodeMirrorInstance = CodeMirror.fromTextArea(mod._ModuleInstanceElement, MSTEditorOptions);
+
+		mod._ValueCodeMirrorInstance.setValue(MSTEditorInitialValue);
+
+		mod._ValueCodeMirrorInstance.on('change', function (instance, changeObject) {
+			if (changeObject.origin === 'setValue') {
+				return;
+			}
+
+			dispatch('MSTEditorDispatchValueChanged', instance.getValue());
+		});
+	},
+
+	// LIFECYCLE
+
+	LifecycleComponentDidMount () {
+		mod.SetupEverything();
+	},
+
+}
+
+import { onMount } from 'svelte';
+onMount(mod.LifecycleComponentDidMount);
+</script>
+
+<div class="MSTEditor">
+
+<textarea bind:this={ mod._ModuleInstanceElement }></textarea>
+
+</div>
