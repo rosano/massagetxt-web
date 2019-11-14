@@ -4,7 +4,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('MSTExplorer_Misc', function () {
 
-describe('MSTExplorerRawEditor', function() {
+describe('MSTExplorerRaw', function() {
 	
 	before(function() {
 		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
@@ -13,7 +13,7 @@ describe('MSTExplorerRawEditor', function() {
 	});
 
 	it('initializes to MSTExplorerRaw', function () {
-		browser.assert.input(`${ MSTExplorerRawEditor } .MSTEditorFieldDebug`, 'alfa')
+		browser.assert.input(`${ MSTExplorerRaw } .MSTEditorFieldDebug`, 'alfa')
 	});
 	
 });
@@ -83,7 +83,7 @@ describe('MSTExplorerOutput', function() {
 	context('update MSTExplorerRaw', function () {
 
 		before(function () {
-			browser.fill(`${ MSTExplorerRawEditor } .MSTEditorFieldDebug`, 'bravo');
+			browser.fill(`${ MSTExplorerRaw } .MSTEditorFieldDebug`, 'bravo');
 		});
 		
 		it('sets value', function () {

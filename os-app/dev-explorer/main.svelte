@@ -65,7 +65,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 
 <div class="MSTExplorerWorkspace">
 	<div class="MSTExplorerConvert">
-		<div class="MSTExplorerRawEditor">
+		<div class="MSTExplorerRaw">
 			<MSTEditor MSTEditorOptions={ {
 				lineNumbers: true,
 				lineWrapping: true,

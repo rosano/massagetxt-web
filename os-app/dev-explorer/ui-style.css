@@ -35,15 +35,15 @@
 	flex-basis: 40%;
 }
 
-.MSTExplorerRawEditor {
-	/* MSTExplorerRawEditorStation:Parent */
+.MSTExplorerRaw {
+	/* MSTExplorerRawStation:Parent */
 	position: relative;
 }
 
-.MSTExplorerRawEditor :global(.CodeMirror) {
+.MSTExplorerRaw :global(.CodeMirror) {
 	font-size: var(--MSTExplorerFontSize);
 	
-	/* MSTExplorerRawEditorStation:Child */
+	/* MSTExplorerRawStation:Child */
 	position: absolute;
 	top: 0;
 	right: 0;
