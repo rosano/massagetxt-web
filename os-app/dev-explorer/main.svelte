@@ -9,9 +9,15 @@ const mod = {
 
 	// MESSAGE
 
-	MSTEditorDispatchValueChangedRaw () {
-		MSTExplorerRaw = arguments[0].detail;
-		
+	MSTEditorDispatchValueChangedRaw (event) {
+		MSTExplorerRaw = event.detail;
+
+		mod.ReactOutput();
+	},
+
+	MSTEditorDispatchValueChangedMassage (event) {
+		MSTExplorerMassage = event.detail;
+
 		mod.ReactOutput();
 	},
 
@@ -68,7 +74,7 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 		extraKeys: {
 			Tab: false,
 		},
-	} } MSTEditorInitialValue={ MSTExplorerMassage }/>
+	} } MSTEditorInitialValue={ MSTExplorerMassage } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedMassage } />
 </div>
 
 <pre class="MSTExplorerOutput">{ mod._ValueOutput }</pre>

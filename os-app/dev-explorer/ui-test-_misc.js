@@ -56,6 +56,18 @@ describe('MSTExplorerOutput', function() {
 		});
 	
 	});
+
+	context('update MSTExplorerMassage', function () {
+
+		before(function () {
+			browser.fill(`${ MSTExplorerMassageEditor } .MSTEditorFieldDebug`, '$input.prepend(alfa )');
+		});
+		
+		it('sets value', function () {
+			browser.assert.text(MSTExplorerOutput, 'alfa bravo')
+		});
+	
+	});
 	
 });
 	
