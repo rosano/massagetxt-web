@@ -7,6 +7,8 @@ Object.entries({
 	
 	MSTExplorerSourceEditor: '.MSTExplorerSourceEditor .MSTEditor',
 	MSTExplorerMassageEditor: '.MSTExplorerMassageEditor .MSTEditor',
+	
+	MSTExplorerOutput: '.MSTExplorerOutput',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -27,6 +29,10 @@ describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 
 	it('shows MSTExplorerMassageEditor', function() {
 		browser.assert.elements(MSTExplorerMassageEditor, 1)
+	});
+
+	it('shows MSTExplorerOutput', function() {
+		browser.assert.elements(MSTExplorerOutput, 1)
 	});
 
 });

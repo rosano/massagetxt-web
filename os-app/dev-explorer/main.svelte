@@ -50,6 +50,8 @@ import MSTEditor from './submodules/MSTEditor/main.svelte';
 	} } MSTEditorInitialValue={ MSTExplorerMassage }/>
 </div>
 
+<pre class="MSTExplorerOutput"></pre>
+
 </div>
 
 <style src="./ui-style.css"></style>
