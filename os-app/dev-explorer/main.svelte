@@ -10,6 +10,7 @@ export const OLSKLocalized = function(inputData) {
 };
 
 import MassageTXT from 'MassageTXT';
+import MSTExplorerLogic from './ui-logic.js';
 
 const mod = {
 
@@ -70,7 +71,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 <div class="MSTExplorer">
 
 <div class="MSTExplorerToolbar">
-	<a class="MSTExplorerPermalink" href={ `${ window.location.pathname }?MSTExplorerRaw=${ encodeURIComponent(MSTExplorerRaw) }&MSTExplorerMassage=${ encodeURIComponent(MSTExplorerMassage) }` }>{ OLSKLocalized('MSTExplorerPermalinkText') }</a>
+	<a class="MSTExplorerPermalink" href={ `${ window.location.pathname }?MSTExplorerRaw=${ MSTExplorerLogic.MSTPermalinkEncode(MSTExplorerRaw) }&MSTExplorerMassage=${ MSTExplorerLogic.MSTPermalinkEncode(MSTExplorerMassage) }` }>{ OLSKLocalized('MSTExplorerPermalinkText') }</a>
 </div>
 
 <div class="MSTExplorerWorkspace">
