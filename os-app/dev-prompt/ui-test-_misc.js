@@ -50,6 +50,25 @@ describe('MSWPromptMassage', function() {
 	
 });
 	
+describe('MSWPromptTrace', function() {
+
+	context('syntax error', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				MSWPromptRaw: 'alfa',
+				MSWPromptMassage: '$input.prepend(',
+			});
+		});
+
+		it('sets text', function () {
+			browser.assert.text(MSWPromptSyntaxError, 'MSTErrorIdentifierNotValid')
+		});
+	
+	});
+	
+});
+	
 describe('MSWPromptTraceItem', function() {
 	
 	before(function() {

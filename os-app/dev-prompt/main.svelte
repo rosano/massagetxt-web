@@ -38,12 +38,21 @@ const mod = {
 
 	ReactOutput () {
 		const item = [];
+		delete mod._ValueSyntaxError;
 
-		mod._ValueOutput = MSWPromptMassage[0] !== '$' ? MSWPromptRaw : MassageTXT.MSTMassage(MSWPromptRaw, MSWPromptMassage.replace(/\\n/g, '\n'), {
-			MSTOptionTrace (inputData) {
-				item.push(inputData);
-			},
-		});
+		try {
+			mod._ValueOutput = MSWPromptMassage[0] !== '$' ? MSWPromptRaw : MassageTXT.MSTMassage(MSWPromptRaw, MSWPromptMassage.replace(/\\n/g, '\n'), {
+				MSTOptionTrace (index, key, value) {
+					if (!item[index]) {
+						item[index] = {}
+					}
+
+					item[index][key] = value;
+				},
+			});
+		} catch (err) {
+			mod._ValueSyntaxError = err;
+		}
 
 		mod._ValueTraceObjects = item;
 	},
@@ -93,6 +102,10 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 			{#each mod._ValueTraceObjects as item}
 				<MSWPromptTraceItem MSWPromptTraceItemOperation={ item.MSTTraceOperation } MSWPromptTraceItemInputContent={ MSWPromptLogic.MSWStringify(item.MSTTraceInput) } OLSKLocalized={ OLSKLocalized } />
 			{/each}
+
+			{#if mod._ValueSyntaxError}
+				<div class="MSWPromptSyntaxError">{ mod._ValueSyntaxError.message }</div>
+			{/if}
 		</div>
 
 		<pre class="MSWPromptOutput">{ mod._ValueOutput }</pre>
