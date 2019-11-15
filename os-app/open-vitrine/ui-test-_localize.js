@@ -45,6 +45,10 @@ describe(`MSWVitrine_Localize-${ languageCode }`, function () {
 		browser.assert.element(`a[href="${ require('../open-guide/controller.js').OLSKControllerRoutes().shift().OLSKRoutePath }"]`);
 	});
 
+	it('localizes MSWExploreRoute', function() {
+		browser.assert.element(`a[href="${ require('../open-explore/controller.js').OLSKControllerRoutes().shift().OLSKRoutePath }"]`);
+	});
+
 	it('localizes MSW_SHARED_GITHUB_URL', function() {
 		browser.assert.element(`a[href="${ process.env.MSW_SHARED_GITHUB_URL }"]`);
 	});

@@ -14,6 +14,7 @@ exports.OLSKControllerRoutes = function() {
 					headerIds: false,
 				})(require('fs').readFileSync(require('path').join(__dirname, `text.${ res.locals.OLSKSharedPageCurrentLanguage }.md`), 'utf-8')), {
 					MSWVitrineTokenGuideURL: res.locals.OLSKCanonicalFor('MSWGuideRoute'),
+					MSWVitrineTokenExploreURL: res.locals.OLSKCanonicalFor('MSWExploreRoute'),
 					MSW_SHARED_GITHUB_URL: process.env.MSW_SHARED_GITHUB_URL,
 				}),
 				OLSKStringReplaceTokens: require('OLSKString').OLSKStringReplaceTokens,
