@@ -19,6 +19,15 @@ const mod = {
 		return JSON.stringify(inputData);
 
 	},
+	
+	MSWVisualString (inputData) {
+		if (typeof inputData !== 'string') {
+			return inputData;
+		}
+
+		return inputData.split('\n').join('\\n');
+
+	},
 
 };
 

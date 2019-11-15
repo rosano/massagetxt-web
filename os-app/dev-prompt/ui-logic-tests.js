@@ -39,3 +39,15 @@ describe('MSWStringify', function testMSWStringify() {
 	});
 
 });
+
+describe('MSWVisualString', function testMSWVisualString() {
+
+	it('returns input if not string', function () {
+		deepEqual(mainModule.MSWVisualString([]), [])
+	});
+
+	it('replaces line breaks', function () {
+		deepEqual(mainModule.MSWVisualString('alfa\nbravo'), 'alfa\\nbravo')
+	});
+
+});
