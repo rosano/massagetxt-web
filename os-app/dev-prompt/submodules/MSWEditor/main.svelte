@@ -8,7 +8,7 @@ export const MSWEditorSetDocument = function (inputData) {
 	mod._ValueCodeMirrorInstance.getDoc().clearHistory();
 };
 
-export let EditorConfigure = function (e) {
+export const EditorConfigure = function (e) {
 	// console.log(mod._ValueCodeMirrorInstance ? 'run' : 'queue', e);
 	return mod._ValueCodeMirrorInstance ? e(mod._ValueCodeMirrorInstance) : mod._ValuePostInitializeQueue.push(e);
 };
