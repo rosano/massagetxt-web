@@ -105,7 +105,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 
 		<div class="MSWPromptTrace">
 			{#each mod._ValueTraceObjects as item}
-				<MSWPromptTraceItem MSWPromptTraceItemOperation={ item.MSTTraceOperation } MSWPromptTraceItemInputContent={ MSWPromptLogic.MSWStringify(item.MSTTraceInput) } OLSKLocalized={ OLSKLocalized } />
+				<MSWPromptTraceItem MSWPromptTraceItemOperation={ item.MSTTraceOperation } MSWPromptTraceItemInputContent={ MSWPromptLogic.MSWStringify(MSWPromptLogic.MSWVisualString(item.MSTTraceInput)) } OLSKLocalized={ OLSKLocalized } />
 			{/each}
 
 			{#if mod._ValueSyntaxError}
