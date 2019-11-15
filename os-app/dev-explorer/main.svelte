@@ -16,14 +16,14 @@ const mod = {
 
 	// MESSAGE
 
-	MSTEditorDispatchValueChangedRaw (event) {
-		MSTExplorerRaw = event.detail;
+	MSTEditorDispatchValueDidChangeRaw (inputData) {
+		MSTExplorerRaw = inputData;
 
 		mod.ReactOutput();
 	},
 
-	MSTEditorDispatchValueChangedMassage (event) {
-		MSTExplorerMassage = event.detail;
+	MSTEditorDispatchValueDidChangeMassage (inputData) {
+		MSTExplorerMassage = inputData;
 
 		mod.ReactOutput();
 	},
@@ -86,7 +86,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 				extraKeys: {
 					Tab: false,
 				},
-			} } MSTEditorInitialValue={ MSTExplorerRaw } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedRaw } />
+			} } MSTEditorInitialValue={ MSTExplorerRaw } MSTEditorDispatchValueDidChange={ mod.MSTEditorDispatchValueDidChangeRaw } />
 		</div>
 
 		<div class="MSTExplorerTrace">
@@ -108,7 +108,7 @@ import MSTExplorerTraceItem from './submodules/MSTExplorerTraceItem/main.svelte'
 				Tab: false,
 				'Shift-Tab': false,
 			},
-		} } MSTEditorInitialValue={ MSTExplorerMassage } on:MSTEditorDispatchValueChanged={ mod.MSTEditorDispatchValueChangedMassage } />
+		} } MSTEditorInitialValue={ MSTExplorerMassage } MSTEditorDispatchValueDidChange={ mod.MSTEditorDispatchValueDidChangeMassage } />
 	</div>
 </div>
 

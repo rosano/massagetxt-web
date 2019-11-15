@@ -1,6 +1,7 @@
 <script>
 export let MSTEditorInitialValue = '';
 export let MSTEditorOptions = {};
+export let MSTEditorDispatchValueDidChange = null;
 
 export const MSTEditorSetDocument = function (inputData) {
 	mod._ValueCodeMirrorInstance.setValue(inputData);
@@ -13,18 +14,15 @@ export let EditorConfigure = function (e) {
 };
 
 import { OLSK_TESTING_BEHAVIOUR } from 'OLSKTesting'
-import { createEventDispatcher } from 'svelte';
 
 const mod = {
-
-	// MESSAGE
-
-	MessageDispatch: createEventDispatcher(),
 
 	// INTERFACE
 
 	InterfaceInputDebugDidInput (event) {
-		mod.MessageDispatch('MSTEditorDispatchValueChanged', this.value);
+		if (MSTEditorDispatchValueDidChange) {
+			MSTEditorDispatchValueDidChange(this.value);
+		}
 	},
 
 	// VALUE
@@ -59,7 +57,9 @@ const mod = {
 				return;
 			}
 
-			mod.MessageDispatch('MSTEditorDispatchValueChanged', instance.getValue());
+			if (MSTEditorDispatchValueDidChange) {
+				MSTEditorDispatchValueDidChange(instance.getValue());
+			}
 		});
 
 		mod._ValueCodeMirrorInstance.focus();

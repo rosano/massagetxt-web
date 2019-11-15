@@ -3,21 +3,21 @@ import Module from './main.svelte';
 
 const mod = {
 
-	TestMSTEditorDispatchValueChanged (inputData) {
-		window.TestMSTEditorDispatchValueChanged.innerHTML = parseInt(window.TestMSTEditorDispatchValueChanged.innerHTML) + 1;	
-		window.TestMSTEditorDispatchValueChangedValue.innerHTML = inputData.detail;
+	TestMSTEditorDispatchValueDidChange (inputData) {
+		window.TestMSTEditorDispatchValueDidChange.innerHTML = parseInt(window.TestMSTEditorDispatchValueDidChange.innerHTML) + 1;	
+		window.TestMSTEditorDispatchValueDidChangeValue.innerHTML = inputData.detail;
 	},
 
 };
 </script>
 
 <Module
-	on:MSTEditorDispatchValueChanged={ mod.TestMSTEditorDispatchValueChanged }
+	on:MSTEditorDispatchValueDidChange={ mod.TestMSTEditorDispatchValueDidChange }
 	{...Object.fromEntries((new window.URLSearchParams(window.location.search)).entries())}
 	/>
 
 <p>
-	<strong>MSTEditorDispatchValueChanged</strong>
-	<span id="TestMSTEditorDispatchValueChanged">0</span>
-	<span id="TestMSTEditorDispatchValueChangedValue">undefined</span>
+	<strong>MSTEditorDispatchValueDidChange</strong>
+	<span id="TestMSTEditorDispatchValueDidChange">0</span>
+	<span id="TestMSTEditorDispatchValueDidChangeValue">undefined</span>
 </p>
