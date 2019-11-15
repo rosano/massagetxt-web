@@ -1,0 +1,42 @@
+<%
+locals.OLSKPageTitle = OLSKLocalized('MSWVitrineTitle');
+locals.OLSKPageDescription = OLSKLocalized('MSWVitrineDescription');
+locals.OLSKPageAssets = [
+	'/_shared/__external/normalize.css/normalize.css',
+	'/_shared/__external/OLSKLayout/ui-style.css',
+	'/_shared/common/ui-style.css',
+	'ui-style.css',
+	'__compiled/ui-behaviour.js',
+];
+locals.OLSKPageUseLivereload = process.env.NODE_ENV === 'development';
+locals.OLSKPagePublicConstants = {
+	OLSKSharedPageCurrentLanguage: OLSKSharedPageCurrentLanguage,
+};
+%>
+
+<%- include('../_shared/common/layout-header.ejs') %>
+
+<div class="MSWVitrine OLSKCommon">
+
+<%- include('../_shared/RCSLanguageSwitcher/main.ejs') %>
+
+<hr>
+
+<div class="MSWVitrineIdentity">
+	<img class="MSWVitrineIdentityLogo" src="/_shared/MSWRootLink/ui-assets/logo.svg" role="image" />
+	<h1 class="MSWVitrineIdentityName"><%= OLSKLocalized('MSWVitrineTitle') %></h1>
+</div>
+
+<article class="MSWVitrineContent">
+
+<%- OLSKStringReplaceTokens(MSWVitrineContent, {}) %>
+
+</article>
+
+<hr />
+
+<%- include('../_shared/ROCORootLink/main.ejs') %>
+
+</div>
+
+<%- include('../_shared/common/layout-footer.ejs') %>

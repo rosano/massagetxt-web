@@ -21,6 +21,10 @@
     "// FRONDEND EDITOR": null,
     "codemirror": "rosano/CodeMirror#add-distribution",
 
+    "// FRONTEND TEXT": null,
+    "marked": "latest",
+    "OLSKString": "olsk/OLSKString",
+
     "// MASSAGE": null,
     "MassageTXT": "massagetxt/mst-lib",
 
