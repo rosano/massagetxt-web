@@ -39,7 +39,7 @@ const mod = {
 	ReactOutput () {
 		const item = [];
 
-		mod._ValueOutput = MSWPromptMassage[0] !== '$' ? MSWPromptRaw : MassageTXT.MSTMassage(MSWPromptRaw, MSWPromptMassage, {
+		mod._ValueOutput = MSWPromptMassage[0] !== '$' ? MSWPromptRaw : MassageTXT.MSTMassage(MSWPromptRaw, MSWPromptMassage.replace(/\\n/g, '\n'), {
 			MSTOptionTrace (inputData) {
 				item.push(inputData);
 			},
