@@ -3,7 +3,7 @@ const mod = {
 	// SETUP
 
 	SetupEverything() {
-		let app = new Main({
+		const app = new Main({
 			target: document.getElementById('MSWPromptTarget'),
 			props: Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()),
 		});
