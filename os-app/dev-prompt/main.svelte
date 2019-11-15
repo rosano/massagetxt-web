@@ -6,7 +6,7 @@ export let MSWPromptOptions = {};
 let _OLSKLocalizedMap = JSON.parse(`{"OLSK_I18N_SEARCH_REPLACE":"OLSK_I18N_SEARCH_REPLACE"}`);
 import OLSKInternational from 'OLSKInternational';
 export const OLSKLocalized = function(inputData) {
-	return OLSKInternational.OLSKInternationalLocalizedString(inputData, _OLSKLocalizedMap[MSWPromptOptions.MSTOptionLanguage || 'en']);
+	return OLSKInternational.OLSKInternationalLocalizedString(inputData, _OLSKLocalizedMap[MSWPromptOptions.MSWOptionLanguage || 'en']);
 };
 
 import MassageTXT from 'MassageTXT';
@@ -71,7 +71,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 <div class="MSWPrompt">
 
 <div class="MSWPromptToolbar">
-	<a class="MSWPromptPermalink" href={ `${ window.location.pathname }?MSWPromptRaw=${ MSWPromptLogic.MSTPermalinkEncode(MSWPromptRaw) }&MSWPromptMassage=${ MSWPromptLogic.MSTPermalinkEncode(MSWPromptMassage) }` }>{ OLSKLocalized('MSWPromptPermalinkText') }</a>
+	<a class="MSWPromptPermalink" href={ `${ window.location.pathname }?MSWPromptRaw=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptRaw) }&MSWPromptMassage=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptMassage) }` }>{ OLSKLocalized('MSWPromptPermalinkText') }</a>
 </div>
 
 <div class="MSWPromptWorkspace">
@@ -91,7 +91,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 
 		<div class="MSWPromptTrace">
 			{#each mod._ValueTraceObjects as item}
-				<MSWPromptTraceItem MSWPromptTraceItemOperation={ item.MSTTraceOperation } MSWPromptTraceItemInputContent={ MSWPromptLogic.MSTStringify(item.MSTTraceInput) } OLSKLocalized={ OLSKLocalized } />
+				<MSWPromptTraceItem MSWPromptTraceItemOperation={ item.MSTTraceOperation } MSWPromptTraceItemInputContent={ MSWPromptLogic.MSWStringify(item.MSTTraceInput) } OLSKLocalized={ OLSKLocalized } />
 			{/each}
 		</div>
 

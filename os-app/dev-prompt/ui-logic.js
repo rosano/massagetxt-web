@@ -1,8 +1,8 @@
 const mod = {
 	
-	MSTPermalinkEncode (inputData) {
+	MSWPermalinkEncode (inputData) {
 		if (typeof inputData !== 'string') {
-			throw new Error('MSTErrorInputNotValid');
+			throw new Error('MSWErrorInputNotValid');
 		}
 
 		return encodeURIComponent(inputData).split('').reduce(function (coll, item) {
@@ -11,7 +11,7 @@ const mod = {
 
 	},
 	
-	MSTStringify (inputData) {
+	MSWStringify (inputData) {
 		if (typeof inputData === 'string') {
 			return inputData;
 		}
