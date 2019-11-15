@@ -1,9 +1,9 @@
 <script>
-export let MSTEditorInitialValue = '';
-export let MSTEditorOptions = {};
-export let MSTEditorDispatchValueDidChange = null;
+export let MSWEditorInitialValue = '';
+export let MSWEditorOptions = {};
+export let MSWEditorDispatchValueDidChange = null;
 
-export const MSTEditorSetDocument = function (inputData) {
+export const MSWEditorSetDocument = function (inputData) {
 	mod._ValueCodeMirrorInstance.setValue(inputData);
 	mod._ValueCodeMirrorInstance.getDoc().clearHistory();
 };
@@ -20,8 +20,8 @@ const mod = {
 	// INTERFACE
 
 	InterfaceInputDebugDidInput (event) {
-		if (MSTEditorDispatchValueDidChange) {
-			MSTEditorDispatchValueDidChange(this.value);
+		if (MSWEditorDispatchValueDidChange) {
+			MSWEditorDispatchValueDidChange(this.value);
 		}
 	},
 
@@ -48,17 +48,17 @@ const mod = {
 	},
 
 	SetupCodeMirrorInstance() {
-		mod._ValueCodeMirrorInstance = CodeMirror.fromTextArea(mod._ModuleInstanceElement, MSTEditorOptions);
+		mod._ValueCodeMirrorInstance = CodeMirror.fromTextArea(mod._ModuleInstanceElement, MSWEditorOptions);
 
-		mod._ValueCodeMirrorInstance.setValue(MSTEditorInitialValue);
+		mod._ValueCodeMirrorInstance.setValue(MSWEditorInitialValue);
 
 		mod._ValueCodeMirrorInstance.on('change', function (instance, changeObject) {
 			if (changeObject.origin === 'setValue') {
 				return;
 			}
 
-			if (MSTEditorDispatchValueDidChange) {
-				MSTEditorDispatchValueDidChange(instance.getValue());
+			if (MSWEditorDispatchValueDidChange) {
+				MSWEditorDispatchValueDidChange(instance.getValue());
 			}
 		});
 
@@ -77,12 +77,12 @@ import { onMount } from 'svelte';
 onMount(mod.LifecycleComponentDidMount);
 </script>
 
-<div class="MSTEditor">
+<div class="MSWEditor">
 
 {#if OLSK_TESTING_BEHAVIOUR()}
-	<textarea class="MSTEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput } value={ MSTEditorInitialValue }></textarea>
+	<textarea class="MSWEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput } value={ MSWEditorInitialValue }></textarea>
 {/if}
 
-<textarea class="MSTEditorField" bind:this={ mod._ModuleInstanceElement }></textarea>
+<textarea class="MSWEditorField" bind:this={ mod._ModuleInstanceElement }></textarea>
 
 </div>

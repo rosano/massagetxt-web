@@ -16,13 +16,13 @@ const mod = {
 
 	// MESSAGE
 
-	MSTEditorDispatchValueDidChangeRaw (inputData) {
+	MSWEditorDispatchValueDidChangeRaw (inputData) {
 		MSWPromptRaw = inputData;
 
 		mod.ReactOutput();
 	},
 
-	MSTEditorDispatchValueDidChangeMassage (inputData) {
+	MSWEditorDispatchValueDidChangeMassage (inputData) {
 		MSWPromptMassage = inputData;
 
 		mod.ReactOutput();
@@ -64,7 +64,7 @@ const mod = {
 
 mod.LifecycleModuleWillMount();
 
-import MSTEditor from './submodules/MSTEditor/main.svelte';
+import MSWEditor from './submodules/MSWEditor/main.svelte';
 import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 </script>
 
@@ -77,7 +77,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 <div class="MSWPromptWorkspace">
 	<div class="MSWPromptConvert">
 		<div class="MSWPromptRaw">
-			<MSTEditor MSTEditorOptions={ {
+			<MSWEditor MSWEditorOptions={ {
 				lineNumbers: true,
 				lineWrapping: true,
 
@@ -86,7 +86,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 				extraKeys: {
 					Tab: false,
 				},
-			} } MSTEditorInitialValue={ MSWPromptRaw } MSTEditorDispatchValueDidChange={ mod.MSTEditorDispatchValueDidChangeRaw } />
+			} } MSWEditorInitialValue={ MSWPromptRaw } MSWEditorDispatchValueDidChange={ mod.MSWEditorDispatchValueDidChangeRaw } />
 		</div>
 
 		<div class="MSWPromptTrace">
@@ -99,7 +99,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 	</div>
 
 	<div class="MSWPromptMassage">
-		<MSTEditor MSTEditorOptions={ {
+		<MSWEditor MSWEditorOptions={ {
 			lineWrapping: true,
 
 			keyMap: 'sublime',
@@ -108,7 +108,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 				Tab: false,
 				'Shift-Tab': false,
 			},
-		} } MSTEditorInitialValue={ MSWPromptMassage } MSTEditorDispatchValueDidChange={ mod.MSTEditorDispatchValueDidChangeMassage } />
+		} } MSWEditorInitialValue={ MSWPromptMassage } MSWEditorDispatchValueDidChange={ mod.MSWEditorDispatchValueDidChangeMassage } />
 	</div>
 </div>
 

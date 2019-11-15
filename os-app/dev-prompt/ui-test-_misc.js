@@ -31,7 +31,7 @@ describe('MSWPromptRaw', function() {
 	});
 
 	it('initializes to MSWPromptRaw', function () {
-		browser.assert.input(`${ MSWPromptRaw } .MSTEditorFieldDebug`, 'alfa')
+		browser.assert.input(`${ MSWPromptRaw } .MSWEditorFieldDebug`, 'alfa')
 	});
 	
 });
@@ -45,7 +45,7 @@ describe('MSWPromptMassage', function() {
 	});
 
 	it('initializes to MSWPromptMassage', function () {
-		browser.assert.input(`${ MSWPromptMassage } .MSTEditorFieldDebug`, '$input')
+		browser.assert.input(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input')
 	});
 	
 });
@@ -74,7 +74,7 @@ describe('MSWPromptTraceItem', function() {
 	context('update MSWPromptMassage', function () {
 
 		before(function () {
-			browser.fill(`${ MSWPromptMassage } .MSTEditorFieldDebug`, '$input.lines');
+			browser.fill(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input.lines');
 		});
 
 		it('updates elements', function () {
@@ -101,7 +101,7 @@ describe('MSWPromptOutput', function() {
 	context('update MSWPromptRaw', function () {
 
 		before(function () {
-			browser.fill(`${ MSWPromptRaw } .MSTEditorFieldDebug`, 'bravo');
+			browser.fill(`${ MSWPromptRaw } .MSWEditorFieldDebug`, 'bravo');
 		});
 		
 		it('sets value', function () {
@@ -113,7 +113,7 @@ describe('MSWPromptOutput', function() {
 	context('update MSWPromptMassage', function () {
 
 		before(function () {
-			browser.fill(`${ MSWPromptMassage } .MSTEditorFieldDebug`, '$input.prepend(alfa )');
+			browser.fill(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input.prepend(alfa )');
 		});
 		
 		it('sets value', function () {

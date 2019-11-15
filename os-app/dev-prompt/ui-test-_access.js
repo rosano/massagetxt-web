@@ -7,8 +7,8 @@ Object.entries({
 	
 	MSWPromptPermalink: '.MSWPromptPermalink',
 
-	MSWPromptRaw: '.MSWPromptRaw .MSTEditor',
-	MSWPromptMassage: '.MSWPromptMassage .MSTEditor',
+	MSWPromptRaw: '.MSWPromptRaw .MSWEditor',
+	MSWPromptMassage: '.MSWPromptMassage .MSWEditor',
 	
 	MSWPromptTrace: '.MSWPromptTrace',	
 	MSWPromptTraceItem: '.MSWPromptTraceItem',
