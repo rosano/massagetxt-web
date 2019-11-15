@@ -20,6 +20,10 @@ describe('MSWPromptPermalink', function() {
 		}));
 	});
 
+	it('sets target', function () {
+		browser.assert.attribute(MSWPromptPermalink, 'target', '_blank');
+	});
+
 });
 	
 describe('MSWPromptRaw', function() {
