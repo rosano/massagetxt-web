@@ -78,7 +78,7 @@ describe('MSWPromptTraceItem', function() {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			MSWPromptRaw: 'alfa',
-			MSWPromptMassage: '$input',
+			MSWPromptMassage: '$input.lines',
 		});
 	});
 
@@ -87,7 +87,7 @@ describe('MSWPromptTraceItem', function() {
 	});
 
 	it('sets MSWPromptTraceItemOperation', function () {
-		browser.assert.text(MSWPromptTraceItemOperation, '$input')
+		browser.assert.text(MSWPromptTraceItemOperation, 'lines')
 	});
 
 	it('sets MSWPromptTraceItemInputContent', function () {
@@ -97,7 +97,7 @@ describe('MSWPromptTraceItem', function() {
 	context('update MSWPromptMassage', function () {
 
 		before(function () {
-			browser.fill(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input.lines');
+			browser.fill(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input.lines.join( )');
 		});
 
 		it('updates elements', function () {

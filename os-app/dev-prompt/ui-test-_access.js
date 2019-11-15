@@ -63,7 +63,7 @@ describe('MSWPrompt_Access', function testMSWPrompt_Access () {
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
 				MSWPromptRaw: 'alfa',
-				MSWPromptMassage: '$input',
+				MSWPromptMassage: '$input.lines',
 			});
 		});
 

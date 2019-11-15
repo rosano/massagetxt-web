@@ -59,7 +59,7 @@ const mod = {
 			mod._ValueSyntaxError = err;
 		}
 
-		mod._ValueTraceObjects = item;
+		mod._ValueTraceObjects = item.slice(1);
 	},
 
 	// SETUP
