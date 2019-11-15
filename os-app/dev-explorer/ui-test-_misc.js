@@ -7,10 +7,10 @@ describe('MSTExplorer_Misc', function () {
 describe('MSTExplorerPermalink', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerRaw: 'alfa bravo',
 			MSTExplorerMassage: '$input.prepend( charlie)',
-		}));
+		});
 	});
 
 	it('sets href', function () {
@@ -25,9 +25,9 @@ describe('MSTExplorerPermalink', function() {
 describe('MSTExplorerRaw', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerRaw: 'alfa',
-		}));
+		});
 	});
 
 	it('initializes to MSTExplorerRaw', function () {
@@ -39,9 +39,9 @@ describe('MSTExplorerRaw', function() {
 describe('MSTExplorerMassage', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerMassage: '$input',
-		}));
+		});
 	});
 
 	it('initializes to MSTExplorerMassage', function () {
@@ -53,10 +53,10 @@ describe('MSTExplorerMassage', function() {
 describe('MSTExplorerTraceItem', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerRaw: 'alfa',
 			MSTExplorerMassage: '$input',
-		}));
+		});
 	});
 
 	it('initializes to result', function () {
@@ -88,10 +88,10 @@ describe('MSTExplorerTraceItem', function() {
 describe('MSTExplorerOutput', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerRaw: 'alfa',
 			MSTExplorerMassage: '$input',
-		}));
+		});
 	});
 
 	it('initializes to result', function () {

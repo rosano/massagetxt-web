@@ -21,7 +21,7 @@ Object.entries({
 describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 
 	before(function() {
-		return browser.visit(kDefaultRoute.OLSKRoutePath);
+		return browser.OLSKVisit(kDefaultRoute);
 	});
 
 	it('shows MSTExplorer', function() {
@@ -55,10 +55,10 @@ describe('MSTExplorer_Access', function testMSTExplorer_Access () {
 	context('input', function () {
 		
 		before(function() {
-			return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+			return browser.OLSKVisit(kDefaultRoute, {
 				MSTExplorerRaw: 'alfa',
 				MSTExplorerMassage: '$input',
-			}));
+			});
 		});
 
 		it('shows MSTExplorerTraceItem', function () {

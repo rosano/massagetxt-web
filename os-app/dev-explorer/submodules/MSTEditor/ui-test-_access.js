@@ -13,7 +13,7 @@ Object.entries({
 describe('MSTEditor_Access', function () {
 
 	before(function() {
-		return browser.visit(kDefaultRoute.OLSKRoutePath);
+		return browser.OLSKVisit(kDefaultRoute);
 	});
 	
 	it('shows MSTEditor', function() {

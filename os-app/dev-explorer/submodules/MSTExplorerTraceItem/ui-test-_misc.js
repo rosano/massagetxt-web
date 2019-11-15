@@ -7,10 +7,10 @@ describe('MSTExplorerTraceItem_Misc', function () {
 describe('MSTExplorerTraceItemOperation', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerTraceItemOperation: 'alfa',
 			MSTExplorerTraceItemInputContent: 'bravo',
-		}));
+		});
 	});
 
 	it('initializes to MSTExplorerTraceItemOperation', function () {
@@ -22,10 +22,10 @@ describe('MSTExplorerTraceItemOperation', function() {
 describe('MSTExplorerTraceItemInputContent', function() {
 	
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerTraceItemOperation: 'alfa',
 			MSTExplorerTraceItemInputContent: 'bravo',
-		}));
+		});
 	});
 
 	it('initializes to MSTExplorerTraceItemInputContent', function () {

@@ -7,7 +7,7 @@ describe('MSTEditor_Misc', function () {
 describe('MSTEditorField', function testMSTEditorField () {
 
 	before(function() {
-		return browser.visit(kDefaultRoute.OLSKRoutePath);
+		return browser.OLSKVisit(kDefaultRoute);
 	});
 
 	before(function () {

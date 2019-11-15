@@ -16,10 +16,10 @@ Object.entries({
 describe('MSTExplorerTraceItem_Access', function () {
 
 	before(function() {
-		return browser.visit(OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		return browser.OLSKVisit(kDefaultRoute, {
 			MSTExplorerTraceItemOperation: 'alfa',
 			MSTExplorerTraceItemInputContent: 'bravo',
-		}));
+		});
 	});
 	
 	it('shows MSTExplorerTraceItem', function() {
