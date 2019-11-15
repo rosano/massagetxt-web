@@ -22,9 +22,11 @@ const mod = {
 
 <div class="MSWPromptTraceItemOperation">{ MSWPromptTraceItemOperation }</div>
 
-<div class="MSWPromptTraceItemInputHeading">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
+<div class="MSWPromptTraceItemInput" class:MSWPromptTraceItemInputTruncated={ mod._ValueInputTruncated }>
+	<div class="MSWPromptTraceItemInputHeading">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
 
-<div class="MSWPromptTraceItemInputContent" class:MSWPromptTraceItemInputContentTruncated={ mod._ValueInputTruncated } on:click={ mod.InterfaceInputContentDidClick }>{ MSWPromptTraceItemInputContent }</div>
+	<div class="MSWPromptTraceItemInputContent" on:click={ mod.InterfaceInputContentDidClick }>{ MSWPromptTraceItemInputContent }</div>
+</div>
 
 </div>
 
@@ -46,5 +48,17 @@ const mod = {
 	text-transform: uppercase;
 	opacity: 0.5;
 	letter-spacing: 3px;
+}
+
+.MSWPromptTraceItemInputTruncated .MSWPromptTraceItemInputContent {
+	max-height: 30px;
+
+	overflow: hidden;
+}
+
+.MSWPromptTraceItemInputTruncated::after { 
+  content: '…';
+
+  opacity: 0.6;
 }
 </style>

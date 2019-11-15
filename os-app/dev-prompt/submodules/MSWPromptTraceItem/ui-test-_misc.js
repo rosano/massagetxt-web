@@ -19,7 +19,7 @@ describe('MSWPromptTraceItemOperation', function() {
 	
 });
 	
-describe('MSWPromptTraceItemInputContent', function() {
+describe('MSWPromptTraceItemInput', function() {
 	
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
@@ -29,35 +29,46 @@ describe('MSWPromptTraceItemInputContent', function() {
 	});
 
 	it('sets class', function () {
-		browser.assert.hasClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+		browser.assert.hasClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
 	});
 
-	it('initializes to MSWPromptTraceItemInputContent', function () {
-		browser.assert.text(MSWPromptTraceItemInputContent, 'bravo')
-	});
-
-	context('click truncated', function () {
+	context('click MSWPromptTraceItemInputContent truncated', function () {
 
 		before(function () {
 			browser.click(MSWPromptTraceItemInputContent);
 		});
 
 		it('removes class', function () {
-			browser.assert.hasNoClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+			browser.assert.hasNoClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
 		});
 	
 	});
 
-	context('click not truncated', function () {
+	context('click MSWPromptTraceItemInputContent truncated', function () {
 
 		before(function () {
 			browser.click(MSWPromptTraceItemInputContent);
 		});
 
 		it('adds class', function () {
-			browser.assert.hasClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+			browser.assert.hasClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
 		});
 	
+	});
+	
+});
+	
+describe('MSWPromptTraceItemInputContent', function() {
+	
+	before(function() {
+		return browser.OLSKVisit(kDefaultRoute, {
+			MSWPromptTraceItemOperation: 'alfa',
+			MSWPromptTraceItemInputContent: 'bravo',
+		});
+	});
+
+	it('initializes to MSWPromptTraceItemInputContent', function () {
+		browser.assert.text(MSWPromptTraceItemInputContent, 'bravo')
 	});
 	
 });

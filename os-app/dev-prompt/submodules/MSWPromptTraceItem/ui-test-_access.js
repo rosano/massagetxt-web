@@ -7,6 +7,7 @@ Object.entries({
 
 	MSWPromptTraceItemOperation: '.MSWPromptTraceItemOperation',
 
+	MSWPromptTraceItemInput: '.MSWPromptTraceItemInput',
 	MSWPromptTraceItemInputHeading: '.MSWPromptTraceItemInputHeading',
 	MSWPromptTraceItemInputContent: '.MSWPromptTraceItemInputContent',
 }).map(function (e) {
@@ -28,6 +29,10 @@ describe('MSWPromptTraceItem_Access', function () {
 	
 	it('shows MSWPromptTraceItemOperation', function() {
 		browser.assert.elements(MSWPromptTraceItemOperation, 1);
+	});
+	
+	it('shows MSWPromptTraceItemInput', function() {
+		browser.assert.elements(MSWPromptTraceItemInput, 1);
 	});
 	
 	it('shows MSWPromptTraceItemInputHeading', function() {
