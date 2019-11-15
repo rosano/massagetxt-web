@@ -2,6 +2,20 @@
 export let MSWPromptTraceItemOperation;
 export let MSWPromptTraceItemInputContent;
 export let OLSKLocalized;
+
+const mod = {
+
+	// VALUE
+
+	_ValueInputTruncated: true,
+
+	// INTERFACE
+
+	InterfaceInputContentDidClick () {
+		mod._ValueInputTruncated = !mod._ValueInputTruncated;
+	}
+
+};
 </script>
 
 <div class="MSWPromptTraceItem">
@@ -10,7 +24,7 @@ export let OLSKLocalized;
 
 <div class="MSWPromptTraceItemInputHeading">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
 
-<div class="MSWPromptTraceItemInputContent">{ MSWPromptTraceItemInputContent }</div>
+<div class="MSWPromptTraceItemInputContent" class:MSWPromptTraceItemInputContentTruncated={ mod._ValueInputTruncated } on:click={ mod.InterfaceInputContentDidClick }>{ MSWPromptTraceItemInputContent }</div>
 
 </div>
 

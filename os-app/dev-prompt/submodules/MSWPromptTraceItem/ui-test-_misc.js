@@ -28,8 +28,36 @@ describe('MSWPromptTraceItemInputContent', function() {
 		});
 	});
 
+	it('sets class', function () {
+		browser.assert.hasClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+	});
+
 	it('initializes to MSWPromptTraceItemInputContent', function () {
 		browser.assert.text(MSWPromptTraceItemInputContent, 'bravo')
+	});
+
+	context('click truncated', function () {
+
+		before(function () {
+			browser.click(MSWPromptTraceItemInputContent);
+		});
+
+		it('removes class', function () {
+			browser.assert.hasNoClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+		});
+	
+	});
+
+	context('click not truncated', function () {
+
+		before(function () {
+			browser.click(MSWPromptTraceItemInputContent);
+		});
+
+		it('adds class', function () {
+			browser.assert.hasClass(MSWPromptTraceItemInputContent, 'MSWPromptTraceItemInputContentTruncated');
+		});
+	
 	});
 	
 });
