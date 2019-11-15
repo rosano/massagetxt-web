@@ -58,6 +58,21 @@ describe('MSWPromptTraceItemInput', function() {
 	
 });
 	
+describe('MSWPromptTraceItemInputHeading', function() {
+	
+	before(function() {
+		return browser.OLSKVisit(kDefaultRoute, {
+			MSWPromptTraceItemOperation: 'alfa',
+			MSWPromptTraceItemInputContent: 'bravo',
+		});
+	});
+
+	it('sets class', function () {
+		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKLayoutElementTappable')
+	});
+	
+});
+	
 describe('MSWPromptTraceItemInputContent', function() {
 	
 	before(function() {
