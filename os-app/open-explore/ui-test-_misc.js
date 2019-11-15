@@ -8,12 +8,4 @@ describe('MSWExplore_Misc', function () {
 		return browser.visit(kDefaultRoute.OLSKRoutePath)
 	});
 
-	context('MSWExplore', function () {
-		
-		it('sets class', function () {
-			browser.assert.hasClass(MSWExplore, 'OLSKCommon')
-		});
-	
-	});
-
 });

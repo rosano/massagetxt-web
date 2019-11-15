@@ -18,4 +18,8 @@ describe('MSWExplore_Access', function () {
 		browser.assert.elements(MSWExplore, 1)
 	});
 	
+	it('shows MSWPrompt', function() {
+		browser.assert.elements('.MSWPrompt', 1)
+	});
+	
 });
