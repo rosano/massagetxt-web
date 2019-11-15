@@ -11,7 +11,7 @@ const mod = {
 
 	// INTERFACE
 
-	InterfaceInputContentDidClick () {
+	InterfaceInputDidClick () {
 		mod._ValueInputTruncated = !mod._ValueInputTruncated;
 	}
 
@@ -22,10 +22,10 @@ const mod = {
 
 <div class="MSWPromptTraceItemOperation">{ MSWPromptTraceItemOperation }</div>
 
-<div class="MSWPromptTraceItemInput" class:MSWPromptTraceItemInputTruncated={ mod._ValueInputTruncated }>
-	<div class="MSWPromptTraceItemInputHeading">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
+<div class="MSWPromptTraceItemInput" class:MSWPromptTraceItemInputTruncated={ mod._ValueInputTruncated } on:click={ mod.InterfaceInputDidClick }>
+	<div class="MSWPromptTraceItemInputHeading OLSKLayoutElementTappable">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
 
-	<div class="MSWPromptTraceItemInputContent" on:click={ mod.InterfaceInputContentDidClick }>{ MSWPromptTraceItemInputContent }</div>
+	<div class="MSWPromptTraceItemInputContent">{ MSWPromptTraceItemInputContent }</div>
 </div>
 
 </div>

@@ -32,10 +32,10 @@ describe('MSWPromptTraceItemInput', function() {
 		browser.assert.hasClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
 	});
 
-	context('click MSWPromptTraceItemInputContent truncated', function () {
+	context('click MSWPromptTraceItemInput truncated', function () {
 
 		before(function () {
-			browser.click(MSWPromptTraceItemInputContent);
+			browser.click(MSWPromptTraceItemInput);
 		});
 
 		it('removes class', function () {
@@ -44,10 +44,10 @@ describe('MSWPromptTraceItemInput', function() {
 	
 	});
 
-	context('click MSWPromptTraceItemInputContent truncated', function () {
+	context('click MSWPromptTraceItemInput truncated', function () {
 
 		before(function () {
-			browser.click(MSWPromptTraceItemInputContent);
+			browser.click(MSWPromptTraceItemInput);
 		});
 
 		it('adds class', function () {
