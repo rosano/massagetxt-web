@@ -12,6 +12,10 @@ export const OLSKLocalized = function(inputData) {
 import MassageTXT from 'MassageTXT';
 import MSWPromptLogic from './ui-logic.js';
 
+import unifiedPackage from 'unified';
+import remarkParsePackage from 'remark-parse';
+const uParser = unifiedPackage().use(remarkParsePackage).parse;
+
 const mod = {
 
 	// MESSAGE
@@ -42,6 +46,7 @@ const mod = {
 
 		try {
 			mod._ValueOutput = MSWPromptMassage[0] !== '$' ? MSWPromptRaw : MassageTXT.MSTMassage(MSWPromptRaw, MSWPromptMassage.replace(/\\n/g, '\n'), {
+				MSTOptionMarkdownParser: uParser,
 				MSTOptionTrace (index, key, value) {
 					if (!item[index]) {
 						item[index] = {}
