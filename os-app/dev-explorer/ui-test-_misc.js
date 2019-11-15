@@ -14,7 +14,7 @@ describe('MSTExplorerPermalink', function() {
 	});
 
 	it('sets href', function () {
-		browser.assert.attribute(MSTExplorerPermalink, 'href', OLSKTestingCanonicalFor(kDefaultRoute.OLSKRoutePath, {
+		browser.assert.attribute(MSTExplorerPermalink, 'href', OLSKTestingCanonical(kDefaultRoute, {
 			MSTExplorerRaw: require('./ui-logic.js').MSTPermalinkEncode('alfa bravo'),
 			MSTExplorerMassage: require('./ui-logic.js').MSTPermalinkEncode('$input.prepend( charlie)'),
 		}));
