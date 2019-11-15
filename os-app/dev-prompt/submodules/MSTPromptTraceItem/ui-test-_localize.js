@@ -8,18 +8,18 @@ const uLocalized = function (inputData) {
 	return OLSKTestingLocalized(inputData, languageCode);
 };
 
-describe(`MSTExplorer_Localize-${ languageCode }`, function () {
+describe(`MSWPrompt_Localize-${ languageCode }`, function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKRoutingLanguage: languageCode,
-			MSTExplorerTraceItemOperation: 'alfa',
-			MSTExplorerTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemOperation: 'alfa',
+			MSWPromptTraceItemInputContent: 'bravo',
 		});
 	});
 
-	it('localizes MSTExplorerTraceItemInputHeading', function () {
-		browser.assert.text(MSTExplorerTraceItemInputHeading, uLocalized('MSTExplorerTraceItemInputHeadingText'))
+	it('localizes MSWPromptTraceItemInputHeading', function () {
+		browser.assert.text(MSWPromptTraceItemInputHeading, uLocalized('MSWPromptTraceItemInputHeadingText'))
 	});
 
 });

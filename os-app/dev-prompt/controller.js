@@ -1,8 +1,8 @@
 exports.OLSKControllerRoutes = function() {
 	return [{
-		OLSKRoutePath: '/explorer',
+		OLSKRoutePath: '/prompt',
 		OLSKRouteMethod: 'get',
-		OLSKRouteSignature: 'MSTExplorerRoute',
+		OLSKRouteSignature: 'MSWPromptRoute',
 		OLSKRouteFunction: function(req, res, next) {
 			return res.render(require('path').join(__dirname, 'ui-view'), {});
 		},

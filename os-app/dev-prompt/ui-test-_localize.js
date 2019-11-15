@@ -8,7 +8,7 @@ const uLocalized = function (inputData) {
 	return OLSKTestingLocalized(inputData, languageCode);
 };
 
-describe(`MSTExplorer_Localize-${ languageCode }`, function () {
+describe(`MSWPrompt_Localize-${ languageCode }`, function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
@@ -16,8 +16,8 @@ describe(`MSTExplorer_Localize-${ languageCode }`, function () {
 		});
 	});
 
-	it('localizes MSTExplorerPermalink', function () {
-		browser.assert.text(MSTExplorerPermalink, uLocalized('MSTExplorerPermalinkText'))
+	it('localizes MSWPromptPermalink', function () {
+		browser.assert.text(MSWPromptPermalink, uLocalized('MSWPromptPermalinkText'))
 	});
 
 });

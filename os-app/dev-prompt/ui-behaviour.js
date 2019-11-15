@@ -4,7 +4,7 @@ const mod = {
 
 	SetupEverything() {
 		let app = new Main({
-			target: document.getElementById('MSTExplorerTarget'),
+			target: document.getElementById('MSWPromptTarget'),
 			props: Object.fromEntries((new window.URLSearchParams(window.location.search)).entries()),
 		});
 	},
@@ -16,4 +16,4 @@ const mod = {
 	},
 };
 
-window.MSTExplorerBehaviour = mod
+window.MSWPromptBehaviour = mod

@@ -1,0 +1,127 @@
+:root {
+	--MSWPromptFontSize: 10pt;
+	--MSWPromptPadding: 10px;
+}
+
+.MSWPrompt {
+	height: 100vh;
+
+	font-family: 'Helvetica Neue', 'Helvetica', sans;
+	font-size: var(--MSWPromptFontSize);
+
+	/* MSWPromptFlexbox:Parent */
+	display: flex;
+	flex-direction: column;
+}
+
+.MSWPromptToolbar {
+	padding: var(--MSWPromptPadding);
+
+	background: rgba(0, 0, 0, 6%);
+
+	/* MSWPromptToolbar:Parent */
+	display: flex;
+	justify-content: flex-end;
+}
+
+.MSWPromptWorkspace {
+	/* MSWPromptFlexbox:Child */
+	flex-grow: 1;
+
+	/* MSWPromptWorkspaceFlexbox:Parent */
+	display: flex;
+	flex-direction: column;
+}
+
+.MSWPromptConvert {
+	/* MSWPromptWorkspaceFlexbox:Child */
+	flex-grow: 1;
+
+	/* MSWPromptConvertFlexbox:Parent */
+	display: flex;
+}
+
+.MSWPromptConvert > * {
+	/* MSWPromptConvertFlexbox:Child */
+	flex-basis: 40%;
+}
+
+.MSWPromptRaw {
+	/* MSWPromptRawStation:Parent */
+	position: relative;
+}
+
+.MSWPromptRaw :global(.CodeMirror) {
+	font-size: var(--MSWPromptFontSize);
+	
+	/* MSWPromptRawStation:Child */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	/* override defaults */
+	height: 100%;
+}
+
+.MSWPromptTrace {
+	padding: var(--MSWPromptPadding);
+
+	background: rgba(0, 0, 0, 2%);
+
+	/* MSWPromptConvertFlexbox:Child */
+	flex-basis: 20% !important;
+
+	/* cap width */
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
+.MSWPromptOutput {
+	margin: 0;
+	padding: var(--MSWPromptPadding);
+
+	background: rgba(0, 0, 0, 4%);
+
+	/* cap width */
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
+.MSWPromptMassage {
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+
+	/* MSWPromptWorkspaceFlexbox:Child */
+	min-height: 80px;
+
+	/* MSWPromptMassageStation:Parent */
+	position: relative;
+}
+
+.MSWPromptMassage :global(.CodeMirror) {
+	font-size: var(--MSWPromptFontSize);
+
+	/* MSWPromptMassageStation:Child */
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+
+	/* override defaults */
+	height: 100%;
+}
+
+.MSWPromptMassage :global(.CodeMirror-scroll) {
+}
+
+.MSWPromptMassage :global(.CodeMirror-lines) {
+	/* override defaults */
+	padding: var(--MSWPromptPadding);
+}
+
+.MSWPromptMassage :global(.CodeMirror pre) {
+	/* override defaults */
+	padding: 0;
+}
