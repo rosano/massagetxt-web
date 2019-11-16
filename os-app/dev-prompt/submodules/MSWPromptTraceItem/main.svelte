@@ -12,14 +12,14 @@ import MSWPromptTraceValue from '../MSWPromptTraceValue/main.svelte';
 <div class="MSWPromptTraceItemOperation">{ MSWPromptTraceItemOperation }</div>
 
 <div class="MSWPromptTraceItemInput">
-	<div class="MSWPromptTraceItemInputHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
+	<h2 class="MSWPromptTraceItemInputHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</h2>
 
 	<MSWPromptTraceValue MSWPromptTraceValueContent={ MSWPromptTraceItemInput } />
 </div>
 
 {#if MSWPromptTraceItemArguments.length }
 	<div class="MSWPromptTraceItemArguments">
-		<div class="MSWPromptTraceItemArgumentsHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</div>
+		<h2 class="MSWPromptTraceItemArgumentsHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</h2>
 
 		{#each MSWPromptTraceItemArguments as item}
 			<MSWPromptTraceValue MSWPromptTraceValueContent={ item } />
@@ -41,11 +41,14 @@ import MSWPromptTraceValue from '../MSWPromptTraceValue/main.svelte';
 	font-weight: bold;
 }
 
-.MSWPromptTraceItemInputHeading {
+h2 {
+	margin: 10px 0 0 0;
 	margin-top: 10px;
 
+	font-size: 100%;
+	font-weight: normal;
+	letter-spacing: 3px;
 	text-transform: uppercase;
 	opacity: 0.5;
-	letter-spacing: 3px;
 }
 </style>
