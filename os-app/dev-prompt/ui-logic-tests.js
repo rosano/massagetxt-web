@@ -46,8 +46,12 @@ describe('MSWVisualString', function testMSWVisualString() {
 		deepEqual(mainModule.MSWVisualString([]), [])
 	});
 
+	it('surrounds with quotes', function () {
+		deepEqual(mainModule.MSWVisualString('alfa'), `'alfa'`)
+	});
+
 	it('replaces line breaks', function () {
-		deepEqual(mainModule.MSWVisualString('alfa\nbravo'), 'alfa\\nbravo')
+		deepEqual(mainModule.MSWVisualString('alfa\nbravo'), `'alfa\\nbravo'`)
 	});
 
 });

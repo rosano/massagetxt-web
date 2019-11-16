@@ -25,7 +25,7 @@ const mod = {
 			return inputData;
 		}
 
-		return inputData.split('\n').join('\\n');
+		return `'${ inputData.split('\n').join('\\n') }'`;
 
 	},
 
