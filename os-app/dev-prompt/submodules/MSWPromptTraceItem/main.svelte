@@ -1,6 +1,7 @@
 <script>
 export let MSWPromptTraceItemOperation;
 export let MSWPromptTraceItemInputContent;
+export let MSWPromptTraceItemArguments = [];
 export let OLSKLocalized;
 
 const mod = {
@@ -27,6 +28,14 @@ const mod = {
 
 	<div class="MSWPromptTraceItemInputContent">{ MSWPromptTraceItemInputContent }</div>
 </div>
+
+{#if MSWPromptTraceItemArguments.length }
+	<div class="MSWPromptTraceItemArguments">
+		<div class="MSWPromptTraceItemArgumentsHeading">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</div>
+
+		<div class="MSWPromptTraceItemArgumentsContent">{ MSWPromptTraceItemArguments }</div>
+	</div>
+{/if}
 
 </div>
 

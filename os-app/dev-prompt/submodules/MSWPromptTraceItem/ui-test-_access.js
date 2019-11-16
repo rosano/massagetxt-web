@@ -10,6 +10,10 @@ Object.entries({
 	MSWPromptTraceItemInput: '.MSWPromptTraceItemInput',
 	MSWPromptTraceItemInputHeading: '.MSWPromptTraceItemInputHeading',
 	MSWPromptTraceItemInputContent: '.MSWPromptTraceItemInputContent',
+
+	MSWPromptTraceItemArguments: '.MSWPromptTraceItemArguments',
+	MSWPromptTraceItemArgumentsHeading: '.MSWPromptTraceItemArgumentsHeading',
+	MSWPromptTraceItemArgumentsContent: '.MSWPromptTraceItemArgumentsContent',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -41,6 +45,34 @@ describe('MSWPromptTraceItem_Access', function () {
 	
 	it('shows MSWPromptTraceItemInputContent', function() {
 		browser.assert.elements(MSWPromptTraceItemInputContent, 1);
+	});
+
+	it('hides MSWPromptTraceItemArguments', function () {
+		browser.assert.elements(MSWPromptTraceItemArguments, 0);
+	});
+
+	context('MSWPromptTraceItemArguments', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				MSWPromptTraceItemOperation: 'alfa',
+				MSWPromptTraceItemInputContent: 'bravo',
+				MSWPromptTraceItemArguments: JSON.stringify(['charlie', 'delta']),
+			});
+		});
+		
+		it('shows MSWPromptTraceItemArguments', function () {
+			browser.assert.elements(MSWPromptTraceItemArguments, 1);
+		});
+
+		it('shows MSWPromptTraceItemArgumentsHeading', function () {
+			browser.assert.elements(MSWPromptTraceItemArgumentsHeading, 1);
+		});
+
+		it('shows MSWPromptTraceItemArgumentsContent', function () {
+			browser.assert.elements(MSWPromptTraceItemArgumentsContent, 1);
+		});
+	
 	});
 	
 });

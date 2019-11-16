@@ -22,6 +22,22 @@ describe(`MSWPrompt_Localize-${ languageCode }`, function () {
 		browser.assert.text(MSWPromptTraceItemInputHeading, uLocalized('MSWPromptTraceItemInputHeadingText'))
 	});
 
+	context('MSWPromptTraceItemArguments', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				MSWPromptTraceItemOperation: 'alfa',
+				MSWPromptTraceItemInputContent: 'bravo',
+				MSWPromptTraceItemArguments: JSON.stringify(['charlie', 'delta']),
+			});
+		});
+		
+		it('localizes MSWPromptTraceItemArgumentsHeading', function () {
+			browser.assert.text(MSWPromptTraceItemArgumentsHeading, uLocalized('MSWPromptTraceItemArgumentsHeadingText'))
+		});
+	
+	});
+
 });
 
 });
