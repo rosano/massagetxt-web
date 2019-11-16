@@ -31,7 +31,10 @@ locals.OLSKPagePublicConstants = {
 
 <div class="MSWExploreFooter OLSKToolbar">
 	<%- include('../_shared/MSWRootLink/main.ejs') %>
-	<div class="OLSKToolbarElementGroup"></div>
+	
+	<div class="OLSKToolbarElementGroup">
+		<a class="MSWExploreGuideLink" href="<%= OLSKCanonicalFor('MSWGuideRoute') %>" target="_blank"><%= OLSKLocalized('MSWExploreGuideLinkText') %></a>	
+	</div>
 </div>
 
 </div>

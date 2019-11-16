@@ -24,6 +24,10 @@ describe(`MSWExplore_Localize-${ languageCode }`, function () {
 		browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWExploreDescription'))
 	});
 
+	it('localizes MSWExploreGuideLink', function () {
+		browser.assert.text(MSWExploreGuideLink, uLocalized('MSWExploreGuideLinkText'));
+	});
+
 });
 
 });
