@@ -36,8 +36,8 @@
 
 @media screen and (max-width: 760px) {
 
-.OLSKToolbar {
-	min-height: 52px;
+.MSWExploreFooter {
+	display: none;
 }
 
 }
