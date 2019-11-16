@@ -106,6 +106,21 @@ describe('MSWPromptTraceItem', function() {
 	
 	});
 
+	context('arguments', function () {
+		
+		before(function() {
+			return browser.OLSKVisit(kDefaultRoute, {
+				MSWPromptRaw: 'alfa',
+				MSWPromptMassage: '$input.lines.prepend(bravo)',
+			});
+		});
+
+		it('sets MSWPromptTraceItemArgumentsValue', function () {
+			browser.assert.text(MSWPromptTraceItemArgumentsValue, 'bravo')
+		});
+
+	});
+
 });
 	
 describe('MSWPromptOutput', function() {
