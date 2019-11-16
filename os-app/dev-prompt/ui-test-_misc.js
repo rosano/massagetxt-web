@@ -15,8 +15,8 @@ describe('MSWPromptPermalink', function() {
 
 	it('sets href', function () {
 		browser.assert.attribute(MSWPromptPermalink, 'href', OLSKTestingCanonical(kDefaultRoute, {
-			MSWPromptRaw: require('./ui-logic.js').MSWPermalinkEncode('alfa bravo'),
-			MSWPromptMassage: require('./ui-logic.js').MSWPermalinkEncode('$input.prepend( charlie)'),
+			raw: require('./ui-logic.js').MSWPermalinkEncode('alfa bravo'),
+			massage: require('./ui-logic.js').MSWPermalinkEncode('$input.prepend( charlie)'),
 		}));
 	});
 

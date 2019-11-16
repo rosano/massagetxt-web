@@ -85,7 +85,7 @@ import MSWPromptTraceItem from './submodules/MSWPromptTraceItem/main.svelte';
 <div class="MSWPrompt">
 
 <div class="MSWPromptToolbar">
-	<a class="MSWPromptPermalink" href={ `${ window.location.pathname }?MSWPromptRaw=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptRaw) }&MSWPromptMassage=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptMassage) }` } target="_blank">{ OLSKLocalized('MSWPromptPermalinkText') }</a>
+	<a class="MSWPromptPermalink" href={ `${ window.location.pathname }?raw=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptRaw) }&massage=${ MSWPromptLogic.MSWPermalinkEncode(MSWPromptMassage) }` } target="_blank">{ OLSKLocalized('MSWPromptPermalinkText') }</a>
 </div>
 
 <div class="MSWPromptWorkspace">
