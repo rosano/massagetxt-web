@@ -16,6 +16,10 @@ const mod = {
 			return inputData;
 		}
 
+		if (inputData instanceof RegExp) {
+			return inputData.toString();
+		};
+
 		return JSON.stringify(inputData);
 
 	},

@@ -34,6 +34,10 @@ describe('MSWStringify', function testMSWStringify() {
 		deepEqual(mainModule.MSWStringify('alfa'), 'alfa')
 	});
 
+	it('returns string if regex', function () {
+		deepEqual(mainModule.MSWStringify(/alfa/g), '/alfa/g')
+	});
+
 	it('returns JSON.stringified', function () {
 		deepEqual(mainModule.MSWStringify(['alfa']), JSON.stringify(['alfa']))
 	});
