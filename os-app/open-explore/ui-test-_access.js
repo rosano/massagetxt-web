@@ -4,6 +4,8 @@ const kDefaultRoutePath = require('./controller.js').OLSKControllerRoutes().shif
 
 Object.entries({
 	MSWExplore: '.MSWExplore',
+	
+	MSWExploreFooter: '.MSWExploreFooter',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -16,6 +18,14 @@ describe('MSWExplore_Access', function () {
 	
 	it('shows MSWExplore', function() {
 		browser.assert.elements(MSWExplore, 1)
+	});
+	
+	it('shows MSWExploreFooter', function() {
+		browser.assert.elements(MSWExploreFooter, 1)
+	});
+	
+	it('shows MSWRootLink', function() {
+		browser.assert.elements('.MSWRootLink', 1)
 	});
 	
 	it('shows MSWPrompt', function() {

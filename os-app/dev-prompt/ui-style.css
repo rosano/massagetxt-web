@@ -4,7 +4,7 @@
 }
 
 .MSWPrompt {
-	height: 100vh;
+	height: 100%;
 
 	font-family: 'Helvetica Neue', 'Helvetica', sans;
 	font-size: var(--MSWPromptFontSize);
