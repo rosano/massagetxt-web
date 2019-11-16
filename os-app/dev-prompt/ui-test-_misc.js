@@ -91,7 +91,7 @@ describe('MSWPromptTraceItem', function() {
 	});
 
 	it('sets MSWPromptTraceItemInputValue', function () {
-		browser.assert.text(MSWPromptTraceItemInputValue, 'alfa')
+		browser.assert.text(MSWPromptTraceItemInputValue, '\'alfa\'')
 	});
 
 	context('update MSWPromptMassage', function () {
@@ -116,7 +116,7 @@ describe('MSWPromptTraceItem', function() {
 		});
 
 		it('sets MSWPromptTraceItemArgumentsValue', function () {
-			browser.assert.text(MSWPromptTraceItemArgumentsValue, 'bravo')
+			browser.assert.text(MSWPromptTraceItemArgumentsValue, '\'bravo\'')
 		});
 
 	});
