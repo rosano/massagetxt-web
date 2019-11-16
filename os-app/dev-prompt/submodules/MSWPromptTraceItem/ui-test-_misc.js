@@ -9,7 +9,7 @@ describe('MSWPromptTraceItemOperation', function() {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemInput: 'bravo',
 		});
 	});
 
@@ -19,71 +19,32 @@ describe('MSWPromptTraceItemOperation', function() {
 	
 });
 	
-describe('MSWPromptTraceItemInput', function() {
-	
-	before(function() {
-		return browser.OLSKVisit(kDefaultRoute, {
-			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
-		});
-	});
-
-	it('sets class', function () {
-		browser.assert.hasClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
-	});
-
-	context('click MSWPromptTraceItemInput truncated', function () {
-
-		before(function () {
-			browser.click(MSWPromptTraceItemInput);
-		});
-
-		it('removes class', function () {
-			browser.assert.hasNoClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
-		});
-	
-	});
-
-	context('click MSWPromptTraceItemInput truncated', function () {
-
-		before(function () {
-			browser.click(MSWPromptTraceItemInput);
-		});
-
-		it('adds class', function () {
-			browser.assert.hasClass(MSWPromptTraceItemInput, 'MSWPromptTraceItemInputTruncated');
-		});
-	
-	});
-	
-});
-	
 describe('MSWPromptTraceItemInputHeading', function() {
 	
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemInput: 'bravo',
 		});
 	});
 
 	it('sets class', function () {
-		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKLayoutElementTappable')
+		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKLayoutElementTextVisual')
 	});
 	
 });
 	
-describe('MSWPromptTraceItemInputContent', function() {
+describe('MSWPromptTraceItemInputValue', function() {
 	
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemInput: 'bravo',
 		});
 	});
 
-	it('initializes to MSWPromptTraceItemInputContent', function () {
-		browser.assert.text(MSWPromptTraceItemInputContent, 'bravo')
+	it('initializes to MSWPromptTraceItemInput', function () {
+		browser.assert.text(MSWPromptTraceItemInputValue, 'bravo')
 	});
 	
 });

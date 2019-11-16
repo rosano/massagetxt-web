@@ -90,8 +90,8 @@ describe('MSWPromptTraceItem', function() {
 		browser.assert.text(MSWPromptTraceItemOperation, 'lines')
 	});
 
-	it('sets MSWPromptTraceItemInputContent', function () {
-		browser.assert.text(MSWPromptTraceItemInputContent, 'alfa')
+	it('sets MSWPromptTraceItemInputValue', function () {
+		browser.assert.text(MSWPromptTraceItemInputValue, 'alfa')
 	});
 
 	context('update MSWPromptMassage', function () {

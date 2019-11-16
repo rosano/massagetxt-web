@@ -9,6 +9,8 @@ import Module from './main.svelte';
 </script>
 
 <Module
-	{...Object.fromEntries((new window.URLSearchParams(window.location.search)).entries())}
+	{...Object.fromEntries(Array.from((new window.URLSearchParams(window.location.search)).entries()).map(function ([key, value]) {
+		return [key, key === 'MSWPromptTraceItemArguments' ? JSON.parse(value) : value];
+	}))}
 	OLSKLocalized={ OLSKLocalized }
 	/>

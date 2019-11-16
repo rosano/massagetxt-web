@@ -9,11 +9,11 @@ Object.entries({
 
 	MSWPromptTraceItemInput: '.MSWPromptTraceItemInput',
 	MSWPromptTraceItemInputHeading: '.MSWPromptTraceItemInputHeading',
-	MSWPromptTraceItemInputContent: '.MSWPromptTraceItemInputContent',
+	MSWPromptTraceItemInputValue: '.MSWPromptTraceItemInput .MSWPromptTraceValue',
 
 	MSWPromptTraceItemArguments: '.MSWPromptTraceItemArguments',
 	MSWPromptTraceItemArgumentsHeading: '.MSWPromptTraceItemArgumentsHeading',
-	MSWPromptTraceItemArgumentsContent: '.MSWPromptTraceItemArgumentsContent',
+	MSWPromptTraceItemArgumentsValue: '.MSWPromptTraceItemArguments .MSWPromptTraceValue',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -23,7 +23,7 @@ describe('MSWPromptTraceItem_Access', function () {
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
 			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemInput: 'bravo',
 		});
 	});
 	
@@ -43,8 +43,8 @@ describe('MSWPromptTraceItem_Access', function () {
 		browser.assert.elements(MSWPromptTraceItemInputHeading, 1);
 	});
 	
-	it('shows MSWPromptTraceItemInputContent', function() {
-		browser.assert.elements(MSWPromptTraceItemInputContent, 1);
+	it('shows MSWPromptTraceItemInputValue', function() {
+		browser.assert.elements(MSWPromptTraceItemInputValue, 1);
 	});
 
 	it('hides MSWPromptTraceItemArguments', function () {
@@ -56,7 +56,7 @@ describe('MSWPromptTraceItem_Access', function () {
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
 				MSWPromptTraceItemOperation: 'alfa',
-				MSWPromptTraceItemInputContent: 'bravo',
+				MSWPromptTraceItemInput: 'bravo',
 				MSWPromptTraceItemArguments: JSON.stringify(['charlie', 'delta']),
 			});
 		});
@@ -69,8 +69,8 @@ describe('MSWPromptTraceItem_Access', function () {
 			browser.assert.elements(MSWPromptTraceItemArgumentsHeading, 1);
 		});
 
-		it('shows MSWPromptTraceItemArgumentsContent', function () {
-			browser.assert.elements(MSWPromptTraceItemArgumentsContent, 1);
+		it('shows MSWPromptTraceItemArgumentsValue', function () {
+			browser.assert.elements(MSWPromptTraceItemArgumentsValue, 2);
 		});
 	
 	});

@@ -14,7 +14,7 @@ describe(`MSWPrompt_Localize-${ languageCode }`, function () {
 		return browser.OLSKVisit(kDefaultRoute, {
 			OLSKRoutingLanguage: languageCode,
 			MSWPromptTraceItemOperation: 'alfa',
-			MSWPromptTraceItemInputContent: 'bravo',
+			MSWPromptTraceItemInput: 'bravo',
 		});
 	});
 
@@ -27,7 +27,7 @@ describe(`MSWPrompt_Localize-${ languageCode }`, function () {
 		before(function() {
 			return browser.OLSKVisit(kDefaultRoute, {
 				MSWPromptTraceItemOperation: 'alfa',
-				MSWPromptTraceItemInputContent: 'bravo',
+				MSWPromptTraceItemInput: 'bravo',
 				MSWPromptTraceItemArguments: JSON.stringify(['charlie', 'delta']),
 			});
 		});

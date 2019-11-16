@@ -1,39 +1,29 @@
 <script>
 export let MSWPromptTraceItemOperation;
-export let MSWPromptTraceItemInputContent;
+export let MSWPromptTraceItemInput;
 export let MSWPromptTraceItemArguments = [];
 export let OLSKLocalized;
 
-const mod = {
-
-	// VALUE
-
-	_ValueInputTruncated: true,
-
-	// INTERFACE
-
-	InterfaceInputDidClick () {
-		mod._ValueInputTruncated = !mod._ValueInputTruncated;
-	}
-
-};
+import MSWPromptTraceValue from '../MSWPromptTraceValue/main.svelte';
 </script>
 
 <div class="MSWPromptTraceItem">
 
 <div class="MSWPromptTraceItemOperation">{ MSWPromptTraceItemOperation }</div>
 
-<div class="MSWPromptTraceItemInput" class:MSWPromptTraceItemInputTruncated={ mod._ValueInputTruncated } on:click={ mod.InterfaceInputDidClick }>
-	<div class="MSWPromptTraceItemInputHeading OLSKLayoutElementTappable">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
+<div class="MSWPromptTraceItemInput">
+	<div class="MSWPromptTraceItemInputHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</div>
 
-	<div class="MSWPromptTraceItemInputContent">{ MSWPromptTraceItemInputContent }</div>
+	<MSWPromptTraceValue MSWPromptTraceValueContent={ MSWPromptTraceItemInput } />
 </div>
 
 {#if MSWPromptTraceItemArguments.length }
 	<div class="MSWPromptTraceItemArguments">
 		<div class="MSWPromptTraceItemArgumentsHeading">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</div>
 
-		<div class="MSWPromptTraceItemArgumentsContent">{ MSWPromptTraceItemArguments }</div>
+		{#each MSWPromptTraceItemArguments as item}
+			<MSWPromptTraceValue MSWPromptTraceValueContent={ item } />
+		{/each}
 	</div>
 {/if}
 
@@ -57,17 +47,5 @@ const mod = {
 	text-transform: uppercase;
 	opacity: 0.5;
 	letter-spacing: 3px;
-}
-
-.MSWPromptTraceItemInputTruncated .MSWPromptTraceItemInputContent {
-	max-height: 30px;
-
-	overflow: hidden;
-}
-
-.MSWPromptTraceItemInputTruncated::after { 
-  content: '…';
-
-  opacity: 0.6;
 }
 </style>
