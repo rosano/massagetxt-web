@@ -49,4 +49,20 @@ describe('MSWPromptTraceItemInputValue', function() {
 	
 });
 	
+describe('MSWPromptTraceItemArgumentsHeading', function() {
+	
+	before(function() {
+		return browser.OLSKVisit(kDefaultRoute, {
+			MSWPromptTraceItemOperation: 'alfa',
+			MSWPromptTraceItemInput: 'bravo',
+			MSWPromptTraceItemArguments: JSON.stringify(['charlie']),
+		});
+	});
+
+	it('sets class', function () {
+		browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKLayoutElementTextVisual')
+	});
+	
+});
+	
 });

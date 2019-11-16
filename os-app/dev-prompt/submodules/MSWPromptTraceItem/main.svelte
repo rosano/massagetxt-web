@@ -19,7 +19,7 @@ import MSWPromptTraceValue from '../MSWPromptTraceValue/main.svelte';
 
 {#if MSWPromptTraceItemArguments.length }
 	<div class="MSWPromptTraceItemArguments">
-		<div class="MSWPromptTraceItemArgumentsHeading">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</div>
+		<div class="MSWPromptTraceItemArgumentsHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</div>
 
 		{#each MSWPromptTraceItemArguments as item}
 			<MSWPromptTraceValue MSWPromptTraceValueContent={ item } />
