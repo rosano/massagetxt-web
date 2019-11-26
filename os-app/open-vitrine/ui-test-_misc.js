@@ -21,6 +21,10 @@ describe('MSWVitrine_Misc', function () {
 		it('sets role', function () {
 			browser.assert.attribute(MSWVitrineIdentityLogo, 'role', 'image')
 		});
+		
+		it('sets src', function () {
+			browser.assert.attribute(MSWVitrineIdentityLogo, 'src', '/_shared/MSWRootLink/ui-assets/logo.svg')
+		});
 	
 	});
 

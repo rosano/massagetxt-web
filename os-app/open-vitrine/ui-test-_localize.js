@@ -24,14 +24,6 @@ describe(`MSWVitrine_Localize-${ languageCode }`, function () {
 		browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
 	});
 
-	it('shows MSWVitrineIdentityLogo', function () {
-		browser.assert.elements(MSWVitrineIdentityLogo, 1);
-	});
-
-	it('shows MSWVitrineIdentityName', function () {
-		browser.assert.elements(MSWVitrineIdentityName, 1);
-	});
-
 	it('localize MSWVitrineIdentityName', function () {
 		browser.assert.text(MSWVitrineIdentityName, uLocalized('MSWVitrineTitle'));
 	});
