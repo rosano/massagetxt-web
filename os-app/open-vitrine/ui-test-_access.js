@@ -1,6 +1,6 @@
 import { deepEqual } from 'assert';
 
-const kDefaultRoutePath = require('./controller.js').OLSKControllerRoutes().shift().OLSKRoutePath;
+const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 Object.entries({
 	MSWVitrine: '.MSWVitrine',
@@ -17,7 +17,7 @@ Object.entries({
 describe('MSWVitrine_Access', function () {
 
 	before(function() {
-		return browser.visit(kDefaultRoutePath);
+		return browser.OLSKVisit(kDefaultRoute);
 	});
 	
 	it('shows MSWVitrine', function() {

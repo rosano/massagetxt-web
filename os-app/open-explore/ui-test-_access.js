@@ -1,6 +1,6 @@
 import { deepEqual } from 'assert';
 
-const kDefaultRoutePath = require('./controller.js').OLSKControllerRoutes().shift().OLSKRoutePath;
+const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 Object.entries({
 	MSWExplore: '.MSWExplore',
@@ -14,7 +14,7 @@ Object.entries({
 describe('MSWExplore_Access', function () {
 
 	before(function() {
-		return browser.visit(kDefaultRoutePath);
+		return browser.OLSKVisit(kDefaultRoute);
 	});
 	
 	it('shows MSWExplore', function() {
