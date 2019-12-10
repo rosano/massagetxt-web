@@ -3,7 +3,7 @@ export let MSWEditorInitialValue = '';
 export let MSWEditorOptions = {};
 export let MSWEditorDispatchValueDidChange = null;
 
-export const MSWEditorSetDocument = function (inputData) {
+export const MSWEditorSetValue = function (inputData) {
 	mod._ValueCodeMirrorInstance.setValue(inputData);
 	mod._ValueCodeMirrorInstance.getDoc().clearHistory();
 };
