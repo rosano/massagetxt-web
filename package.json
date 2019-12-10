@@ -25,6 +25,9 @@
     "marked": "latest",
     "OLSKString": "olsk/OLSKString",
 
+    "// FRONTEND ROCO ROOT LINK": null,
+    "ROCORootLink": "rosano/ROCORootLink",
+
     "// MASSAGE": null,
     "MassageTXT": "massagetxt/mst-lib",
 
