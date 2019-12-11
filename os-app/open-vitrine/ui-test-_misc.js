@@ -19,7 +19,7 @@ describe('MSWVitrine_Misc', function () {
 	context('MSWVitrineIdentityLogo', function () {
 		
 		it('sets role', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'role', 'image')
+			browser.assert.attribute(MSWVitrineIdentityLogo, 'role', 'presentation')
 		});
 		
 		it('sets src', function () {
