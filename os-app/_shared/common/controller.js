@@ -3,7 +3,7 @@ exports.OLSKControllerRoutes = function() {
 		MSTCommonIdentityRedirect: {
 			OLSKRoutePath: '/identity.svg',
 			OLSKRouteMethod: 'get',
-			OLSKRouteRedirect: '/_shared/MSTRootLink/ui-assets/identity.svg',
+			OLSKRouteRedirect: '/_shared/MSWRootLink/ui-assets/identity.svg',
 		},
 	};
 };
