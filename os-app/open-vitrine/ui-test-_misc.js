@@ -23,7 +23,7 @@ describe('MSWVitrine_Misc', function () {
 		});
 		
 		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'src', '/_shared/MSWRootLink/ui-assets/logo.svg')
+			browser.assert.attribute(MSWVitrineIdentityLogo, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg')
 		});
 	
 	});
