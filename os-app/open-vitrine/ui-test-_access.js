@@ -24,8 +24,8 @@ describe('MSWVitrine_Access', function () {
 		browser.assert.elements(MSWVitrine, 1)
 	});
 	
-	it('shows RCSLanguageSwitcher', function() {
-		browser.assert.elements('#RCSLanguageSwitcher', 1)
+	it('shows OLSKLanguageSwitcher', function() {
+		browser.assert.elements('.OLSKLanguageSwitcher', 1);
 	});
 	
 	it('shows MSWVitrineIdentity', function() {
