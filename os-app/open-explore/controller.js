@@ -7,7 +7,7 @@ exports.OLSKControllerRoutes = function() {
 		OLSKRoutePath: '/explore',
 		OLSKRouteMethod: 'get',
 		OLSKRouteSignature: 'MSWExploreRoute',
-		OLSKRouteFunction: function (req, res, next) {
+		OLSKRouteFunction (req, res, next) {
 			return res.render(require('path').join(__dirname, 'ui-view'));
 		},
 		OLSKRouteLanguages: ['en'],
