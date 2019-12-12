@@ -1,1 +1,8 @@
-<a class="MSWRootLink" href="<%= OLSKCanonicalLocalizedFor('MSWVitrineRoute') %>" title="<%= OLSKFormatted(OLSKLocalized('MSWSharedColonSeparatedFormat'), OLSKLocalized('MSWRootLinkLogoLabel'), OLSKLocalized('MSWRootLinkText')) %>"><img role="presentation" src="/_shared/MSWRootLink/ui-assets/identity.svg"></a>
+<div class="MSWRootLink">
+
+<%- include('../__external/OLSKRootLink/main.ejs', {
+	OLSKRootLinkURL: OLSKCanonicalLocalizedFor('MSWVitrineRoute'),
+	OLSKRootLinkImageURL: '/_shared/MSWRootLink/ui-assets/identity.svg',
+}) %>
+
+</div>

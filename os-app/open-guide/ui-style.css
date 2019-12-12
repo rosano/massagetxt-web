@@ -34,13 +34,6 @@ body {
 	padding: 0;
 }
 
-.MSWRootLink {
-	display: block;
+.OLSKRootLink {
 	width: 48px;
-
-	margin: 20px auto;
-}
-
-.MSWRootLink img {
-	width: inherit;
 }

@@ -23,6 +23,8 @@
 		'normalize.css',
 		'OLSKLayout',
 		'OLSKLanguageSwitcher',
+		'OLSKRouting',
+		'OLSKRootLink',
 		'ROCORootLink',
 		'codemirror',
 	], pathPackage.join(__dirname, 'node_modules'), pathPackage.join(__dirname, 'os-app/_shared/__external'));
