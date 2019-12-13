@@ -29,7 +29,7 @@
 	/* Firefox header spacing */
 	line-height: 0;
 
-	/* @OLSKToolbarFlexbox:Parent */
+	/* OLSKToolbarFlexbox:Parent */
 	display: flex; 
 	align-items: center;
 }
