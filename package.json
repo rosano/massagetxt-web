@@ -50,7 +50,7 @@
 
     "// SVELTE": null,
     "svelte": "latest",
-    "OLSKRollup": "olsk/OLSKRollup",
+    "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
     
     "// MASSAGE MARKDOWN": null,
     "unified": "latest",
