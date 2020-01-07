@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "// OLDSKOOL": null,
-    "OLSKApp": "olsk/OLSKApp",
+    "OLSKExpress": "olsk/OLSKExpress",
 
     "// FRONTEND NORMALIZE CSS": null,
     "normalize.css": "latest",
