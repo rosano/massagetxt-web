@@ -22,7 +22,7 @@ describe('MSWPromptTraceValue', function() {
 			browser.click(MSWPromptTraceValue);
 		});
 
-		it('removes class', function () {
+		it('classes MSWPromptTraceValueTruncated', function () {
 			browser.assert.hasNoClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 		});
 	
