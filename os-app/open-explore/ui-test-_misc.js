@@ -10,7 +10,7 @@ before(function () {
 
 describe('MSWExploreFooter', function() {
 	
-	it('sets class', function () {
+	it('classes OLSKToolbar', function () {
 		browser.assert.hasClass(MSWExploreFooter, 'OLSKToolbar');
 	});
 

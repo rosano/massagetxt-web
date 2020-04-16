@@ -28,7 +28,7 @@ describe('MSWPromptTraceItemInputHeading', function() {
 		});
 	});
 
-	it('sets class', function () {
+	it('classes OLSKLayoutElementTextVisual', function () {
 		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKLayoutElementTextVisual')
 	});
 	
@@ -59,7 +59,7 @@ describe('MSWPromptTraceItemArgumentsHeading', function() {
 		});
 	});
 
-	it('sets class', function () {
+	it('classes OLSKLayoutElementTextVisual', function () {
 		browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKLayoutElementTextVisual')
 	});
 	

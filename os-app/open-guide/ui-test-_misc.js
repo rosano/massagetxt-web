@@ -10,8 +10,8 @@ describe('MSWGuide_Misc', function () {
 
 	context('MSWGuide', function () {
 		
-		it('sets class', function () {
-			browser.assert.hasClass(MSWGuide, 'OLSKCommon')
+		it('classes OLSKCommon', function () {
+			browser.assert.hasClass(MSWGuide, 'OLSKCommon');
 		});
 	
 	});

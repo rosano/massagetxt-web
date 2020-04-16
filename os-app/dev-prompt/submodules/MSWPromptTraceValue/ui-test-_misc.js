@@ -12,7 +12,7 @@ describe('MSWPromptTraceValue', function() {
 		});
 	});
 
-	it('sets class', function () {
+	it('classes MSWPromptTraceValueTruncated', function () {
 		browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 	});
 

@@ -10,7 +10,7 @@ describe('MSWVitrine_Misc', function () {
 
 	context('MSWVitrine', function () {
 		
-		it('sets class', function () {
+		it('classes OLSKCommon', function () {
 			browser.assert.hasClass(MSWVitrine, 'OLSKCommon')
 		});
 	
