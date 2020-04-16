@@ -34,7 +34,7 @@ describe('MSWPromptTraceValue', function() {
 			browser.click(MSWPromptTraceValue);
 		});
 
-		it('adds class', function () {
+		it('classes MSWPromptTraceValueTruncated', function () {
 			browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 		});
 	
