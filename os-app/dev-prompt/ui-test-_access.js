@@ -20,7 +20,7 @@ Object.entries({
 	return global[e.shift()]  = e.pop();
 });
 
-describe('MSWPrompt_Access', function testMSWPrompt_Access () {
+describe('MSWPrompt_Access', function test_MSWPrompt_Access () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute);

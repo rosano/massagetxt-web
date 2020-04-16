@@ -4,7 +4,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('MSWEditor_Misc', function () {
 
-describe('MSWEditorField', function testMSWEditorField () {
+describe('MSWEditorField', function test_MSWEditorField () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute);

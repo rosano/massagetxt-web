@@ -2,7 +2,7 @@ const { throws, deepEqual } = require('assert');
 
 const mainModule = require('./ui-logic.js');
 
-describe('MSWPermalinkEncode', function testMSWPermalinkEncode() {
+describe('MSWPermalinkEncode', function test_MSWPermalinkEncode() {
 
 	it('throws if not string', function() {
 		throws(function() {
@@ -28,7 +28,7 @@ describe('MSWPermalinkEncode', function testMSWPermalinkEncode() {
 	
 });
 
-describe('MSWStringify', function testMSWStringify() {
+describe('MSWStringify', function test_MSWStringify() {
 
 	it('returns string if string', function () {
 		deepEqual(mainModule.MSWStringify('alfa'), 'alfa')
@@ -44,7 +44,7 @@ describe('MSWStringify', function testMSWStringify() {
 
 });
 
-describe('MSWVisualString', function testMSWVisualString() {
+describe('MSWVisualString', function test_MSWVisualString() {
 
 	it('returns input if not string', function () {
 		deepEqual(mainModule.MSWVisualString([]), [])

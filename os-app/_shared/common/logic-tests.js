@@ -2,7 +2,7 @@ const { throws, deepEqual } = require('assert');
 
 const mainModule = require('./logic.js');
 
-describe('MSWSharedGitHubLinkGuard', function testMSWSharedGitHubLinkGuard() {
+describe('MSWSharedGitHubLinkGuard', function test_MSWSharedGitHubLinkGuard() {
 
 	const StubEnvValid = function () {
 		return {
