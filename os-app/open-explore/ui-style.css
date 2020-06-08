@@ -23,27 +23,12 @@
 	flex-grow: 1;
 }
 
-.OLSKToolbar {
-	padding: 0 4px;
-
-	/* Firefox header spacing */
-	line-height: 0;
-
-	/* OLSKToolbarFlexbox:Parent */
-	display: flex; 
-	align-items: center;
-}
-
 @media screen and (max-width: 760px) {
 
 .MSWExploreFooter {
 	display: none;
 }
 
-}
-
-.OLSKToolbarElementGroup {
-	margin: 10px 2px;
 }
 
 .MSWExploreFooter {
