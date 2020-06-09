@@ -6,6 +6,10 @@ describe('MSWGuide_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute)
 	});
 
+	it('assigns meta:viewport', function () {
+		browser.assert.attribute('meta[name=viewport]', 'content', 'width=device-width');
+	});
+
 	context('MSWGuide', function () {
 		
 		it('classes OLSKCommon', function () {
