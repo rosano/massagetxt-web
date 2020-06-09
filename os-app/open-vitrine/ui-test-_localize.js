@@ -1,5 +1,3 @@
-import { deepEqual } from 'assert';
-
 const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 kDefaultRoute.OLSKRouteLanguages.forEach(function (languageCode) {
@@ -30,7 +28,9 @@ describe(`MSWVitrine_Localize-${ languageCode }`, function () {
 
 	it('localizes MSWVitrineContent', function() {
 		const item = require('fs').readFileSync(require('path').join(__dirname, `text.${ languageCode }.md`), 'utf-8').replace(/_/g, '');
-		deepEqual(browser.query(MSWVitrineContent).textContent.trim().slice(0, 20), item.slice(0, 20))
+		browser.assert.OLSKTextContent(MSWVitrineContent, item.slice(0, 20), function (inputData) {
+			return inputData.slice(0, 20);
+		});
 	});
 
 	it('localizes MSWGuideRoute', function() {
