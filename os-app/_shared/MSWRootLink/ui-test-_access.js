@@ -1,5 +1,3 @@
-import { deepEqual } from 'assert';
-
 Object.entries({
 	MSWRootLink: '.MSWRootLink',
 }).map(function (e) {
