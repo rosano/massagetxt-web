@@ -18,6 +18,12 @@ const uParser = unifiedPackage().use(remarkParsePackage).parse;
 
 const mod = {
 
+	// VALUE
+
+	_ValueTraceObjects: [],
+
+	_ValueOutput: '',
+
 	// MESSAGE
 
 	MSWEditorDispatchValueDidChangeRaw (inputData) {
@@ -31,12 +37,6 @@ const mod = {
 
 		mod.ReactOutput();
 	},
-
-	// VALUE
-
-	_ValueTraceObjects: [],
-
-	_ValueOutput: '',
 
 	// REACT
 
