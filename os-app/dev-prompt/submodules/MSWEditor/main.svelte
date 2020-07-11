@@ -3,14 +3,18 @@ export let MSWEditorInitialValue = '';
 export let MSWEditorOptions = {};
 export let MSWEditorDispatchValueDidChange = null;
 
-export const MSWEditorSetValue = function (inputData) {
-	mod._ValueCodeMirrorInstance.setValue(inputData);
-	mod._ValueCodeMirrorInstance.getDoc().clearHistory();
-};
+export const modPublic = {
 
-export const EditorConfigure = function (e) {
-	// console.log(mod._ValueCodeMirrorInstance ? 'run' : 'queue', e);
-	return mod._ValueCodeMirrorInstance ? e(mod._ValueCodeMirrorInstance) : mod._ValuePostInitializeQueue.push(e);
+	MSWEditorSetValue (inputData) {
+		mod._ValueCodeMirrorInstance.setValue(inputData);
+		mod._ValueCodeMirrorInstance.getDoc().clearHistory();
+	},
+
+	EditorConfigure (e) {
+		// console.log(mod._ValueCodeMirrorInstance ? 'run' : 'queue', e);
+		return mod._ValueCodeMirrorInstance ? e(mod._ValueCodeMirrorInstance) : mod._ValuePostInitializeQueue.push(e);
+	},
+
 };
 
 import { OLSK_TESTING_BEHAVIOUR } from 'OLSKTesting'
