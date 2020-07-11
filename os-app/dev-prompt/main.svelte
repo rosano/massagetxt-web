@@ -5,7 +5,7 @@ export let MSWPromptOptions = {};
 
 let _OLSKLocalizedMap = JSON.parse(`{"OLSK_I18N_SEARCH_REPLACE":"OLSK_I18N_SEARCH_REPLACE"}`);
 import OLSKInternational from 'OLSKInternational';
-export const OLSKLocalized = function(inputData) {
+const OLSKLocalized = function(inputData) {
 	return OLSKInternational.OLSKInternationalLocalizedString(inputData, _OLSKLocalizedMap[MSWPromptOptions.MSWOptionLanguage || 'en']);
 };
 
