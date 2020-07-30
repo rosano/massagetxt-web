@@ -38,9 +38,11 @@
 	flex-shrink: 0;
 }
 
-.MSWRootLink {
+.MSWRootLink .OLSKCommonIdentity {
 	width: 30px;
 	padding: 4px;
+
+	margin: 0;
 }
 
 .MSWRootLink img {
