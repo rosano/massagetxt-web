@@ -16,10 +16,7 @@
 })();
 
 (function OLSKPostinstallExternalAssets() {
-	const OLSKAssets = require('./node_modules/OLSKExpress/modules/OLSKAssets/main.js');
-	const pathPackage = require('path');
-
-	OLSKAssets.OLSKAssetsCopyAssetsFromTo([
+	require('./node_modules/OLSKExpress/modules/OLSKAssets/main.js').OLSKAssetsCopyAssetsFromTo([
 		'codemirror',
 		'normalize.css',
 		'OLSKLanguageSwitcher',
@@ -27,5 +24,5 @@
 		'OLSKRootLink',
 		'OLSKRouting',
 		'ROCORootLink',
-	], pathPackage.join(__dirname, 'node_modules'), pathPackage.join(__dirname, 'os-app/_shared/__external'));
+	], require('path').join(__dirname, 'node_modules'), require('path').join(__dirname, 'os-app/_shared/__external'));
 })();
