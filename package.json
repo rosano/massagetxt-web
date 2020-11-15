@@ -21,10 +21,6 @@
     "// FRONDEND EDITOR": null,
     "codemirror": "rosano/CodeMirror#add-distribution",
 
-    "// FRONTEND TEXT": null,
-    "marked": "latest",
-    "OLSKString": "olsk/OLSKString",
-
     "// FRONTEND LANGUAGE SWITCHER": null,
     "OLSKLanguageSwitcher": "olsk/OLSKLanguageSwitcher",
 
