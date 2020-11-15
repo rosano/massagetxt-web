@@ -3,7 +3,7 @@ exports.OLSKControllerUseLivereload = function() {
 };
 
 function OLSKRouteFunction (req, res, next) {
-	return res.render(require('path').join(__dirname, 'ui-view'), {
+	return res.OLSKLayoutRender(require('path').join(__dirname, 'ui-view'), {
 		MSWGuideContent: require('marked').setOptions({
 			gfm: true,
 			headerIds: false,
