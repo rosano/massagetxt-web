@@ -19,8 +19,5 @@ exports.OLSKControllerRoutes = function() {
 			});
 		},
 		OLSKRouteLanguages: ['en'],
-		OLSKRouteMiddlewares: [
-			'MSWSharedGitHubLinkGuardMiddleware',
-		],
 	}];
 };
