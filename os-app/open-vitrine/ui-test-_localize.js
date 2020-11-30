@@ -18,7 +18,7 @@ describe(`MSWVitrine_Localize-${ languageCode }`, function () {
 		browser.assert.text('title', uLocalized('MSWVitrineTitle'))
 	});
 
-	it('localizes description', function() {
+	it('localizes meta[description]', function() {
 		browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
 	});
 

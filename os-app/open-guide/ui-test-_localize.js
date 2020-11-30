@@ -16,7 +16,7 @@ describe(`MSWGuide_Localize-${ languageCode }`, function () {
 		browser.assert.text('title', uLocalized('MSWGuideTitle'))
 	});
 
-	it('localizes description', function() {
+	it('localizes meta[description]', function() {
 		browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWGuideDescription'))
 	});
 
