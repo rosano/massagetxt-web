@@ -6,7 +6,7 @@ exports.OLSKControllerRoutes = function() {
 			return res.OLSKLayoutRender(require('path').join(__dirname, 'stub-view'));
 		},
 		OLSKRouteSignature: 'MSWRootLinkEJSStubRoute',
-		OLSKRouteLanguages: ['en', 'fr', 'es'],
+		OLSKRouteLanguageCodes: ['en', 'fr', 'es'],
 		OLSKRouteIsHidden: process.env.NODE_ENV === 'production',
 	}, {
 		OLSKRoutePath: '/stub/MSWRootLinkSvelte',
@@ -15,7 +15,7 @@ exports.OLSKControllerRoutes = function() {
 			return res.OLSKLayoutRender(require('path').join(__dirname, 'stub-view'));
 		},
 		OLSKRouteSignature: 'MSWRootLinkSvelteStubRoute',
-		OLSKRouteLanguages: ['en', 'fr', 'es'],
+		OLSKRouteLanguageCodes: ['en', 'fr', 'es'],
 		OLSKRouteIsHidden: process.env.NODE_ENV === 'production',
 	}];
 };

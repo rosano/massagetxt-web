@@ -6,7 +6,7 @@ exports.OLSKControllerRoutes = function() {
 			return res.OLSKLayoutRender(require('path').join(__dirname, 'stub-view'));
 		},
 		OLSKRouteSignature: 'MSWPromptTraceItemStubRoute',
-		OLSKRouteLanguages: ['en'],
+		OLSKRouteLanguageCodes: ['en'],
 		OLSKRouteIsHidden: process.env.NODE_ENV === 'production',
 	}];
 };

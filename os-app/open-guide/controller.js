@@ -15,6 +15,6 @@ exports.OLSKControllerRoutes = function() {
 		OLSKRouteSignature: 'MSWGuideRoute',
 		OLSKRouteMethod: 'get',
 		OLSKRouteFunction,
-		_OLSKRouteLanguages: ['en'],
+		_OLSKRouteLanguageCodes: ['en'],
 	}];
 };
