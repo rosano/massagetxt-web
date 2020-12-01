@@ -17,7 +17,7 @@ export const modPublic = {
 
 };
 
-import { OLSK_TESTING_BEHAVIOUR } from 'OLSKTesting'
+import { OLSK_SPEC_UI } from 'OLSKSpec'
 
 const mod = {
 
@@ -36,7 +36,7 @@ const mod = {
 	// SETUP
 
 	SetupEverything () {
-		if (OLSK_TESTING_BEHAVIOUR()) {
+		if (OLSK_SPEC_UI()) {
 			return;
 		}
 
@@ -83,7 +83,7 @@ onMount(mod.LifecycleComponentDidMount);
 
 <div class="MSWEditor">
 
-{#if OLSK_TESTING_BEHAVIOUR()}
+{#if OLSK_SPEC_UI()}
 	<textarea class="MSWEditorFieldDebug" on:input={ mod.InterfaceInputDebugDidInput } value={ MSWEditorInitialValue }></textarea>
 {/if}
 
