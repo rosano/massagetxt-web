@@ -1,16 +1,16 @@
 const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
-kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (languageCode) {
+kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 
 const uLocalized = function (inputData) {
-	return OLSKTestingLocalized(inputData, languageCode);
+	return OLSKTestingLocalized(inputData, OLSKRoutingLanguage);
 };
 
-describe(`MSWVitrine_Localize-${ languageCode }`, function () {
+describe(`MSWVitrine_Localize-${ OLSKRoutingLanguage }`, function () {
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
-			OLSKRoutingLanguage: languageCode,
+			OLSKRoutingLanguage,
 		});
 	});
 
@@ -27,7 +27,7 @@ describe(`MSWVitrine_Localize-${ languageCode }`, function () {
 	});
 
 	it('localizes MSWVitrineContent', function() {
-		const item = require('fs').readFileSync(require('path').join(__dirname, `text.${ languageCode }.md`), 'utf-8').replace(/_/g, '');
+		const item = require('fs').readFileSync(require('path').join(__dirname, `text.${ OLSKRoutingLanguage }.md`), 'utf-8').replace(/_/g, '');
 		browser.assert.OLSKTextContent(MSWVitrineContent, item.slice(0, 20), function (inputData) {
 			return inputData.slice(0, 20);
 		});
