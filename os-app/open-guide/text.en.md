@@ -1,10 +1,8 @@
-# MassageTXT Guide
-
 <div class="MSWGuideNotice">
 This document is a work-in-progress.
 </div>
 
-## Quick Introduction
+# Quick Introduction
 
 Transformations are specified as an *Expression*.
 
@@ -22,11 +20,9 @@ Sometimes an *Operation* takes arguments
 $input.prepend(Hello )
 ```
 
-* * *
+# API Reference
 
-## API Reference
-
-### String Operations
+## String Operations
 
 __lowercase__
 
@@ -44,13 +40,13 @@ __postpend__(LITERAL)
 
 __markdown__
 
-### Object Operations
+## Object Operations
 
 __remap__(MAPPING)
 
 __print__(LITERAL)
 
-### Array Operations
+## Array Operations
 
 __first__
 
@@ -70,7 +66,7 @@ __remap__(MAPPING)
 
 __join__(LITERAL)
 
-### MarkdownTree Operations
+## MarkdownTree Operations
 
 __sections__
 
