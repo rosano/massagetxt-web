@@ -6,6 +6,7 @@ Object.entries({
 	MSWVitrineIdentity: '.MSWVitrineIdentity',
 	MSWVitrineIdentityLogo: '.MSWVitrineIdentityLogo',
 	MSWVitrineIdentityName: '.MSWVitrineIdentityName',
+	MSWVitrineIdentityBlurb: '.MSWVitrineIdentityBlurb',
 
 	MSWVitrineContent: '.MSWVitrineContent',
 }).map(function (e) {
@@ -36,6 +37,10 @@ describe('MSWVitrine_Access', function () {
 	
 	it('shows MSWVitrineIdentityName', function() {
 		browser.assert.elements(MSWVitrineIdentityName, 1)
+	});
+
+	it('shows MSWVitrineIdentityBlurb', function () {
+		browser.assert.elements(MSWVitrineIdentityBlurb, 1);
 	});
 	
 	it('shows MSWVitrineContent', function() {
