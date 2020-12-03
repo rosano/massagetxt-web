@@ -6,10 +6,6 @@ describe('MSWVitrine_Misc', function () {
 		return browser.OLSKVisit(kDefaultRoute)
 	});
 
-	it('assigns meta:viewport', function () {
-		browser.assert.attribute('meta[name=viewport]', 'content', 'width=device-width');
-	});
-
 	context('MSWVitrine', function () {
 		
 		it('classes OLSKCommon', function () {
