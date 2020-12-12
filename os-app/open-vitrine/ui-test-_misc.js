@@ -24,8 +24,8 @@ describe('MSWVitrine_Misc', function () {
 			browser.assert.hasClass(MSWVitrineIdentity, 'OLSKCommonCard');
 		});
 
-		it('classes OLSKCommonIdentityCard', function () {
-			browser.assert.hasClass(MSWVitrineIdentity, 'OLSKCommonIdentityCard');
+		it('classes OLSKCommonCrownCard', function () {
+			browser.assert.hasClass(MSWVitrineIdentity, 'OLSKCommonCrownCard');
 		});
 		
 	});
