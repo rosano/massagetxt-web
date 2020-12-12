@@ -1,5 +1,3 @@
-**Convert between text and structured data**
-
 See the [guide](MSWVitrineTokenGuideURL) for more information.
 
 Check out the demos below for some ideas or [explore](MSWVitrineTokenExploreURL) for yourself.

@@ -43,6 +43,10 @@ describe('MSWVitrine_Access', function () {
 		browser.assert.elements(MSWVitrineIdentityBlurb, 1);
 	});
 	
+	it('shows OLSKCommonWhatIsIt', function() {
+		browser.assert.elements('.OLSKCommonWhatIsIt', 1);
+	});
+
 	it('shows MSWVitrineContent', function() {
 		browser.assert.elements(MSWVitrineContent, 1)
 	});
