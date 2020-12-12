@@ -11,6 +11,10 @@ describe('MSWGuide_Misc', function () {
 		it('classes OLSKCommon', function () {
 			browser.assert.hasClass(MSWGuide, 'OLSKCommon');
 		});
+
+		it('classes OLSKCommonCapped', function () {
+			browser.assert.hasClass(MSWGuide, 'OLSKCommonCapped');
+		});
 	
 	});
 

@@ -11,6 +11,10 @@ describe('MSWVitrine_Misc', function () {
 		it('classes OLSKCommon', function () {
 			browser.assert.hasClass(MSWVitrine, 'OLSKCommon')
 		});
+
+		it('classes OLSKCommonCapped', function () {
+			browser.assert.hasClass(MSWVitrine, 'OLSKCommonCapped')
+		});
 	
 	});
 
