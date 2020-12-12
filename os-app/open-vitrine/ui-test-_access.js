@@ -3,10 +3,10 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	MSWVitrine: '.MSWVitrine',
 	
-	MSWVitrineIdentity: '.MSWVitrineIdentity',
-	MSWVitrineIdentityLogo: '.MSWVitrineIdentityLogo',
-	MSWVitrineIdentityName: '.MSWVitrineIdentityName',
-	MSWVitrineIdentityBlurb: '.MSWVitrineIdentityBlurb',
+	MSWVitrineCrown: '.MSWVitrineCrown',
+	MSWVitrineCrownIcon: '.MSWVitrineCrownIcon',
+	MSWVitrineCrownName: '.MSWVitrineCrownName',
+	MSWVitrineCrownBlurb: '.MSWVitrineCrownBlurb',
 
 	MSWVitrineContent: '.MSWVitrineContent',
 }).map(function (e) {
@@ -27,20 +27,20 @@ describe('MSWVitrine_Access', function () {
 		browser.assert.elements('.OLSKLanguageSwitcher', 1);
 	});
 	
-	it('shows MSWVitrineIdentity', function() {
-		browser.assert.elements(MSWVitrineIdentity, 1)
+	it('shows MSWVitrineCrown', function() {
+		browser.assert.elements(MSWVitrineCrown, 1)
 	});
 	
-	it('shows MSWVitrineIdentityLogo', function() {
-		browser.assert.elements(MSWVitrineIdentityLogo, 1)
+	it('shows MSWVitrineCrownIcon', function() {
+		browser.assert.elements(MSWVitrineCrownIcon, 1)
 	});
 	
-	it('shows MSWVitrineIdentityName', function() {
-		browser.assert.elements(MSWVitrineIdentityName, 1)
+	it('shows MSWVitrineCrownName', function() {
+		browser.assert.elements(MSWVitrineCrownName, 1)
 	});
 
-	it('shows MSWVitrineIdentityBlurb', function () {
-		browser.assert.elements(MSWVitrineIdentityBlurb, 1);
+	it('shows MSWVitrineCrownBlurb', function () {
+		browser.assert.elements(MSWVitrineCrownBlurb, 1);
 	});
 	
 	it('shows OLSKCommonWhatIsIt', function() {

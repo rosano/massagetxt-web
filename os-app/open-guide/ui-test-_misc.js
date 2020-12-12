@@ -18,26 +18,26 @@ describe('MSWGuide_Misc', function () {
 	
 	});
 
-	describe('MSWGuideIdentity', function test_MSWGuideIdentity() {
+	describe('MSWGuideCrown', function test_MSWGuideCrown() {
 
 		it('classes OLSKCommonCard', function () {
-			browser.assert.hasClass(MSWGuideIdentity, 'OLSKCommonCard');
+			browser.assert.hasClass(MSWGuideCrown, 'OLSKCommonCard');
 		});
 
 		it('classes OLSKCommonCrownCard', function () {
-			browser.assert.hasClass(MSWGuideIdentity, 'OLSKCommonCrownCard');
+			browser.assert.hasClass(MSWGuideCrown, 'OLSKCommonCrownCard');
 		});
 		
 	});
 
-	describe('MSWGuideIdentityLogo', function () {
+	describe('MSWGuideCrownLogo', function () {
 
 		it('sets role', function () {
-			browser.assert.attribute(MSWGuideIdentityLogo, 'role', 'presentation');
+			browser.assert.attribute(MSWGuideCrownLogo, 'role', 'presentation');
 		});
 
 		it('sets src', function () {
-			browser.assert.attribute(MSWGuideIdentityLogo, 'src', '/_shared/KOMRootLink/ui-assets/identity.svg');
+			browser.assert.attribute(MSWGuideCrownLogo, 'src', '/_shared/KOMRootLink/ui-assets/identity.svg');
 		});
 
 	});

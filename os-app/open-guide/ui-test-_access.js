@@ -3,8 +3,8 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	MSWGuide: '.MSWGuide',
 
-	MSWGuideIdentity: '.MSWGuideIdentity',
-	MSWGuideIdentityName: '.MSWGuideIdentityName',
+	MSWGuideCrown: '.MSWGuideCrown',
+	MSWGuideCrownName: '.MSWGuideCrownName',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -19,12 +19,12 @@ describe('MSWGuide_Access', function () {
 		browser.assert.elements(MSWGuide, 1);
 	});
 
-	it('shows MSWGuideIdentity', function () {
-		browser.assert.elements(MSWGuideIdentity, 1);
+	it('shows MSWGuideCrown', function () {
+		browser.assert.elements(MSWGuideCrown, 1);
 	});
 
-	it('shows MSWGuideIdentityName', function () {
-		browser.assert.elements(MSWGuideIdentityName, 1);
+	it('shows MSWGuideCrownName', function () {
+		browser.assert.elements(MSWGuideCrownName, 1);
 	});
 
 	it('shows MSWRootLink', function () {

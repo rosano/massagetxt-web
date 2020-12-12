@@ -20,8 +20,8 @@ kDefaultRoute._OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWGuideDescription'))
 		});
 
-		it('localizes MSWGuideIdentityName', function () {
-			browser.assert.text(MSWGuideIdentityName, uLocalized('MSWGuideTitle'));
+		it('localizes MSWGuideCrownName', function () {
+			browser.assert.text(MSWGuideCrownName, uLocalized('MSWGuideTitle'));
 		});
 
 	});

@@ -18,38 +18,38 @@ describe('MSWVitrine_Misc', function () {
 	
 	});
 
-	describe('MSWVitrineIdentity', function test_MSWVitrineIdentity() {
+	describe('MSWVitrineCrown', function test_MSWVitrineCrown() {
 
 		it('classes OLSKCommonCard', function () {
-			browser.assert.hasClass(MSWVitrineIdentity, 'OLSKCommonCard');
+			browser.assert.hasClass(MSWVitrineCrown, 'OLSKCommonCard');
 		});
 
 		it('classes OLSKCommonCrownCard', function () {
-			browser.assert.hasClass(MSWVitrineIdentity, 'OLSKCommonCrownCard');
+			browser.assert.hasClass(MSWVitrineCrown, 'OLSKCommonCrownCard');
 		});
 		
 	});
 
-	describe('MSWVitrineIdentityLogo', function () {
+	describe('MSWVitrineCrownIcon', function () {
 
 		it('sets role', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'role', 'presentation');
+			browser.assert.attribute(MSWVitrineCrownIcon, 'role', 'presentation');
 		});
 
 		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg');
+			browser.assert.attribute(MSWVitrineCrownIcon, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg');
 		});
 
 	});
 
-	context('MSWVitrineIdentityLogo', function () {
+	context('MSWVitrineCrownIcon', function () {
 		
 		it('sets role', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'role', 'presentation')
+			browser.assert.attribute(MSWVitrineCrownIcon, 'role', 'presentation')
 		});
 		
 		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineIdentityLogo, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg')
+			browser.assert.attribute(MSWVitrineCrownIcon, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg')
 		});
 	
 	});

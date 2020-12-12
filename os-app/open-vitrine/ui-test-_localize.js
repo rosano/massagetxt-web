@@ -22,12 +22,12 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
 		});
 
-		it('localizes MSWVitrineIdentityName', function () {
-			browser.assert.text(MSWVitrineIdentityName, uLocalized('MSWVitrineTitle'));
+		it('localizes MSWVitrineCrownName', function () {
+			browser.assert.text(MSWVitrineCrownName, uLocalized('MSWVitrineTitle'));
 		});
 
-		it('localizes MSWVitrineIdentityBlurb', function () {
-			browser.assert.text(MSWVitrineIdentityBlurb, uLocalized('MSWVitrineDescription'));
+		it('localizes MSWVitrineCrownBlurb', function () {
+			browser.assert.text(MSWVitrineCrownBlurb, uLocalized('MSWVitrineDescription'));
 		});
 
 		it('localizes OLSKCommonWhatIsIt', function () {
