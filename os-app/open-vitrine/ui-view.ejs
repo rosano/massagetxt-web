@@ -20,7 +20,7 @@ locals.OLSKPagePublicConstants = {
 <hr role="presentation" />
 
 <div class="MSWVitrineCrown OLSKCommonCard OLSKCommonCrownCard">
-	<img class="MSWVitrineCrownIcon" src="/_shared/MSWRootLink/ui-assets/identity.svg" role="presentation" />
+	<img class="MSWVitrineCrownIcon" src="<%= process.env.MSW_VITRINE_IDENTITY_URL %>" role="presentation" />
 	<section>
 		<span class="MSWVitrineCrownName"><%= OLSKLocalized('MSWVitrineTitle') %></span>
 		<span class="MSWVitrineCrownBlurb"><%= OLSKLocalized('MSWVitrineDescription') %></span>

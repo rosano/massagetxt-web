@@ -37,21 +37,9 @@ describe('MSWVitrine_Misc', function () {
 		});
 
 		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineCrownIcon, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg');
+			browser.assert.attribute(MSWVitrineCrownIcon, 'src', process.env.MSW_VITRINE_IDENTITY_URL);
 		});
 
-	});
-
-	context('MSWVitrineCrownIcon', function () {
-		
-		it('sets role', function () {
-			browser.assert.attribute(MSWVitrineCrownIcon, 'role', 'presentation')
-		});
-		
-		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineCrownIcon, 'src', '/_shared/MSWRootLink/ui-assets/identity.svg')
-		});
-	
 	});
 
 });
