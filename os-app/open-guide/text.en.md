@@ -1,4 +1,4 @@
-<div class="MSWGuideNotice">
+<div class="OLSKCommonNotice">
 This document is a work-in-progress.
 </div>
 

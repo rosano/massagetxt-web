@@ -9,11 +9,6 @@ body {
 	color: var(--MSWCommonForeground);
 }
 
-.MSWGuideNotice {
-	padding: 10px;
-	border: 1px solid var(--MSWCommonForeground)
-}
-
 .MSWGuideExample {
 	display: block;
 	padding: 20px 0 10px 15px;
