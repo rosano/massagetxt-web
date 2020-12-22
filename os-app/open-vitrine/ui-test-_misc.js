@@ -8,12 +8,12 @@ describe('MSWVitrine_Misc', function () {
 
 	context('MSWVitrine', function () {
 		
-		it('classes OLSKCommon', function () {
-			browser.assert.hasClass(MSWVitrine, 'OLSKCommon')
+		it('classes OLSKDecor', function () {
+			browser.assert.hasClass(MSWVitrine, 'OLSKDecor')
 		});
 
-		it('classes OLSKCommonCapped', function () {
-			browser.assert.hasClass(MSWVitrine, 'OLSKCommonCapped')
+		it('classes OLSKDecorCapped', function () {
+			browser.assert.hasClass(MSWVitrine, 'OLSKDecorCapped')
 		});
 	
 	});

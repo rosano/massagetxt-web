@@ -8,12 +8,12 @@ describe('MSWGuide_Misc', function () {
 
 	context('MSWGuide', function () {
 		
-		it('classes OLSKCommon', function () {
-			browser.assert.hasClass(MSWGuide, 'OLSKCommon');
+		it('classes OLSKDecor', function () {
+			browser.assert.hasClass(MSWGuide, 'OLSKDecor');
 		});
 
-		it('classes OLSKCommonCapped', function () {
-			browser.assert.hasClass(MSWGuide, 'OLSKCommonCapped');
+		it('classes OLSKDecorCapped', function () {
+			browser.assert.hasClass(MSWGuide, 'OLSKDecorCapped');
 		});
 	
 	});
