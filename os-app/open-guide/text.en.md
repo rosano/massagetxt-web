@@ -1,4 +1,4 @@
-<div class="OLSKCommonNotice">
+<div class="OLSKDecorNotice">
 This document is a work-in-progress.
 </div>
 
