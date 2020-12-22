@@ -12,14 +12,14 @@ import MSWPromptTraceValue from '../MSWPromptTraceValue/main.svelte';
 <div class="MSWPromptTraceItemOperation">{ MSWPromptTraceItemOperation }</div>
 
 <div class="MSWPromptTraceItemInput">
-	<h2 class="MSWPromptTraceItemInputHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</h2>
+	<h2 class="MSWPromptTraceItemInputHeading OLSKDecorTextVisual">{ OLSKLocalized('MSWPromptTraceItemInputHeadingText') }</h2>
 
 	<MSWPromptTraceValue MSWPromptTraceValueContent={ MSWPromptTraceItemInput } />
 </div>
 
 {#if MSWPromptTraceItemArguments.length }
 	<div class="MSWPromptTraceItemArguments">
-		<h2 class="MSWPromptTraceItemArgumentsHeading OLSKLayoutElementTextVisual">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</h2>
+		<h2 class="MSWPromptTraceItemArgumentsHeading OLSKDecorTextVisual">{ OLSKLocalized('MSWPromptTraceItemArgumentsHeadingText') }</h2>
 
 		{#each MSWPromptTraceItemArguments as item}
 			<MSWPromptTraceValue MSWPromptTraceValueContent={ item } />

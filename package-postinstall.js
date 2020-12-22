@@ -16,7 +16,7 @@
 		'codemirror',
 		'normalize.css',
 		'OLSKLanguageSwitcher',
-		'OLSKLayout',
+		'OLSKDecor',
 		'OLSKRootLink',
 		'OLSKRouting',
 		'ROCORootLink',

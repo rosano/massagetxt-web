@@ -26,8 +26,8 @@ describe('MSWPromptTraceItemInputHeading', function() {
 		});
 	});
 
-	it('classes OLSKLayoutElementTextVisual', function () {
-		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKLayoutElementTextVisual')
+	it('classes OLSKDecorTextVisual', function () {
+		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKDecorTextVisual')
 	});
 	
 });
@@ -57,8 +57,8 @@ describe('MSWPromptTraceItemArgumentsHeading', function() {
 		});
 	});
 
-	it('classes OLSKLayoutElementTextVisual', function () {
-		browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKLayoutElementTextVisual')
+	it('classes OLSKDecorTextVisual', function () {
+		browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKDecorTextVisual')
 	});
 	
 });
