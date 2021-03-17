@@ -42,4 +42,12 @@ describe('MSWVitrine_Misc', function () {
 
 	});
 
+	describe('OLSKGazette', function () {
+
+		it('sets src', function () {
+			browser.assert.attribute('.OLSKGazetteProjectField', 'value', 'RP_002');
+		});
+
+	});
+
 });

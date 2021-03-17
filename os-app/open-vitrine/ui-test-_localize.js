@@ -34,7 +34,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text('.OLSKCommonWhatIsIt', uLocalized('OLSKCommonWhatIsItText'));
 		});
 
-		it('localizes MSWVitrineContent', function() {
+		it.skip('localizes MSWVitrineContent', function() {
 			const item = require('fs').readFileSync(require('path').join(__dirname, `text.${ OLSKRoutingLanguage }.md`), 'utf-8').replace(/_/g, '');
 			browser.assert.OLSKTextContent(MSWVitrineContent, item.slice(0, 20), function (inputData) {
 				return inputData.slice(0, 20);
@@ -51,6 +51,10 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 
 		it('localizes MSW_SHARED_GITHUB_URL', function() {
 			browser.assert.element(`a[href="${ process.env.MSW_SHARED_GITHUB_URL }"]`);
+		});
+
+		it('localizes MSWVitrineGazetteHeading', function () {
+			browser.assert.text(MSWVitrineGazetteHeading, uLocalized('OLSKGazetteHeadingText'));
 		});
 
 	});

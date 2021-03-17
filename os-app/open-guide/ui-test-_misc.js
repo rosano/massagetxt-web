@@ -30,16 +30,4 @@ describe('MSWGuide_Misc', function () {
 		
 	});
 
-	describe('MSWGuideCrownLogo', function () {
-
-		it('sets role', function () {
-			browser.assert.attribute(MSWGuideCrownLogo, 'role', 'presentation');
-		});
-
-		it('sets src', function () {
-			browser.assert.attribute(MSWGuideCrownLogo, 'src', '/_shared/KOMRootLink/ui-assets/identity.svg');
-		});
-
-	});
-
 });

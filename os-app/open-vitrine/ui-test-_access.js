@@ -9,6 +9,8 @@ Object.entries({
 	MSWVitrineCrownBlurb: '.MSWVitrineCrownBlurb',
 
 	MSWVitrineContent: '.MSWVitrineContent',
+
+	MSWVitrineGazetteHeading: '.MSWVitrineGazetteHeading',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -49,6 +51,14 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineContent', function() {
 		browser.assert.elements(MSWVitrineContent, 1)
+	});
+
+	it('shows MSWVitrineGazetteHeading', function () {
+		browser.assert.elements(MSWVitrineGazetteHeading, 1);
+	});
+
+	it('shows OLSKGazette', function () {
+		browser.assert.elements('.OLSKGazette', 1);
 	});
 
 	it('shows ROCORootLink', function() {

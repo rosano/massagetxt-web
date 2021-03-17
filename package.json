@@ -19,6 +19,9 @@
     "normalize.css": "latest",
     "OLSKDecor": "olsk/OLSKDecor",
 
+    "// VITRINE": null,
+    "OLSKGazette": "olsk/OLSKGazette",
+
     "// FRONDEND EDITOR": null,
     "codemirror": "rosano/CodeMirror#add-distribution",
 
