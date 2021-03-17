@@ -42,7 +42,7 @@ describe('MSWVitrine_Misc', function () {
 
 	});
 
-	describe('OLSKGazette', function () {
+	describe('OLSKGazette', function test_OLSKGazette () {
 
 		it('sets src', function () {
 			browser.assert.attribute('.OLSKGazetteProjectField', 'value', 'RP_002');
