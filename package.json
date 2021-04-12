@@ -12,59 +12,33 @@
     "watch": "olsk-rollup-watch"
   },
   "dependencies": {
-    "// OLDSKOOL": null,
-    "OLSKExpress": "olsk/OLSKExpress",
+    "// open-vitrine": null,
+    "OLSKPithVitrine": "olsk/OLSKPithVitrine",
 
-    "// FRONTEND NORMALIZE CSS": null,
-    "normalize.css": "latest",
-    "OLSKDecor": "olsk/OLSKDecor",
+    "// open-guide": null,
+    "OLSKPithGuide": "olsk/OLSKPithGuide",
 
-    "// VITRINE": null,
-    "OLSKGazette": "olsk/OLSKGazette",
-
-    "// FRONDEND EDITOR": null,
+    "// open-explore": null,
+    "OLSKPithApp": "olsk/OLSKPithApp",
     "codemirror": "rosano/CodeMirror#add-distribution",
-
-    "// FRONTEND LANGUAGE SWITCHER": null,
-    "OLSKLanguageSwitcher": "olsk/OLSKLanguageSwitcher",
-
-    "// FRONTEND ROOT LINK": null,
-    "OLSKRootLink": "olsk/OLSKRootLink",
-    "ROCORootLink": "rationalcreative/ROCORootLink",
-
-    "// MASSAGE": null,
     "MassageTXT": "massagetxt/mst-lib",
 
-    "// TECH ROBOTS": null,
+    "// tech-robots": null,
     "OLSKRobots": "olsk/OLSKRobots",
+
+    "// tech-sw": null,
+    "OLSKServiceWorker": "olsk/OLSKServiceWorker",
 
     "// I sacrifice myself for the commas of others": null
   },
   "devDependencies": {
-    "// SVELTE": null,
+    "OLSKPithToolchain": "olsk/OLSKPithToolchain",
     "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
-    
-    "// MASSAGE MARKDOWN": null,
     "unified": "latest",
     "remark-parse": "latest",
     "rollup-plugin-json": "latest",
     "rollup-plugin-node-builtins": "latest",
     "rollup-plugin-node-globals": "latest",
-
-    "// LIVERELOAD": null,
-    "livereload": "latest",
-
-    "// PRODUCTION BUILD": null,
-    "OLSKDisk": "olsk/OLSKDisk",
-
-    "// SPEC": null,
-    "OLSKSpec": "olsk/OLSKSpec",
-    
-    "// HOTFIX": null,
-    "OLSKHotfix": "olsk/OLSKHotfix",
-    
-    "// BUNDLE": null,
-    "OLSKBundle": "olsk/OLSKBundle",
 
     "// I sacrifice myself for the commas of others": null    
   }
