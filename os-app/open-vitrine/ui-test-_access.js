@@ -10,8 +10,6 @@ Object.entries({
 
 	MSWVitrineContent: '.MSWVitrineContent',
 
-	MSWVitrineGazetteHeading: '.MSWVitrineGazetteHeading',
-
 	MSWVitrineJarHeading: '.MSWVitrineJarHeading',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
@@ -55,16 +53,8 @@ describe('MSWVitrine_Access', function () {
 		browser.assert.elements(MSWVitrineContent, 1)
 	});
 
-	it('shows MSWVitrineGazetteHeading', function () {
-		browser.assert.elements(MSWVitrineGazetteHeading, 1);
-	});
-
-	it('shows OLSKFollow', function () {
-		browser.assert.elements('.OLSKFollow', 1);
-	});
-
-	it('shows ROCOBulletin', function () {
-		browser.assert.elements('.ROCOBulletin', 1);
+	it('shows ROCOGazette', function () {
+		browser.assert.elements('.ROCOGazette', 1);
 	});
 
 	it('shows MSWVitrineJarHeading', function () {
