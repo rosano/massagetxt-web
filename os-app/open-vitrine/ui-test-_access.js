@@ -9,8 +9,6 @@ Object.entries({
 	MSWVitrineCrownBlurb: '.MSWVitrineCrownBlurb',
 
 	MSWVitrineContent: '.MSWVitrineContent',
-
-	MSWVitrineJarHeading: '.MSWVitrineJarHeading',
 }).map(function (e) {
 	return global[e.shift()]  = e.pop();
 });
@@ -55,10 +53,6 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows ROCOGazette', function () {
 		browser.assert.elements('.ROCOGazette', 1);
-	});
-
-	it('shows MSWVitrineJarHeading', function () {
-		browser.assert.elements(MSWVitrineJarHeading, 1);
 	});
 
 	it('shows OLSKJar', function () {

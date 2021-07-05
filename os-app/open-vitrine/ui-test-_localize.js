@@ -53,10 +53,6 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.element(`a[href="${ process.env.MSW_SHARED_GITHUB_URL }"]`);
 		});
 
-		it('localizes MSWVitrineJarHeading', function () {
-			browser.assert.text(MSWVitrineJarHeading, uLocalized('OLSKJarHeadingText'));
-		});
-
 	});
 
 });
