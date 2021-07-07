@@ -17,7 +17,6 @@
 		'normalize.css',
 		'OLSKLanguageSwitcher',
 		'OLSKDecor',
-		'OLSKBanner',
 		'OLSKRootLink',
 		'OLSKRouting',
 		'ROCORootLink',
