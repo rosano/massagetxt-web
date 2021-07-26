@@ -42,18 +42,18 @@ describe('MSWVitrine_Misc', function () {
 
 	});
 
-	describe('OLSKEdit', function test_OLSKEdit () {
-
-		it('sets OLSKEditURL', function () {
-			browser.assert.attribute('.OLSKEdit', 'href', process.env.OLSK_REPO_URL);
-		});
-
-	});
-
 	describe('ROCOGazette', function test_ROCOGazette () {
 
 		it('sets ROCOBulletinProject', function () {
 			browser.assert.attribute('.ROCOBulletinProjectField', 'value', 'RP_002');
+		});
+
+	});
+
+	describe('OLSKEdit', function test_OLSKEdit () {
+
+		it('sets OLSKEditURL', function () {
+			browser.assert.attribute('.OLSKEdit', 'href', process.env.OLSK_REPO_URL);
 		});
 
 	});
