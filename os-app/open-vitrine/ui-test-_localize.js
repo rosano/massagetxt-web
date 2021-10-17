@@ -35,7 +35,7 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		});
 
 		it.skip('localizes MSWVitrineContent', function() {
-			const item = require('fs').readFileSync(require('path').join(__dirname, `text.${ OLSKRoutingLanguage }.md`), 'utf-8').replace(/_/g, '');
+			const item = require('fs').readFileSync(require('path').join(__dirname, `text-${ OLSKRoutingLanguage }.md`), 'utf-8').replace(/_/g, '');
 			browser.assert.OLSKTextContent(MSWVitrineContent, item.slice(0, 20), function (inputData) {
 				return inputData.slice(0, 20);
 			});
