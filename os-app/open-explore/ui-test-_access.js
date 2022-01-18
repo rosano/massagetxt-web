@@ -6,7 +6,7 @@ Object.entries({
 	MSWExploreFooter: '.MSWExploreFooter',
 	MSWExploreGuideLink: '.MSWExploreGuideLink',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('MSWExplore_Access', function () {

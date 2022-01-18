@@ -13,7 +13,7 @@ Object.entries({
 	MSWPromptTraceItemArgumentsHeading: '.MSWPromptTraceItemArgumentsHeading',
 	MSWPromptTraceItemArgumentsValue: '.MSWPromptTraceItemArguments .MSWPromptTraceValue',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('MSWPromptTraceItem_Access', function () {

@@ -5,7 +5,7 @@ Object.entries({
 
 	MSWEditorFieldDebug: '.MSWEditorFieldDebug',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('MSWEditor_Access', function () {

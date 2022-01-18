@@ -15,7 +15,7 @@ Object.entries({
 	
 	MSWPromptOutput: '.MSWPromptOutput',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('MSWPrompt_Access', function test_MSWPrompt_Access () {

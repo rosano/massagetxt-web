@@ -10,7 +10,7 @@ Object.entries({
 
 	MSWVitrineContent: '.MSWVitrineContent',
 }).map(function (e) {
-	return global[e.shift()]  = e.pop();
+	return global[e.shift()] = e.pop();
 });
 
 describe('MSWVitrine_Access', function () {
