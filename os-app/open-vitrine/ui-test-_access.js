@@ -9,6 +9,8 @@ Object.entries({
 	MSWVitrineCrownBlurb: '.MSWVitrineCrownBlurb',
 
 	MSWVitrineContent: '.MSWVitrineContent',
+
+	MSWVitrineDemosHeading: '.MSWVitrineDemosHeading',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
 });
@@ -49,6 +51,10 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineContent', function() {
 		browser.assert.elements(MSWVitrineContent, 1)
+	});
+
+	it('shows MSWVitrineDemosHeading', function () {
+		browser.assert.elements(MSWVitrineDemosHeading, 1);
 	});
 
 	it('shows ROCOGazette', function () {
