@@ -62,6 +62,13 @@ describe('MSWVitrine_Misc', function () {
 
 	});
 
+	describe('MSWVitrineDemosThreeFrame', function () {
+		it('sets src', function () {
+			browser.assert.attribute(MSWVitrineDemosThreeFrame, 'src', '/explore/?raw=spanish-vocab-journal%0A%0A%23%202020.04.17%0A-%20atraco%3Bheist%0A-%20hojuelas%3Bflakes%0A-%20nuboso%3Bcloudy%0A-%20nubloso%3Bhazy%0A-%20lujoso%3Bluxurious%0A-%20nariz%3Bnose%0A-%20desdoble%3Bunfold%0A-%20soplando%3Bblowing%0A%0A%23%202020.04.14%0A-%20¿cómo%20sigues%3F%3Bhow%27s%20it%20going%3F%0A%0A%23%202020.03.21%0A-%20aprovisionarse%3Bto%20stock%20up%0A%0A%5B%5B%23lingo%5D%5D&massage=%24input.markdown.sections%5B1%5D.markdown.items.postpend%28%3Bspanish%29.join%28%5Cn%29');
+		});
+
+	});
+
 	describe('ROCOGazette', function test_ROCOGazette () {
 
 		it('sets ROCOBulletinProject', function () {

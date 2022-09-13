@@ -15,6 +15,8 @@ Object.entries({
 	MSWVitrineDemosOneFrame: '.MSWVitrineDemosOneFrame',
 	MSWVitrineDemosTwoHeading: '.MSWVitrineDemosTwoHeading',
 	MSWVitrineDemosTwoFrame: '.MSWVitrineDemosTwoFrame',
+	MSWVitrineDemosThreeHeading: '.MSWVitrineDemosThreeHeading',
+	MSWVitrineDemosThreeFrame: '.MSWVitrineDemosThreeFrame',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
 });
@@ -75,6 +77,14 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineDemosTwoFrame', function () {
 		browser.assert.elements(MSWVitrineDemosTwoFrame, 1);
+	});
+
+	it('shows MSWVitrineDemosThreeHeading', function () {
+		browser.assert.elements(MSWVitrineDemosThreeHeading, 1);
+	});
+
+	it('shows MSWVitrineDemosThreeFrame', function () {
+		browser.assert.elements(MSWVitrineDemosThreeFrame, 1);
 	});
 
 	it('shows ROCOGazette', function () {
