@@ -49,6 +49,6 @@
 	width: inherit;
 }
 
-:global(.OLSKBanner) {
-	display: none;
+.OLSKBanner {
+	display: none !important;
 }
