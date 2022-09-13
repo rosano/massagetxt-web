@@ -7,3 +7,10 @@ body {
 	background: var(--MSWCommonBackground);
 	color: var(--MSWCommonForeground);
 }
+
+.MSWVitrineDemos iframe {
+	width: 100%;
+	height: 350px;
+	border: 10px var(--OLSKDecorForegroundLight) solid;
+	border-radius: 5px;
+}
