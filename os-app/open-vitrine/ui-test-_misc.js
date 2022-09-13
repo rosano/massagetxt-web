@@ -48,10 +48,6 @@ describe('MSWVitrine_Misc', function () {
 
 	describe('MSWVitrineDemosOneFrame', function () {
 
-		it('classes OLSKDecorFrame', function () {
-			browser.assert.hasClass(MSWVitrineDemosOneFrame, 'OLSKDecorFrame');
-		});
-
 		it('sets src', function () {
 			browser.assert.attribute(MSWVitrineDemosOneFrame, 'src', '/explore?raw=alfa%0Abravo%0Acharlie%0Adelta&massage=%24input.lines.prepend%28Hello%20%29.postpend%28!%29.join%28%5Cn%29');
 		});
