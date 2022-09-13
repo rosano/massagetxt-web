@@ -13,6 +13,7 @@ Object.entries({
 	MSWVitrineDemosHeading: '.MSWVitrineDemosHeading',
 	MSWVitrineDemosOneHeading: '.MSWVitrineDemosOneHeading',
 	MSWVitrineDemosOneFrame: '.MSWVitrineDemosOneFrame',
+	MSWVitrineDemosTwoHeading: '.MSWVitrineDemosTwoHeading',
 	MSWVitrineDemosTwoFrame: '.MSWVitrineDemosTwoFrame',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
@@ -66,6 +67,10 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineDemosOneFrame', function () {
 		browser.assert.elements(MSWVitrineDemosOneFrame, 1);
+	});
+
+	it('shows MSWVitrineDemosTwoHeading', function () {
+		browser.assert.elements(MSWVitrineDemosTwoHeading, 1);
 	});
 
 	it('shows MSWVitrineDemosTwoFrame', function () {
