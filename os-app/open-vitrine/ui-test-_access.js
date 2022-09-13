@@ -13,6 +13,7 @@ Object.entries({
 	MSWVitrineDemosHeading: '.MSWVitrineDemosHeading',
 	MSWVitrineDemosOneHeading: '.MSWVitrineDemosOneHeading',
 	MSWVitrineDemosOneFrame: '.MSWVitrineDemosOneFrame',
+	MSWVitrineDemosTwoFrame: '.MSWVitrineDemosTwoFrame',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
 });
@@ -65,6 +66,10 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineDemosOneFrame', function () {
 		browser.assert.elements(MSWVitrineDemosOneFrame, 1);
+	});
+
+	it('shows MSWVitrineDemosTwoFrame', function () {
+		browser.assert.elements(MSWVitrineDemosTwoFrame, 1);
 	});
 
 	it('shows ROCOGazette', function () {

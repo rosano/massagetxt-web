@@ -54,6 +54,14 @@ describe('MSWVitrine_Misc', function () {
 
 	});
 
+	describe('MSWVitrineDemosTwoFrame', function () {
+
+		it('sets src', function () {
+			browser.assert.attribute(MSWVitrineDemosTwoFrame, 'src', '/explore?raw=%23%20one%0A-%20alfa%0A-%20bravo%0A-%20charlie%0A%0A%23%20two%0A-%20delta&massage=%24input.markdown.items.join%28%2C%20%29.prepend%28Hello%20%29.postpend%28!%29');
+		});
+
+	});
+
 	describe('ROCOGazette', function test_ROCOGazette () {
 
 		it('sets ROCOBulletinProject', function () {
