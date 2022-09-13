@@ -49,7 +49,7 @@ describe('MSWVitrine_Misc', function () {
 	describe('MSWVitrineDemosOneFrame', function () {
 
 		it('sets src', function () {
-			browser.assert.attribute(MSWVitrineDemosOneFrame, 'src', '/explore?raw=alfa%0Abravo%0Acharlie%0Adelta&massage=%24input.lines.prepend%28Hello%20%29.postpend%28!%29.join%28%5Cn%29');
+			browser.assert.attribute(MSWVitrineDemosOneFrame, 'src', '/explore?raw=alfa%0Abravo%0Acharlie&massage=%24input.lines.prepend%28Hello%20%29.postpend%28!%29.join%28%5Cn%29');
 		});
 
 	});
