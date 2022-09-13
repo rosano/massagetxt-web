@@ -45,6 +45,10 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text(MSWVitrineDemosHeading, uLocalized('MSWVitrineDemosHeadingText'));
 		});
 
+		it('localizes MSWVitrineDemosOneHeading', function () {
+			browser.assert.text(MSWVitrineDemosOneHeading, uLocalized('MSWVitrineDemosOneHeadingText'));
+		});
+
 		it('localizes MSWGuideRoute', function() {
 			browser.assert.element(`a[href="${ require('../open-guide/controller.js').OLSKControllerRoutes().shift().OLSKRoutePath }"]`);
 		});

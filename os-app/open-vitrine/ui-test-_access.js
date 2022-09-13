@@ -11,6 +11,7 @@ Object.entries({
 	MSWVitrineContent: '.MSWVitrineContent',
 
 	MSWVitrineDemosHeading: '.MSWVitrineDemosHeading',
+	MSWVitrineDemosOneHeading: '.MSWVitrineDemosOneHeading',
 	MSWVitrineDemosOneFrame: '.MSWVitrineDemosOneFrame',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
@@ -56,6 +57,10 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineDemosHeading', function () {
 		browser.assert.elements(MSWVitrineDemosHeading, 1);
+	});
+
+	it('shows MSWVitrineDemosOneHeading', function () {
+		browser.assert.elements(MSWVitrineDemosOneHeading, 1);
 	});
 
 	it('shows MSWVitrineDemosOneFrame', function () {
