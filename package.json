@@ -12,21 +12,21 @@
     "watch": "olsk-rollup-watch"
   },
   "dependencies": {
-    "// open-vitrine": null,
+    "//": "open-vitrine",
     "OLSKPithVitrine": "olsk/OLSKPithVitrine",
 
-    "// open-guide": null,
+    "//": "open-guide",
     "OLSKPithGuide": "olsk/OLSKPithGuide",
 
-    "// open-explore": null,
+    "//": "open-explore",
     "OLSKPithApp": "olsk/OLSKPithApp",
     "codemirror": "rosano/CodeMirror#add-distribution",
     "MassageTXT": "massagetxt/mst-lib",
 
-    "// tech-robots": null,
+    "//": "tech-robots",
     "OLSKRobots": "olsk/OLSKRobots",
 
-    "// tech-serviceworker": null,
+    "//": "tech-serviceworker",
     "OLSKServiceWorker": "olsk/OLSKServiceWorker",
 
     "//": "I sacrifice myself for the commas of others"
