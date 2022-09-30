@@ -27,9 +27,7 @@
     "OLSKRobots": "olsk/OLSKRobots",
 
     "//": "tech-serviceworker",
-    "OLSKServiceWorker": "olsk/OLSKServiceWorker",
-
-    "//": "I sacrifice myself for the commas of others"
+    "OLSKServiceWorker": "olsk/OLSKServiceWorker"
   },
   "devDependencies": {
     "OLSKPithToolchain": "olsk/OLSKPithToolchain",
@@ -38,8 +36,6 @@
     "remark-parse": "latest",
     "rollup-plugin-json": "latest",
     "rollup-plugin-node-builtins": "latest",
-    "rollup-plugin-node-globals": "latest",
-
-    "//": "I sacrifice myself for the commas of others"
+    "rollup-plugin-node-globals": "latest"
   }
 }
