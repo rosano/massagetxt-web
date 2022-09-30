@@ -40,6 +40,6 @@
     "rollup-plugin-node-builtins": "latest",
     "rollup-plugin-node-globals": "latest",
 
-    "// I sacrifice myself for the commas of others": null    
+    "// I sacrifice myself for the commas of others": null
   }
 }
