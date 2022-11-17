@@ -12,21 +12,16 @@
     "watch": "olsk-rollup-watch"
   },
   "dependencies": {
-    "//": "open-vitrine",
     "OLSKPithVitrine": "olsk/OLSKPithVitrine",
 
-    "//": "open-guide",
     "OLSKPithGuide": "olsk/OLSKPithGuide",
 
-    "//": "open-explore",
     "OLSKPithApp": "olsk/OLSKPithApp",
     "codemirror": "rosano/CodeMirror#add-distribution",
     "MassageTXT": "massagetxt/mst-lib",
 
-    "//": "tech-robots",
     "OLSKRobots": "olsk/OLSKRobots",
 
-    "//": "tech-serviceworker",
     "OLSKServiceWorker": "olsk/OLSKServiceWorker"
   },
   "devDependencies": {
