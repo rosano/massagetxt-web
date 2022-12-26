@@ -22,25 +22,6 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
 		});
 
-		it('localizes MSWVitrineCrownName', function () {
-			browser.assert.text(MSWVitrineCrownName, uLocalized('MSWVitrineTitle'));
-		});
-
-		it('localizes MSWVitrineCrownBlurb', function () {
-			browser.assert.text(MSWVitrineCrownBlurb, uLocalized('MSWVitrineDescription'));
-		});
-
-		it('localizes OLSKCommonWhatIsIt', function () {
-			browser.assert.text('.OLSKCommonWhatIsIt', uLocalized('OLSKCommonWhatIsItText'));
-		});
-
-		it.skip('localizes MSWVitrineContent', function() {
-			const item = require('fs').readFileSync(require('path').join(__dirname, `text-${ OLSKRoutingLanguage }.md`), 'utf-8').replace(/_/g, '');
-			browser.assert.OLSKTextContent(MSWVitrineContent, item.slice(0, 20), function (inputData) {
-				return inputData.slice(0, 20);
-			});
-		});
-
 		it('localizes MSWVitrineDemosHeading', function () {
 			browser.assert.text(MSWVitrineDemosHeading, uLocalized('MSWVitrineDemosHeadingText'));
 		});
@@ -57,16 +38,36 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			browser.assert.text(MSWVitrineDemosThreeHeading, uLocalized('MSWVitrineDemosThreeHeadingText'));
 		});
 
-		it('localizes MSWGuideRoute', function() {
-			browser.assert.element(`a[href="${ require('../open-guide/controller.js').OLSKControllerRoutes().shift().OLSKRoutePath }"]`);
+		it('localizes MSWVitrineExploreButton', function () {
+			browser.assert.text(MSWVitrineExploreButton, uLocalized('MSWExploreTitle'));
 		});
 
-		it('localizes MSWExploreRoute', function() {
-			browser.assert.element(`a[href="${ require('../open-explore/controller.js').OLSKControllerRoutes().shift().OLSKRoutePath }"]`);
+		context('OLSKCrown', function test_OLSKCrown () {
+
+			it('localizes OLSKCrownCardName', function () {
+				browser.assert.text('.OLSKCrownCardName', uLocalized('MSWVitrineTitle'));
+			});
+		
 		});
 
-		it('localizes MSW_SHARED_GITHUB_URL', function() {
-			browser.assert.element(`a[href="${ process.env.MSW_SHARED_GITHUB_URL }"]`);
+		context('OLSKLanding', function test_OLSKLanding () {
+
+			it('localizes OLSKLandingHeadingText', function () {
+				browser.assert.text('.OLSKLandingHeading', uLocalized('MSWVitrineDescription'));
+			});
+
+			it('localizes OLSKLandingBlurbText', function () {
+				browser.assert.text('.OLSKLandingBlurb', uLocalized('OLSKLandingBlurbText'));
+			});
+
+			it('localizes OLSKLandingActionText', function () {
+				browser.assert.text('.OLSKLandingAction', uLocalized('OLSKWordingOpenGuide'));
+			});
+
+			it('localizes OLSKLandingActionHref', function () {
+				browser.assert.attribute('.OLSKLandingAction', 'href', OLSKTestingCanonical(require('../open-guide/controller.js').OLSKControllerRoutes().shift()));
+			});
+		
 		});
 
 	});

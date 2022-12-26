@@ -1,12 +1,10 @@
 :root {
-	--OLSKCommonBackground: var(--MSWCommonBackground);
-	--OLSKCommonForeground: var(--MSWCommonForeground);
 	--OLSKCommonFontSize: 12pt;
 }
 
 body {
-	background: var(--MSWCommonBackground);
-	color: var(--MSWCommonForeground);
+	background: var(--OLSKCommonBackground);
+	color: var(--OLSKCommonForeground);
 }
 
 .MSWGuideExample {

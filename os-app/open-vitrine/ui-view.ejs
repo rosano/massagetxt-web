@@ -14,25 +14,23 @@ locals.OLSKPagePublicConstants = {
 
 <div class="MSWVitrine OLSKDecor OLSKDecorCapped OLSKDecorNoTopPad">
 
-<%- include('../_shared/__external/OLSKLanguageSwitcher/main.ejs') %>
+<%- include('../../node_modules/OLSKCrown/main.ejs', {
+	OLSKCrownCardImageURL: '/_shared/MSWRootLink/ui-assets/identity.svg',
+	OLSKCrownCardNameText: OLSKLocalized('MSWVitrineTitle'),
+}) %>
 
-<hr role="presentation" />
+<%- include('../../node_modules/OLSKLanding/main.ejs', {
+	OLSKLandingHeadingText: OLSKLocalized('MSWVitrineDescription'),
+	OLSKLandingBlurbText: OLSKLocalized('OLSKLandingBlurbText'),
+	OLSKLandingActionText: OLSKLocalized('OLSKWordingOpenGuide'),
+	OLSKLandingActionHref: OLSKCanonical('MSWGuideRoute'),
+}) %>
 
-<div class="MSWVitrineCrown OLSKCommonCard OLSKCommonCrownCard">
-	<img class="MSWVitrineCrownIcon" src="<%= process.env.MSW_VITRINE_IDENTITY_URL %>" role="presentation" />
-	<section>
-		<span class="MSWVitrineCrownName"><%= OLSKLocalized('MSWVitrineTitle') %></span>
-		<span class="MSWVitrineCrownBlurb"><%= OLSKLocalized('MSWVitrineDescription') %></span>
-	</section>
+<div class="OLSKCommonVideoList">
+	<p class="MSWVitrineVideo OLSKCommonVideoListItem">
+		<iframe src="<%= process.env.MSW_VITRINE_VIDEO_URL %>" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</p>
 </div>
-
-<p class="OLSKCommonWhatIsIt"><%= OLSKLocalized('OLSKCommonWhatIsItText') %></p>
-
-<article class="MSWVitrineContent">
-
-<%- OLSKStringReplaceTokens(MSWVitrineContent, {}) %>
-
-</article>
 
 <div class="MSWVitrineDemos">
 
@@ -40,15 +38,17 @@ locals.OLSKPagePublicConstants = {
 
 <h2 class="MSWVitrineDemosOneHeading"><%= OLSKLocalized('MSWVitrineDemosOneHeadingText') %></h2>
 
-<iframe class="MSWVitrineDemosOneFrame" src="/explore/?raw=alfa%0Abravo%0Acharlie&massage=%24input.lines.prepend%28Hello%20%29.postpend%28!%29.join%28%5Cn%29" border="0"></iframe>
+<iframe class="MSWVitrineDemosOneFrame" src="<%= OLSKCanonical('MSWExploreRoute') %>?raw=alfa%0Abravo%0Acharlie&massage=%24input.lines.prepend%28Hello%20%29.postpend%28!%29.join%28%5Cn%29" border="0"></iframe>
 
 <h2 class="MSWVitrineDemosTwoHeading"><%= OLSKLocalized('MSWVitrineDemosTwoHeadingText') %></h2>
 
-<iframe class="MSWVitrineDemosTwoFrame" src="/explore/?raw=%23%20one%0A-%20alfa%0A-%20bravo%0A-%20charlie%0A%0A%23%20two%0A-%20delta&massage=%24input.markdown.items.join%28%2C%20%29.prepend%28Hello%20%29.postpend%28!%29" border="0"></iframe>
+<iframe class="MSWVitrineDemosTwoFrame" src="<%= OLSKCanonical('MSWExploreRoute') %>?raw=%23%20one%0A-%20alfa%0A-%20bravo%0A-%20charlie%0A%0A%23%20two%0A-%20delta&massage=%24input.markdown.items.join%28%2C%20%29.prepend%28Hello%20%29.postpend%28!%29" border="0"></iframe>
 
 <h2 class="MSWVitrineDemosThreeHeading"><%= OLSKLocalized('MSWVitrineDemosThreeHeadingText') %></h2>
 
-<iframe class="MSWVitrineDemosThreeFrame" src="/explore/?raw=spanish-vocab-journal%0A%0A%23%202020.04.17%0A-%20atraco%3Bheist%0A-%20hojuelas%3Bflakes%0A-%20nuboso%3Bcloudy%0A-%20nubloso%3Bhazy%0A-%20lujoso%3Bluxurious%0A-%20nariz%3Bnose%0A-%20desdoble%3Bunfold%0A-%20soplando%3Bblowing%0A%0A%23%202020.04.14%0A-%20¿cómo%20sigues%3F%3Bhow%27s%20it%20going%3F%0A%0A%23%202020.03.21%0A-%20aprovisionarse%3Bto%20stock%20up%0A%0A%5B%5B%23lingo%5D%5D&massage=%24input.markdown.sections%5B1%5D.markdown.items.postpend%28%3Bspanish%29.join%28%5Cn%29" border="0"></iframe>
+<iframe class="MSWVitrineDemosThreeFrame" src="<%= OLSKCanonical('MSWExploreRoute') %>?raw=spanish-vocab-journal%0A%0A%23%202020.04.17%0A-%20atraco%3Bheist%0A-%20hojuelas%3Bflakes%0A-%20nuboso%3Bcloudy%0A-%20nubloso%3Bhazy%0A-%20lujoso%3Bluxurious%0A-%20nariz%3Bnose%0A-%20desdoble%3Bunfold%0A-%20soplando%3Bblowing%0A%0A%23%202020.04.14%0A-%20¿cómo%20sigues%3F%3Bhow%27s%20it%20going%3F%0A%0A%23%202020.03.21%0A-%20aprovisionarse%3Bto%20stock%20up%0A%0A%5B%5B%23lingo%5D%5D&massage=%24input.markdown.sections%5B1%5D.markdown.items.postpend%28%3Bspanish%29.join%28%5Cn%29" border="0"></iframe>
+
+<a class="MSWVitrineExploreButton OLSKDecorPress OLSKDecorPressCall" href="<%= OLSKCanonical('MSWExploreRoute') %>"><%= OLSKLocalized('MSWExploreTitle') %></a>
 
 </div>
 

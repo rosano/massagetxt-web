@@ -3,12 +3,7 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	MSWVitrine: '.MSWVitrine',
 	
-	MSWVitrineCrown: '.MSWVitrineCrown',
-	MSWVitrineCrownIcon: '.MSWVitrineCrownIcon',
-	MSWVitrineCrownName: '.MSWVitrineCrownName',
-	MSWVitrineCrownBlurb: '.MSWVitrineCrownBlurb',
-
-	MSWVitrineContent: '.MSWVitrineContent',
+	MSWVitrineVideo: '.OLSKCommonVideoList .OLSKCommonVideoListItem.MSWVitrineVideo iframe',
 
 	MSWVitrineDemosHeading: '.MSWVitrineDemosHeading',
 	MSWVitrineDemosOneHeading: '.MSWVitrineDemosOneHeading',
@@ -17,6 +12,7 @@ Object.entries({
 	MSWVitrineDemosTwoFrame: '.MSWVitrineDemosTwoFrame',
 	MSWVitrineDemosThreeHeading: '.MSWVitrineDemosThreeHeading',
 	MSWVitrineDemosThreeFrame: '.MSWVitrineDemosThreeFrame',
+	MSWVitrineExploreButton: '.MSWVitrineExploreButton',
 }).map(function (e) {
 	return global[e.shift()] = e.pop();
 });
@@ -31,32 +27,16 @@ describe('MSWVitrine_Access', function () {
 		browser.assert.elements(MSWVitrine, 1)
 	});
 	
-	it('shows OLSKLanguageSwitcher', function() {
-		browser.assert.elements('.OLSKLanguageSwitcher', 1);
+	it('shows OLSKCrown', function() {
+		browser.assert.elements('.OLSKCrown', 1);
 	});
 	
-	it('shows MSWVitrineCrown', function() {
-		browser.assert.elements(MSWVitrineCrown, 1)
-	});
-	
-	it('shows MSWVitrineCrownIcon', function() {
-		browser.assert.elements(MSWVitrineCrownIcon, 1)
-	});
-	
-	it('shows MSWVitrineCrownName', function() {
-		browser.assert.elements(MSWVitrineCrownName, 1)
+	it('shows OLSKLanding', function() {
+		browser.assert.elements('.OLSKLanding', 1);
 	});
 
-	it('shows MSWVitrineCrownBlurb', function () {
-		browser.assert.elements(MSWVitrineCrownBlurb, 1);
-	});
-	
-	it('shows OLSKCommonWhatIsIt', function() {
-		browser.assert.elements('.OLSKCommonWhatIsIt', 1);
-	});
-
-	it('shows MSWVitrineContent', function() {
-		browser.assert.elements(MSWVitrineContent, 1)
+	it('shows MSWVitrineVideo', function () {
+		browser.assert.elements(MSWVitrineVideo, 1);
 	});
 
 	it('shows MSWVitrineDemosHeading', function () {
@@ -85,6 +65,10 @@ describe('MSWVitrine_Access', function () {
 
 	it('shows MSWVitrineDemosThreeFrame', function () {
 		browser.assert.elements(MSWVitrineDemosThreeFrame, 1);
+	});
+
+	it('shows MSWVitrineExploreButton', function () {
+		browser.assert.elements(MSWVitrineExploreButton, 1);
 	});
 
 	it('shows ROCOGazette', function () {
