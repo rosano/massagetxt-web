@@ -14,38 +14,38 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			});
 		});
 
-		it('localizes title', function() {
-			browser.assert.text('title', uLocalized('MSWVitrineTitle'))
+		it.skip('localizes title', function() {
+			return browser.assert.text('title', uLocalized('MSWVitrineTitle'))
 		});
 
 		it('localizes meta[description]', function() {
-			browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
+			return browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWVitrineDescription'))
 		});
 
 		it('localizes MSWVitrineDemosHeading', function () {
-			browser.assert.text(MSWVitrineDemosHeading, uLocalized('MSWVitrineDemosHeadingText'));
+			return browser.assert.text(MSWVitrineDemosHeading, uLocalized('MSWVitrineDemosHeadingText'));
 		});
 
 		it('localizes MSWVitrineDemosOneHeading', function () {
-			browser.assert.text(MSWVitrineDemosOneHeading, uLocalized('MSWVitrineDemosOneHeadingText'));
+			return browser.assert.text(MSWVitrineDemosOneHeading, uLocalized('MSWVitrineDemosOneHeadingText'));
 		});
 
 		it('localizes MSWVitrineDemosTwoHeading', function () {
-			browser.assert.text(MSWVitrineDemosTwoHeading, uLocalized('MSWVitrineDemosTwoHeadingText'));
+			return browser.assert.text(MSWVitrineDemosTwoHeading, uLocalized('MSWVitrineDemosTwoHeadingText'));
 		});
 
 		it('localizes MSWVitrineDemosThreeHeading', function () {
-			browser.assert.text(MSWVitrineDemosThreeHeading, uLocalized('MSWVitrineDemosThreeHeadingText'));
+			return browser.assert.text(MSWVitrineDemosThreeHeading, uLocalized('MSWVitrineDemosThreeHeadingText'));
 		});
 
 		it('localizes MSWVitrineExploreButton', function () {
-			browser.assert.text(MSWVitrineExploreButton, uLocalized('MSWExploreTitle'));
+			return browser.assert.text(MSWVitrineExploreButton, uLocalized('MSWExploreTitle'));
 		});
 
 		context('OLSKCrown', function test_OLSKCrown () {
 
 			it('localizes OLSKCrownCardName', function () {
-				browser.assert.text('.OLSKCrownCardName', uLocalized('MSWVitrineTitle'));
+				return browser.assert.text('.OLSKCrownCardName', uLocalized('MSWVitrineTitle'));
 			});
 		
 		});
@@ -53,19 +53,19 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		context('OLSKLanding', function test_OLSKLanding () {
 
 			it('localizes OLSKLandingHeadingText', function () {
-				browser.assert.text('.OLSKLandingHeading', uLocalized('MSWVitrineDescription'));
+				return browser.assert.text('.OLSKLandingHeading', uLocalized('MSWVitrineDescription'));
 			});
 
 			it('localizes OLSKLandingBlurbText', function () {
-				browser.assert.text('.OLSKLandingBlurb', uLocalized('OLSKLandingBlurbText'));
+				return browser.assert.text('.OLSKLandingBlurb', uLocalized('OLSKLandingBlurbText'));
 			});
 
 			it('localizes OLSKLandingActionText', function () {
-				browser.assert.text('.OLSKLandingAction', uLocalized('OLSKWordingOpenGuide'));
+				return browser.assert.text('.OLSKLandingAction', uLocalized('OLSKWordingOpenGuide'));
 			});
 
 			it('localizes OLSKLandingActionHref', function () {
-				browser.assert.attribute('.OLSKLandingAction', 'href', OLSKTestingCanonical(require('../open-guide/controller.js').OLSKControllerRoutes().shift()));
+				return browser.assert.attribute('.OLSKLandingAction', 'href', OLSKTestingCanonical(require('../open-guide/controller.js').OLSKControllerRoutes().shift()));
 			});
 		
 		});

@@ -11,7 +11,7 @@ describe('MSWPromptTraceValue', function() {
 	});
 
 	it('classes MSWPromptTraceValueTruncated', function () {
-		browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
+		return browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 	});
 
 	context('click truncated', function () {
@@ -21,7 +21,7 @@ describe('MSWPromptTraceValue', function() {
 		});
 
 		it('classes MSWPromptTraceValueTruncated', function () {
-			browser.assert.hasNoClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
+			return browser.assert.hasNoClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 		});
 	
 	});
@@ -33,7 +33,7 @@ describe('MSWPromptTraceValue', function() {
 		});
 
 		it('classes MSWPromptTraceValueTruncated', function () {
-			browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
+			return browser.assert.hasClass(MSWPromptTraceValue, 'MSWPromptTraceValueTruncated');
 		});
 	
 	});
@@ -49,7 +49,7 @@ describe('MSWPromptTraceValueContent', function() {
 	});
 
 	it('initializes to MSWPromptTraceValueContent', function () {
-		browser.assert.text(MSWPromptTraceValueContent, 'alfa')
+		return browser.assert.text(MSWPromptTraceValueContent, 'alfa')
 	});
 	
 });

@@ -17,7 +17,7 @@ describe('MSWPrompt_Localize-' + OLSKRoutingLanguage, function () {
 	});
 
 	it('localizes MSWPromptTraceItemInputHeading', function () {
-		browser.assert.text(MSWPromptTraceItemInputHeading, uLocalized('MSWPromptTraceItemInputHeadingText'))
+		return browser.assert.text(MSWPromptTraceItemInputHeading, uLocalized('MSWPromptTraceItemInputHeadingText'))
 	});
 
 	context('MSWPromptTraceItemArguments', function () {
@@ -31,7 +31,7 @@ describe('MSWPrompt_Localize-' + OLSKRoutingLanguage, function () {
 		});
 		
 		it('localizes MSWPromptTraceItemArgumentsHeading', function () {
-			browser.assert.text(MSWPromptTraceItemArgumentsHeading, uLocalized('MSWPromptTraceItemArgumentsHeadingText'))
+			return browser.assert.text(MSWPromptTraceItemArgumentsHeading, uLocalized('MSWPromptTraceItemArgumentsHeadingText'))
 		});
 	
 	});

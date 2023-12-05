@@ -16,19 +16,19 @@ describe('MSWGuide_Access', function () {
 	});
 
 	it('shows MSWGuide', function () {
-		browser.assert.elements(MSWGuide, 1);
+		return browser.assert.elements(MSWGuide, 1);
 	});
 
 	it('shows MSWGuideCrown', function () {
-		browser.assert.elements(MSWGuideCrown, 1);
+		return browser.assert.elements(MSWGuideCrown, 1);
 	});
 
 	it('shows MSWGuideCrownName', function () {
-		browser.assert.elements(MSWGuideCrownName, 1);
+		return browser.assert.elements(MSWGuideCrownName, 1);
 	});
 
 	it('shows MSWRootLink', function () {
-		browser.assert.elements('.MSWRootLink', 1);
+		return browser.assert.elements('.MSWRootLink', 1);
 	});
 
 });

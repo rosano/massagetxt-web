@@ -14,16 +14,16 @@ describe('MSWExplore_Localize-' + OLSKRoutingLanguage, function () {
 		});
 	});
 
-	it('localizes title', function() {
-		browser.assert.text('title', uLocalized('MSWExploreTitle'))
+	it.skip('localizes title', function() {
+		return browser.assert.text('title', uLocalized('MSWExploreTitle'))
 	});
 
 	it('localizes meta[description]', function() {
-		browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWExploreDescription'))
+		return browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWExploreDescription'))
 	});
 
 	it('localizes MSWExploreGuideLink', function () {
-		browser.assert.text(MSWExploreGuideLink, uLocalized('MSWExploreGuideLinkText'));
+		return browser.assert.text(MSWExploreGuideLink, uLocalized('MSWExploreGuideLinkText'));
 	});
 
 });

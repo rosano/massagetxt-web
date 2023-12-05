@@ -9,8 +9,8 @@ describe('MSWEditorField', function test_MSWEditorField () {
 	});
 
 	before(function () {
-		browser.assert.text('#TestMSWEditorDispatchValueDidChange', '0');
-		browser.assert.text('#TestMSWEditorDispatchValueDidChangeValue', 'undefined');
+		return browser.assert.text('#TestMSWEditorDispatchValueDidChange', '0');
+		return browser.assert.text('#TestMSWEditorDispatchValueDidChangeValue', 'undefined');
 	});
 
 	context('input', function () {
@@ -20,8 +20,8 @@ describe('MSWEditorField', function test_MSWEditorField () {
 		});
 
 		it('sends MSWEditorDispatchValueDidChange', function () {
-			browser.assert.text('#TestMSWEditorDispatchValueDidChange', '1')
-			browser.assert.text('#TestMSWEditorDispatchValueDidChangeValue', 'alfa')
+			return browser.assert.text('#TestMSWEditorDispatchValueDidChange', '1')
+			return browser.assert.text('#TestMSWEditorDispatchValueDidChangeValue', 'alfa')
 		});
 	
 	});

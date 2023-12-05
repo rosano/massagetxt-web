@@ -15,7 +15,7 @@ describe('MSWPrompt_Localize-' + OLSKRoutingLanguage, function () {
 	});
 
 	it('localizes MSWPromptPermalink', function () {
-		browser.assert.text(MSWPromptPermalink, uLocalized('MSWPromptPermalinkText'))
+		return browser.assert.text(MSWPromptPermalink, uLocalized('MSWPromptPermalinkText'))
 	});
 
 });

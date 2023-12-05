@@ -25,35 +25,35 @@ describe('MSWPrompt_Access', function test_MSWPrompt_Access () {
 	});
 
 	it('shows MSWPrompt', function() {
-		browser.assert.elements(MSWPrompt, 1)
+		return browser.assert.elements(MSWPrompt, 1)
 	});
 
 	it('shows MSWPromptPermalink', function() {
-		browser.assert.elements(MSWPromptPermalink, 1)
+		return browser.assert.elements(MSWPromptPermalink, 1)
 	});
 
 	it('shows MSWPromptRaw', function() {
-		browser.assert.elements(MSWPromptRaw, 1)
+		return browser.assert.elements(MSWPromptRaw, 1)
 	});
 
 	it('shows MSWPromptMassage', function() {
-		browser.assert.elements(MSWPromptMassage, 1)
+		return browser.assert.elements(MSWPromptMassage, 1)
 	});
 
 	it('shows MSWPromptTrace', function() {
-		browser.assert.elements(MSWPromptTrace, 1)
+		return browser.assert.elements(MSWPromptTrace, 1)
 	});
 
 	it('hides MSWPromptSyntaxError', function() {
-		browser.assert.elements(MSWPromptSyntaxError, 0)
+		return browser.assert.elements(MSWPromptSyntaxError, 0)
 	});
 
 	it('hides MSWPromptTraceItem', function() {
-		browser.assert.elements(MSWPromptTraceItem, 0)
+		return browser.assert.elements(MSWPromptTraceItem, 0)
 	});
 
 	it('shows MSWPromptOutput', function() {
-		browser.assert.elements(MSWPromptOutput, 1)
+		return browser.assert.elements(MSWPromptOutput, 1)
 	});
 
 	context('input', function () {
@@ -66,7 +66,7 @@ describe('MSWPrompt_Access', function test_MSWPrompt_Access () {
 		});
 
 		it('shows MSWPromptTraceItem', function () {
-			browser.assert.elements(MSWPromptTraceItem, 1)
+			return browser.assert.elements(MSWPromptTraceItem, 1)
 		});
 	
 	});
@@ -81,7 +81,7 @@ describe('MSWPrompt_Access', function test_MSWPrompt_Access () {
 		});
 
 		it('shows MSWPromptSyntaxError', function () {
-			browser.assert.elements(MSWPromptSyntaxError, 1)
+			return browser.assert.elements(MSWPromptSyntaxError, 1)
 		});
 	
 	});

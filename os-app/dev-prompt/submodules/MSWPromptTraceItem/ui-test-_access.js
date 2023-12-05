@@ -26,27 +26,27 @@ describe('MSWPromptTraceItem_Access', function () {
 	});
 	
 	it('shows MSWPromptTraceItem', function() {
-		browser.assert.elements(MSWPromptTraceItem, 1);
+		return browser.assert.elements(MSWPromptTraceItem, 1);
 	});
 	
 	it('shows MSWPromptTraceItemOperation', function() {
-		browser.assert.elements(MSWPromptTraceItemOperation, 1);
+		return browser.assert.elements(MSWPromptTraceItemOperation, 1);
 	});
 	
 	it('shows MSWPromptTraceItemInput', function() {
-		browser.assert.elements(MSWPromptTraceItemInput, 1);
+		return browser.assert.elements(MSWPromptTraceItemInput, 1);
 	});
 	
 	it('shows MSWPromptTraceItemInputHeading', function() {
-		browser.assert.elements(MSWPromptTraceItemInputHeading, 1);
+		return browser.assert.elements(MSWPromptTraceItemInputHeading, 1);
 	});
 	
 	it('shows MSWPromptTraceItemInputValue', function() {
-		browser.assert.elements(MSWPromptTraceItemInputValue, 1);
+		return browser.assert.elements(MSWPromptTraceItemInputValue, 1);
 	});
 
 	it('hides MSWPromptTraceItemArguments', function () {
-		browser.assert.elements(MSWPromptTraceItemArguments, 0);
+		return browser.assert.elements(MSWPromptTraceItemArguments, 0);
 	});
 
 	context('MSWPromptTraceItemArguments', function () {
@@ -60,15 +60,15 @@ describe('MSWPromptTraceItem_Access', function () {
 		});
 		
 		it('shows MSWPromptTraceItemArguments', function () {
-			browser.assert.elements(MSWPromptTraceItemArguments, 1);
+			return browser.assert.elements(MSWPromptTraceItemArguments, 1);
 		});
 
 		it('shows MSWPromptTraceItemArgumentsHeading', function () {
-			browser.assert.elements(MSWPromptTraceItemArgumentsHeading, 1);
+			return browser.assert.elements(MSWPromptTraceItemArgumentsHeading, 1);
 		});
 
 		it('shows MSWPromptTraceItemArgumentsValue', function () {
-			browser.assert.elements(MSWPromptTraceItemArgumentsValue, 2);
+			return browser.assert.elements(MSWPromptTraceItemArgumentsValue, 2);
 		});
 	
 	});

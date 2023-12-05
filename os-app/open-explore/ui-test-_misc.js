@@ -9,7 +9,7 @@ before(function () {
 describe('MSWExploreFooter', function() {
 	
 	it('classes OLSKToolbar', function () {
-		browser.assert.hasClass(MSWExploreFooter, 'OLSKToolbar');
+		return browser.assert.hasClass(MSWExploreFooter, 'OLSKToolbar');
 	});
 
 });
@@ -17,11 +17,11 @@ describe('MSWExploreFooter', function() {
 describe('MSWExploreGuideLink', function() {
 
 	it('sets href', function () {
-		browser.assert.attribute(MSWExploreGuideLink, 'href', OLSKTestingCanonical(require('../open-guide/controller.js').OLSKControllerRoutes().shift()));
+		return browser.assert.attribute(MSWExploreGuideLink, 'href', OLSKTestingCanonical(require('../open-guide/controller.js').OLSKControllerRoutes().shift()));
 	});
 
 	it('sets target', function () {
-		browser.assert.attribute(MSWExploreGuideLink, 'target', '_blank');
+		return browser.assert.attribute(MSWExploreGuideLink, 'target', '_blank');
 	});
 
 });

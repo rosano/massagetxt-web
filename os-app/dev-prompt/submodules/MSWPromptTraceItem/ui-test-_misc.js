@@ -12,7 +12,7 @@ describe('MSWPromptTraceItemOperation', function() {
 	});
 
 	it('initializes to MSWPromptTraceItemOperation', function () {
-		browser.assert.text(MSWPromptTraceItemOperation, 'alfa')
+		return browser.assert.text(MSWPromptTraceItemOperation, 'alfa')
 	});
 	
 });
@@ -27,7 +27,7 @@ describe('MSWPromptTraceItemInputHeading', function() {
 	});
 
 	it('classes OLSKDecorTextVisual', function () {
-		browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKDecorTextVisual')
+		return browser.assert.hasClass(MSWPromptTraceItemInputHeading, 'OLSKDecorTextVisual')
 	});
 	
 });
@@ -42,7 +42,7 @@ describe('MSWPromptTraceItemInputValue', function() {
 	});
 
 	it('initializes to MSWPromptTraceItemInput', function () {
-		browser.assert.text(MSWPromptTraceItemInputValue, 'bravo')
+		return browser.assert.text(MSWPromptTraceItemInputValue, 'bravo')
 	});
 	
 });
@@ -58,7 +58,7 @@ describe('MSWPromptTraceItemArgumentsHeading', function() {
 	});
 
 	it('classes OLSKDecorTextVisual', function () {
-		browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKDecorTextVisual')
+		return browser.assert.hasClass(MSWPromptTraceItemArgumentsHeading, 'OLSKDecorTextVisual')
 	});
 	
 });

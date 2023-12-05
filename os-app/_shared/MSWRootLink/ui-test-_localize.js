@@ -15,7 +15,7 @@ require('./controller.js').OLSKControllerRoutes().forEach(function (kDefaultRout
 			});
 
 			it('localizes OLSKRootLink', function() {
-				browser.assert.attribute('.OLSKRootLink', 'href', OLSKTestingCanonical(require('../../open-vitrine/controller.js').OLSKControllerRoutes().shift(), {
+				return browser.assert.attribute('.OLSKRootLink', 'href', OLSKTestingCanonical(require('../../open-vitrine/controller.js').OLSKControllerRoutes().shift(), {
 					OLSKRoutingLanguage,
 				}));
 			});

@@ -9,7 +9,7 @@ require('./controller.js').OLSKControllerRoutes().forEach(function (kDefaultRout
 		describe('OLSKRootLink', function () {
 			
 			it('sets OLSKRootLinkImageURL', function () {
-				browser.assert.attribute('.OLSKRootLinkImage', 'src', '/_shared/MSWRootLink/ui-assets/identity.svg');
+				return browser.assert.attribute('.OLSKRootLinkImage', 'src', '/_shared/MSWRootLink/ui-assets/identity.svg');
 			});
 		
 		});

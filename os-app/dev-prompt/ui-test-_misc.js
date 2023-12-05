@@ -12,14 +12,14 @@ describe('MSWPromptPermalink', function() {
 	});
 
 	it('sets href', function () {
-		browser.assert.attribute(MSWPromptPermalink, 'href', OLSKTestingCanonical(kDefaultRoute, {
+		return browser.assert.attribute(MSWPromptPermalink, 'href', OLSKTestingCanonical(kDefaultRoute, {
 			raw: require('./ui-logic.js').MSWPermalinkEncode('alfa bravo'),
 			massage: require('./ui-logic.js').MSWPermalinkEncode('$input.prepend( charlie)'),
 		}));
 	});
 
 	it('sets target', function () {
-		browser.assert.attribute(MSWPromptPermalink, 'target', '_blank');
+		return browser.assert.attribute(MSWPromptPermalink, 'target', '_blank');
 	});
 
 });
@@ -33,7 +33,7 @@ describe('MSWPromptRaw', function() {
 	});
 
 	it('initializes to MSWPromptRaw', function () {
-		browser.assert.input(`${ MSWPromptRaw } .MSWEditorFieldDebug`, 'alfa')
+		return browser.assert.input(`${ MSWPromptRaw } .MSWEditorFieldDebug`, 'alfa')
 	});
 	
 });
@@ -47,7 +47,7 @@ describe('MSWPromptMassage', function() {
 	});
 
 	it('initializes to MSWPromptMassage', function () {
-		browser.assert.input(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input')
+		return browser.assert.input(`${ MSWPromptMassage } .MSWEditorFieldDebug`, '$input')
 	});
 	
 });
@@ -64,7 +64,7 @@ describe('MSWPromptTrace', function() {
 		});
 
 		it('sets text', function () {
-			browser.assert.text(MSWPromptSyntaxError, 'MSTErrorIdentifierNotValid')
+			return browser.assert.text(MSWPromptSyntaxError, 'MSTErrorIdentifierNotValid')
 		});
 	
 	});
@@ -81,15 +81,15 @@ describe('MSWPromptTraceItem', function() {
 	});
 
 	it('initializes to result', function () {
-		browser.assert.elements(MSWPromptTraceItem, 1)
+		return browser.assert.elements(MSWPromptTraceItem, 1)
 	});
 
 	it('sets MSWPromptTraceItemOperation', function () {
-		browser.assert.text(MSWPromptTraceItemOperation, 'lines')
+		return browser.assert.text(MSWPromptTraceItemOperation, 'lines')
 	});
 
 	it('sets MSWPromptTraceItemInputValue', function () {
-		browser.assert.text(MSWPromptTraceItemInputValue, '\'alfa\'')
+		return browser.assert.text(MSWPromptTraceItemInputValue, '\'alfa\'')
 	});
 
 	context('update MSWPromptMassage', function () {
@@ -99,7 +99,7 @@ describe('MSWPromptTraceItem', function() {
 		});
 
 		it('updates elements', function () {
-			browser.assert.elements(MSWPromptTraceItem, 2)
+			return browser.assert.elements(MSWPromptTraceItem, 2)
 		});
 	
 	});
@@ -114,7 +114,7 @@ describe('MSWPromptTraceItem', function() {
 		});
 
 		it('sets MSWPromptTraceItemArgumentsValue', function () {
-			browser.assert.text(MSWPromptTraceItemArgumentsValue, '\'bravo\'')
+			return browser.assert.text(MSWPromptTraceItemArgumentsValue, '\'bravo\'')
 		});
 
 	});
@@ -131,7 +131,7 @@ describe('MSWPromptOutput', function() {
 	});
 
 	it('initializes to result', function () {
-		browser.assert.text(MSWPromptOutput, 'alfa')
+		return browser.assert.text(MSWPromptOutput, 'alfa')
 	});
 
 	context('update MSWPromptRaw', function () {
@@ -141,7 +141,7 @@ describe('MSWPromptOutput', function() {
 		});
 		
 		it('sets value', function () {
-			browser.assert.text(MSWPromptOutput, 'bravo')
+			return browser.assert.text(MSWPromptOutput, 'bravo')
 		});
 	
 	});
@@ -153,7 +153,7 @@ describe('MSWPromptOutput', function() {
 		});
 		
 		it('sets value', function () {
-			browser.assert.text(MSWPromptOutput, 'alfa bravo')
+			return browser.assert.text(MSWPromptOutput, 'alfa bravo')
 		});
 	
 	});

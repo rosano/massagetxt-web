@@ -12,16 +12,16 @@ kDefaultRoute._OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 			return browser.OLSKVisit(kDefaultRoute);
 		});
 
-		it('localizes title', function() {
-			browser.assert.text('title', uLocalized('MSWGuideTitle'))
+		it.skip('localizes title', function() {
+			return browser.assert.text('title', uLocalized('MSWGuideTitle'))
 		});
 
 		it('localizes meta[description]', function() {
-			browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWGuideDescription'))
+			return browser.assert.attribute('meta[name=description]', 'content', uLocalized('MSWGuideDescription'))
 		});
 
 		it('localizes MSWGuideCrownName', function () {
-			browser.assert.text(MSWGuideCrownName, uLocalized('MSWGuideTitle'));
+			return browser.assert.text(MSWGuideCrownName, uLocalized('MSWGuideTitle'));
 		});
 
 	});

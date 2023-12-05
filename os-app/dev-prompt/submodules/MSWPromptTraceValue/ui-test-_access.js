@@ -17,11 +17,11 @@ describe('MSWPromptTraceValue_Access', function () {
 	});
 	
 	it('shows MSWPromptTraceValue', function() {
-		browser.assert.elements(MSWPromptTraceValue, 1);
+		return browser.assert.elements(MSWPromptTraceValue, 1);
 	});
 	
 	it('shows MSWPromptTraceValueContent', function() {
-		browser.assert.elements(MSWPromptTraceValueContent, 1);
+		return browser.assert.elements(MSWPromptTraceValueContent, 1);
 	});
 
 });

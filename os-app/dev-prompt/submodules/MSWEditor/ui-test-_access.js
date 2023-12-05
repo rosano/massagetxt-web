@@ -15,11 +15,11 @@ describe('MSWEditor_Access', function () {
 	});
 	
 	it('shows MSWEditor', function() {
-		browser.assert.elements(MSWEditor, 1);
+		return browser.assert.elements(MSWEditor, 1);
 	});
 	
 	it('shows MSWEditorFieldDebug', function() {
-		browser.assert.elements(MSWEditorFieldDebug, 1);
+		return browser.assert.elements(MSWEditorFieldDebug, 1);
 	});
 	
 });
