@@ -27,7 +27,7 @@
   "devDependencies": {
     "OLSKPithToolchain": "olsk/OLSKPithToolchain",
     "OLSKRollupScaffold": "olsk/OLSKRollupScaffold",
-    "unified": "latest",
+    "unified": "9.x",
     "remark-parse": "9.x",
     "rollup-plugin-json": "latest",
     "rollup-plugin-node-builtins": "latest",
